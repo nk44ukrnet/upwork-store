@@ -1,0 +1,248 @@
+.header {
+
+  &__container {
+    padding-top: 13px;
+  }
+
+  &__quick-menu {
+  }
+
+  &__ul {
+    display: flex;
+    gap: 19px;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 25px;
+  }
+
+  &__li {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.502);
+    line-height: 1.5;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logos {
+  }
+
+  &__logo {
+
+    &_desktop {
+    }
+
+    &_mobile {
+      display: none;
+    }
+  }
+
+  &__side {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__search-icon {
+    display: none;
+  }
+
+  &__search {
+    position: relative;
+
+    input[type="search"] {
+      border: 1px solid #e8e8e8;
+      padding: 11px 35px 11px 11px;
+      background-color: transparent;
+      width: 100%;
+      display: block;
+      max-width: 183px;
+      font-size: 15px;
+      color: rgba(0, 0, 0, 0.502);
+      line-height: 1.4;
+
+      &::placeholder {
+        font-size: 15px;
+        color: rgba(0, 0, 0, 0.502);
+        line-height: 1.4;
+      }
+    }
+
+    button[type="submit"] {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      vertical-align: middle;
+      cursor: pointer;
+      position: absolute;
+      top: 8px;
+      right: 5px;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__like, &__cart {
+    position: relative;
+
+    &:before {
+      content: attr(data-quantity);
+      font-size: 8px;
+      line-height: 2.1;
+      //display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: 17px;
+      height: 16px;
+      top: 0;
+      left: 0;
+      background-image: url(../../img/header-icon-bg.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      color: var(--light);
+      z-index: 1;
+      transform: translateY(-110%) translateX(15%);
+    }
+  }
+
+  &__like {
+    cursor: pointer;
+
+    svg {
+      cursor: pointer;
+    }
+  }
+
+  &__cart {
+    cursor: pointer;
+    &:before {
+      transform: translateY(-100%) translateX(20%);
+    }
+
+    svg {
+      cursor: pointer;
+    }
+  }
+
+  &__hamburger {
+    display: none;
+  }
+
+  &__nav {
+    margin-top: 24px;
+  }
+
+  @media (max-width: $pre-mobile) {
+
+    &__quick-menu {
+      display: none;
+    }
+
+
+    &__logos {
+    }
+
+    &__logo {
+
+      &_desktop {
+        display: none;
+      }
+
+      &_mobile {
+        display: block;
+      }
+    }
+
+    &__side {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    &__search-icon {
+      display: block;
+    }
+
+    &__search {
+      position: absolute;
+      top: 10px;
+      left: 30%;
+      -webkit-transition: all .25s linear;-moz-transition: all .25s linear;-ms-transition: all .25s linear;-o-transition: all .25s linear;transition: all .25s linear;
+      transform: translateY(-500%);
+    }
+
+    &__like, &__cart {
+      position: relative;
+
+      &:before {
+        content: attr(data-quantity);
+        font-size: 8px;
+        line-height: 2.1;
+        //display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 17px;
+        height: 16px;
+        top: 0;
+        left: 0;
+        background-image: url(../../img/header-icon-bg.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        color: var(--light);
+        z-index: 1;
+        transform: translateY(-110%) translateX(15%);
+      }
+    }
+
+    &__like {
+      svg {
+        width: 24px;
+      }
+    }
+
+    &__cart {
+      width: 26px;
+    }
+
+    &__hamburger {
+      display: block;
+    }
+
+    &__nav {
+      margin-top: 0;
+    }
+    border-bottom: 3px solid var(--dark);
+
+    &.menu_active {
+      .header__nav {
+        transform: translateX(0);
+      }
+    }
+    &.header_search {
+      .header__search {
+        transform: translateY(0);
+        z-index: 10;
+        background: var(--light);
+      }
+    }
+  }
+}
+
+

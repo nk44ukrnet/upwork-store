@@ -1,0 +1,18 @@
+.color {
+  color: red;
+}
+
+
+@import "base/_normalize",
+"base/_variables",
+"base/_fonts",
+"base/_structure",
+"base/_breadcrumbs",
+"base/_footer",
+"base/_header",
+"base/_pagination",
+"base/_navigation";
+
+@import "blocks/_catalog";
+
+@import "pages/_products";

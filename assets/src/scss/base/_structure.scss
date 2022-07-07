@@ -1,0 +1,39 @@
+body {
+  color: var(--dark);
+  font-family: 'Rubik', sans-serif;
+}
+
+[class*=__container] {
+  max-width: 1236px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.responsive {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.btn {
+  font-size: 16px;
+  //color: var(--light);
+  text-transform: uppercase;
+  line-height: 1.313;
+  text-align: center;
+  font-weight: 500;
+  padding: 16px 31px;
+  display: table;
+  text-decoration: none;
+
+  &_dark {
+    background-color: var(--dark);
+    color: var(--light);
+  }
+  @media (max-width: $mobile) {
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 21px;
+  }
+}
