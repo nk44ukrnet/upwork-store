@@ -12,6 +12,17 @@
     justify-content: center;
   }
 
+  &__menu-standalone {
+    display: none;
+    width: 0;
+    height: 0;
+    @media (max-width: $pre-mobile) {
+      display: block;
+      width: auto;
+      height: auto;
+    }
+  }
+
   ul, &__ul {
     list-style-type: none;
     display: flex;
@@ -57,6 +68,9 @@
   @media (max-width: $pre-mobile) {
     &__container {
       display: block;
+    }
+    ul:nth-child(1) {
+      padding-bottom: 0;
     }
     ul, &__ul {
       flex-direction: column;

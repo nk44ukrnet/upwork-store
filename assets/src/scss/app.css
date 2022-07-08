@@ -313,6 +313,38 @@ template {
   --light: #fff;
 }
 
+/* rubik-300 - latin */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../../fonts/rubik-v20-latin-300.eot"); /* IE9 Compat Modes */
+  src: local(""), url("../../fonts/rubik-v20-latin-300.eot?#iefix") format("embedded-opentype"), url("../../fonts/rubik-v20-latin-300.woff2") format("woff2"), url("../../fonts/rubik-v20-latin-300.woff") format("woff"), url("../../fonts/rubik-v20-latin-300.ttf") format("truetype"), url("../../fonts/rubik-v20-latin-300.svg#Rubik") format("svg"); /* Legacy iOS */
+}
+/* rubik-regular - latin */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/rubik-v20-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""), url("../../fonts/rubik-v20-latin-regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/rubik-v20-latin-regular.woff2") format("woff2"), url("../../fonts/rubik-v20-latin-regular.woff") format("woff"), url("../../fonts/rubik-v20-latin-regular.ttf") format("truetype"), url("../../fonts/rubik-v20-latin-regular.svg#Rubik") format("svg"); /* Legacy iOS */
+}
+/* rubik-500 - latin */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../../fonts/rubik-v20-latin-500.eot"); /* IE9 Compat Modes */
+  src: local(""), url("../../fonts/rubik-v20-latin-500.eot?#iefix") format("embedded-opentype"), url("../../fonts/rubik-v20-latin-500.woff2") format("woff2"), url("../../fonts/rubik-v20-latin-500.woff") format("woff"), url("../../fonts/rubik-v20-latin-500.ttf") format("truetype"), url("../../fonts/rubik-v20-latin-500.svg#Rubik") format("svg"); /* Legacy iOS */
+}
+/* rubik-600 - latin */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../../fonts/rubik-v20-latin-600.eot"); /* IE9 Compat Modes */
+  src: local(""), url("../../fonts/rubik-v20-latin-600.eot?#iefix") format("embedded-opentype"), url("../../fonts/rubik-v20-latin-600.woff2") format("woff2"), url("../../fonts/rubik-v20-latin-600.woff") format("woff"), url("../../fonts/rubik-v20-latin-600.ttf") format("truetype"), url("../../fonts/rubik-v20-latin-600.svg#Rubik") format("svg"); /* Legacy iOS */
+}
 /**
  * Swiper 8.3.0
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -1016,7 +1048,6 @@ body {
   text-transform: uppercase;
   line-height: 100%;
   text-align: center;
-  font-weight: 500;
   padding: 16px 31px;
   display: table;
   text-decoration: none;
@@ -1258,14 +1289,14 @@ body {
 }
 .header__like:before, .header__cart:before {
   content: attr(data-quantity);
-  font-size: 8px;
+  font-size: 10px;
   line-height: 210%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  width: 17px;
-  height: 16px;
+  width: 19px;
+  height: 14px;
   top: 0;
   left: 0;
   background-color: var(--dark);
@@ -1289,24 +1320,26 @@ body {
   pointer-events: none;
 }
 .header__like:before {
-  transform: translateY(-115%) translateX(20%);
+  top: -17px;
+  left: 1px;
 }
 .header__like:after {
   top: -8px;
-  left: 11px;
+  left: 9px;
 }
 .header__like svg {
-  width: 24px;
+  width: 20px;
 }
 .header__cart {
-  width: 26px;
+  width: 22px;
 }
 .header__cart:before {
-  transform: translateY(-110%) translateX(35%);
+  top: -16px;
+  left: 4px;
 }
 .header__cart:after {
   top: -7px;
-  left: 14px;
+  left: 12px;
 }
 .header__hamburger {
   display: none;
@@ -1356,14 +1389,14 @@ body {
   }
   .header__like:before, .header__cart:before {
     content: attr(data-quantity);
-    font-size: 8px;
+    font-size: 10px;
     line-height: 210%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    width: 17px;
-    height: 16px;
+    width: 19px;
+    height: 14px;
     top: 0;
     left: 0;
     background-color: var(--dark);
@@ -1390,7 +1423,7 @@ body {
   }
   .header__like:after {
     top: -8px;
-    left: 11px;
+    left: 13px;
   }
   .header__like svg {
     width: 24px;
@@ -1492,6 +1525,18 @@ body {
   align-items: center;
   justify-content: center;
 }
+.nav__menu-standalone {
+  display: none;
+  width: 0;
+  height: 0;
+}
+@media (max-width: 905px) {
+  .nav__menu-standalone {
+    display: block;
+    width: auto;
+    height: auto;
+  }
+}
 .nav ul, .nav__ul {
   list-style-type: none;
   display: flex;
@@ -1531,6 +1576,9 @@ body {
 @media (max-width: 905px) {
   .nav__container {
     display: block;
+  }
+  .nav ul:nth-child(1) {
+    padding-bottom: 0;
   }
   .nav ul, .nav__ul {
     flex-direction: column;
