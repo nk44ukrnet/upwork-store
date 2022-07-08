@@ -3,7 +3,7 @@
   grid-template-columns: repeat(auto-fill, minmax(min-content, 132px));
   column-gap: 70px;
   row-gap: 51px;
-  justify-content: center;
+  justify-content: space-between;
 
   &__item {
   }
@@ -24,7 +24,7 @@
   &__title {
     text-decoration: none;
     font-size: 14.2px;
-    line-height: 19px;
+    line-height: 133%;
     font-weight: 400;
     color: var(--dark);
     display: table;

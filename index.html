@@ -6,16 +6,17 @@
           content="width=device-width,  initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <!--Swiper CSS-->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
 
-    <link rel="stylesheet" href="assets/dist/css/app.css">
-    <script src="assets/dist/js/app.js" defer></script>
+    <link rel="preload" href="assets/fonts/rubik-v20-latin-300.woff" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/rubik-v20-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/rubik-v20-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/rubik-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+
+
+    <link rel="stylesheet" href="assets/dist/css/app.min.css">
+    <script src="assets/dist/js/app.min.js" defer></script>
 </head>
 <body>
-
 <div class="wrapper">
     <header class="header">
         <div class="header__container">
@@ -29,127 +30,524 @@
             <div class="header__main">
                 <div class="header__logos">
                     <a href="#!" class="header__logo header__logo_desktop">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="391" height="36" viewBox="0 0 391 36">
-                            <image id="Vector_Smart_Object11_copy_4" data-name="Vector Smart Object11 copy 4" width="391" height="36" xlink:href="data:img/png;base64,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"/>
-                        </svg>
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                             x="0px" y="0px"
+                             viewBox="0 0 197.5 17.1" style="enable-background:new 0 0 197.5 17.1;"
+                             xml:space="preserve">
+<style type="text/css">
+	.st0 {
+        display: none;
+    }
+
+    .st1 {
+        display: inline;
+    }
+
+    .st2 {
+        font-family: 'Roboto-Medium';
+    }
+
+    .st3 {
+        font-size: 17.0514px;
+    }
+
+    .st4 {
+        font-family: 'Roboto-Light';
+    }
+
+    .st5 {
+        display: inline;
+        fill: #FFFFFF;
+    }
+
+    .st6 {
+        font-family: 'Roboto-Black';
+    }
+
+    .st7 {
+        font-size: 9px;
+    }
+
+    .st8 {
+        display: inline;
+        fill: none;
+        stroke: #FFFFFF;
+        stroke-width: 0.4;
+        stroke-miterlimit: 10;
+    }
+</style>
+                            <g id="Layer_1" class="st0">
+	<rect x="0" y="0" class="st1" width="17.1" height="17.1"/>
+                                <g class="st1">
+		<text transform="matrix(1 0 0 0.9 20.9087 13.7001)" class="st2 st3">Lee`s</text>
+                                    <text transform="matrix(1 0 0 0.9 63.6861 13.7001)" class="st4 st3">Furniture &amp; Bedding</text>
+	</g>
+                                <text transform="matrix(1 0 0 1 2.4673 13.9366)" class="st5 st6 st7">L</text>
+                                <text transform="matrix(1 0 0 1 10.1226 9.2335)" class="st5 st6 st7">F</text>
+                                <line class="st8" x1="2.4" y1="2.4" x2="14.7" y2="14.7"/>
+</g>
+                            <g id="Layer_1_copy">
+	<g>
+		<g>
+			<g>
+				<path d="M26.1,12.2h5.5v1.5H24V2.8h2.1V12.2z"/>
+                <path d="M36.4,13.8c-1.3,0-2.3-0.4-3.1-1.1s-1.2-1.7-1.2-2.9V9.6c0-0.8,0.2-1.5,0.5-2.2C32.9,6.8,33.4,6.3,34,6
+					c0.6-0.4,1.3-0.5,2.1-0.5c1.2,0,2.2,0.4,2.8,1.1c0.7,0.7,1,1.7,1,3v0.7h-5.9c0.1,0.7,0.3,1.2,0.7,1.6c0.4,0.4,1,0.6,1.6,0.6
+					c0.9,0,1.7-0.3,2.3-1l1.1,0.9c-0.4,0.5-0.8,0.9-1.4,1.1C37.8,13.7,37.1,13.8,36.4,13.8z M36.1,6.9c-0.6,0-1,0.2-1.3,0.5
+					c-0.3,0.3-0.6,0.8-0.7,1.5H38V8.8c0-0.6-0.2-1.1-0.5-1.4C37.1,7.1,36.7,6.9,36.1,6.9z"/>
+                <path d="M45,13.8c-1.3,0-2.3-0.4-3.1-1.1s-1.2-1.7-1.2-2.9V9.6c0-0.8,0.2-1.5,0.5-2.2c0.3-0.6,0.8-1.1,1.5-1.5
+					c0.6-0.4,1.3-0.5,2.1-0.5c1.2,0,2.2,0.4,2.8,1.1c0.7,0.7,1,1.7,1,3v0.7h-5.9c0.1,0.7,0.3,1.2,0.7,1.6c0.4,0.4,1,0.6,1.6,0.6
+					c0.9,0,1.7-0.3,2.3-1l1.1,0.9c-0.4,0.5-0.8,0.9-1.4,1.1C46.5,13.7,45.8,13.8,45,13.8z M44.8,6.9c-0.6,0-1,0.2-1.3,0.5
+					c-0.3,0.3-0.6,0.8-0.7,1.5h3.9V8.8c0-0.6-0.2-1.1-0.5-1.4C45.8,7.1,45.4,6.9,44.8,6.9z"/>
+                <path d="M51.8,4.5l-1.7,0l-2.2-2.3h2.3L51.8,4.5z"/>
+                <path d="M58,11.5c0-0.3-0.1-0.6-0.4-0.7c-0.3-0.2-0.8-0.3-1.5-0.4c-0.7-0.1-1.3-0.3-1.7-0.5c-1-0.4-1.5-1.1-1.5-1.9
+					c0-0.7,0.3-1.3,1-1.8c0.7-0.5,1.5-0.7,2.5-0.7c1.1,0,1.9,0.2,2.6,0.7c0.7,0.5,1,1.1,1,1.9h-2c0-0.3-0.1-0.6-0.4-0.9
+					c-0.3-0.2-0.7-0.3-1.1-0.3c-0.4,0-0.8,0.1-1.1,0.3c-0.3,0.2-0.4,0.4-0.4,0.7c0,0.3,0.1,0.5,0.4,0.7c0.3,0.2,0.8,0.3,1.6,0.5
+					c0.8,0.2,1.4,0.3,1.9,0.6c0.5,0.2,0.8,0.5,1,0.8S60,11,60,11.4c0,0.7-0.3,1.3-1,1.8c-0.7,0.5-1.6,0.7-2.6,0.7
+					c-0.7,0-1.4-0.1-2-0.4c-0.6-0.2-1-0.6-1.3-1c-0.3-0.4-0.5-0.9-0.5-1.4h2c0,0.4,0.2,0.8,0.5,1s0.8,0.3,1.3,0.3
+					c0.5,0,0.9-0.1,1.2-0.3C57.8,12,58,11.8,58,11.5z"/>
+			</g>
+            <g>
+				<path d="M71.9,8.6h-5.7v5.1h-1V2.8h7.5v0.8h-6.5v4.2h5.7V8.6z"/>
+                <path d="M79.4,12.7c-0.6,0.8-1.6,1.2-2.9,1.2c-1,0-1.7-0.3-2.2-0.8c-0.5-0.5-0.8-1.2-0.8-2.2V5.6h1v5.2c0,1.5,0.7,2.3,2.1,2.3
+					c1.4,0,2.4-0.5,2.7-1.6V5.6h1v8.1h-1L79.4,12.7z"/>
+                <path d="M86.5,6.4c-0.2,0-0.4-0.1-0.7-0.1c-0.6,0-1.1,0.2-1.6,0.5c-0.4,0.3-0.7,0.8-0.9,1.4v5.6h-1V5.6h1l0,1.3
+					c0.5-1,1.4-1.4,2.5-1.4c0.3,0,0.5,0,0.7,0.1L86.5,6.4z"/>
+                <path d="M88.4,5.6l0,1.4c0.3-0.5,0.8-0.9,1.3-1.1c0.5-0.3,1.1-0.4,1.7-0.4c1,0,1.7,0.2,2.2,0.7c0.5,0.5,0.7,1.2,0.7,2.2v5.3h-1
+					V8.4c0-0.7-0.2-1.3-0.5-1.6s-0.9-0.5-1.6-0.5c-0.6,0-1.2,0.2-1.6,0.5c-0.5,0.3-0.8,0.8-1.1,1.4v5.6h-1V5.6H88.4z"/>
+                <path d="M96,3.3c0-0.2,0.1-0.3,0.2-0.4c0.1-0.1,0.3-0.2,0.5-0.2s0.4,0.1,0.5,0.2c0.1,0.1,0.2,0.3,0.2,0.4s-0.1,0.3-0.2,0.4
+					c-0.1,0.1-0.3,0.2-0.5,0.2s-0.4-0.1-0.5-0.2C96.1,3.6,96,3.4,96,3.3z M97.2,13.7h-1V5.6h1V13.7z"/>
+                <path d="M100.8,3.5v2.1h1.9v0.7h-1.9v5.4c0,0.5,0.1,0.8,0.3,1c0.2,0.2,0.5,0.3,0.9,0.3c0.2,0,0.4,0,0.8-0.1l0,0.7
+					c-0.3,0.1-0.6,0.1-1.1,0.1c-0.7,0-1.2-0.2-1.5-0.5c-0.3-0.4-0.5-0.9-0.5-1.6V6.3h-1.7V5.6h1.7V3.5H100.8z"/>
+                <path d="M109.8,12.7c-0.6,0.8-1.6,1.2-2.9,1.2c-1,0-1.7-0.3-2.2-0.8c-0.5-0.5-0.8-1.2-0.8-2.2V5.6h1v5.2c0,1.5,0.7,2.3,2.1,2.3
+					c1.4,0,2.4-0.5,2.7-1.6V5.6h1v8.1h-1L109.8,12.7z"/>
+                <path d="M116.8,6.4c-0.2,0-0.4-0.1-0.7-0.1c-0.6,0-1.1,0.2-1.6,0.5c-0.4,0.3-0.7,0.8-0.9,1.4v5.6h-1V5.6h1l0,1.3
+					c0.5-1,1.4-1.4,2.5-1.4c0.3,0,0.5,0,0.7,0.1L116.8,6.4z"/>
+                <path d="M121,13.8c-0.8,0-1.5-0.2-2.1-0.5c-0.6-0.3-1.1-0.8-1.4-1.4c-0.3-0.6-0.5-1.3-0.5-2V9.6c0-0.8,0.2-1.5,0.5-2.1
+					c0.3-0.6,0.8-1.1,1.4-1.5c0.6-0.4,1.2-0.5,1.9-0.5c1.1,0,2,0.3,2.6,1s1,1.6,1,2.8v0.5H118v0.2c0,0.9,0.3,1.7,0.9,2.3
+					c0.6,0.6,1.3,0.9,2.2,0.9c0.5,0,1-0.1,1.4-0.3s0.8-0.5,1.1-0.8l0.6,0.4C123.5,13.4,122.4,13.8,121,13.8z M120.8,6.2
+					c-0.7,0-1.4,0.2-1.9,0.7c-0.5,0.5-0.8,1.2-0.9,2h5.4V8.8c0-0.8-0.3-1.4-0.7-1.9S121.6,6.2,120.8,6.2z"/>
+                <path d="M131.5,7.8c-0.5-0.5-0.8-1-1.1-1.4s-0.3-0.8-0.3-1.2c0-0.8,0.3-1.4,0.8-1.8c0.5-0.4,1.2-0.7,2-0.7
+					c0.8,0,1.4,0.2,1.9,0.6s0.7,0.9,0.7,1.5c0,0.7-0.5,1.4-1.4,2.1l-1.3,0.9l3.3,3.5c0.5-0.7,0.8-1.6,0.8-2.5h0.9
+					c0,1.2-0.4,2.3-1.1,3.1l1.7,1.7h-1.2l-1-1.1c-0.4,0.4-0.9,0.7-1.5,0.9c-0.6,0.2-1.2,0.3-1.8,0.3c-1.2,0-2.1-0.3-2.7-0.8
+					s-1-1.2-1-2.1c0-0.5,0.2-1,0.5-1.5c0.3-0.5,1-1,1.8-1.6L131.5,7.8z M132.8,13.1c0.5,0,1-0.1,1.5-0.3s0.9-0.5,1.3-0.8l-3.4-3.5
+					l-0.1-0.1l-0.4,0.3c-1.1,0.8-1.6,1.6-1.6,2.3c0,0.7,0.2,1.2,0.7,1.6C131.3,12.9,132,13.1,132.8,13.1z M131.1,5.1
+					c0,0.6,0.4,1.3,1.1,2.2l1.1-0.7c0.4-0.2,0.6-0.5,0.9-0.8c0.2-0.3,0.3-0.6,0.3-1c0-0.4-0.1-0.7-0.4-1s-0.7-0.4-1.2-0.4
+					c-0.5,0-1,0.2-1.3,0.5C131.3,4.2,131.1,4.6,131.1,5.1z"/>
+                <path d="M143.3,13.7V2.8h3.6c1.3,0,2.3,0.2,3,0.7c0.7,0.5,1,1.2,1,2.1c0,0.6-0.2,1.1-0.5,1.5c-0.3,0.4-0.8,0.7-1.4,0.9
+					c0.7,0.1,1.3,0.5,1.7,0.9s0.6,1,0.6,1.7c0,1-0.3,1.7-1,2.3s-1.7,0.8-2.9,0.8H143.3z M144.3,7.7h2.8c0.9,0,1.5-0.2,2-0.5
+					c0.5-0.3,0.7-0.9,0.7-1.5c0-0.7-0.2-1.2-0.7-1.6c-0.5-0.3-1.2-0.5-2.2-0.5h-2.6V7.7z M144.3,8.5v4.5h3.1c0.9,0,1.6-0.2,2.1-0.6
+					s0.8-1,0.8-1.7c0-0.7-0.2-1.2-0.7-1.6s-1.2-0.6-2-0.6H144.3z"/>
+                <path d="M156.5,13.8c-0.8,0-1.5-0.2-2.1-0.5c-0.6-0.3-1.1-0.8-1.4-1.4c-0.3-0.6-0.5-1.3-0.5-2V9.6c0-0.8,0.2-1.5,0.5-2.1
+					c0.3-0.6,0.8-1.1,1.4-1.5c0.6-0.4,1.2-0.5,1.9-0.5c1.1,0,2,0.3,2.6,1s1,1.6,1,2.8v0.5h-6.4v0.2c0,0.9,0.3,1.7,0.9,2.3
+					c0.6,0.6,1.3,0.9,2.2,0.9c0.5,0,1-0.1,1.4-0.3s0.8-0.5,1.1-0.8l0.6,0.4C159,13.4,157.9,13.8,156.5,13.8z M156.3,6.2
+					c-0.7,0-1.4,0.2-1.9,0.7c-0.5,0.5-0.8,1.2-0.9,2h5.4V8.8c0-0.8-0.3-1.4-0.7-1.9S157.1,6.2,156.3,6.2z"/>
+                <path d="M160.9,9.6c0-1.3,0.3-2.3,0.9-3c0.6-0.7,1.5-1.1,2.5-1.1c1.2,0,2.1,0.4,2.8,1.3V2.2h1v11.5h-0.9l0-1.1
+					c-0.6,0.8-1.6,1.2-2.8,1.2c-1,0-1.9-0.4-2.5-1.1c-0.6-0.8-1-1.8-1-3V9.6z M161.9,9.7c0,1,0.2,1.8,0.7,2.4
+					c0.5,0.6,1.1,0.9,1.9,0.9c1.2,0,2.1-0.5,2.6-1.5V7.8c-0.5-1.1-1.4-1.6-2.6-1.6c-0.8,0-1.5,0.3-2,0.9
+					C162.1,7.7,161.9,8.6,161.9,9.7z"/>
+                <path d="M169.7,9.6c0-1.3,0.3-2.3,0.9-3c0.6-0.7,1.5-1.1,2.5-1.1c1.2,0,2.1,0.4,2.8,1.3V2.2h1v11.5H176l0-1.1
+					c-0.6,0.8-1.6,1.2-2.8,1.2c-1,0-1.9-0.4-2.5-1.1c-0.6-0.8-1-1.8-1-3V9.6z M170.7,9.7c0,1,0.2,1.8,0.7,2.4
+					c0.5,0.6,1.1,0.9,1.9,0.9c1.2,0,2.1-0.5,2.6-1.5V7.8c-0.5-1.1-1.4-1.6-2.6-1.6c-0.8,0-1.5,0.3-2,0.9
+					C170.9,7.7,170.7,8.6,170.7,9.7z"/>
+                <path d="M178.8,3.3c0-0.2,0.1-0.3,0.2-0.4c0.1-0.1,0.3-0.2,0.5-0.2s0.4,0.1,0.5,0.2c0.1,0.1,0.2,0.3,0.2,0.4s-0.1,0.3-0.2,0.4
+					c-0.1,0.1-0.3,0.2-0.5,0.2s-0.4-0.1-0.5-0.2C178.8,3.6,178.8,3.4,178.8,3.3z M180,13.7h-1V5.6h1V13.7z"/>
+                <path d="M182.9,5.6l0,1.4c0.3-0.5,0.8-0.9,1.3-1.1c0.5-0.3,1.1-0.4,1.7-0.4c1,0,1.7,0.2,2.2,0.7c0.5,0.5,0.7,1.2,0.7,2.2v5.3h-1
+					V8.4c0-0.7-0.2-1.3-0.5-1.6s-0.9-0.5-1.6-0.5c-0.6,0-1.2,0.2-1.6,0.5c-0.5,0.3-0.8,0.8-1.1,1.4v5.6h-1V5.6H182.9z"/>
+                <path d="M190.3,9.6c0-1.3,0.3-2.3,0.9-3c0.6-0.7,1.5-1.1,2.5-1.1c1.2,0,2.2,0.4,2.8,1.3l0.1-1.2h0.9v7.9c0,1-0.3,1.9-1,2.5
+					s-1.5,0.9-2.6,0.9c-0.6,0-1.2-0.1-1.8-0.4c-0.6-0.3-1-0.6-1.3-1l0.6-0.5c0.7,0.8,1.5,1.2,2.5,1.2c0.8,0,1.5-0.2,1.9-0.7
+					s0.7-1.1,0.7-1.8v-1c-0.6,0.8-1.6,1.2-2.8,1.2c-1,0-1.9-0.4-2.5-1.1c-0.6-0.7-0.9-1.8-0.9-3V9.6z M191.3,9.7
+					c0,1,0.2,1.8,0.7,2.4c0.5,0.6,1.1,0.9,1.9,0.9c1.2,0,2.1-0.5,2.6-1.5V7.8c-0.2-0.5-0.6-0.9-1-1.2c-0.4-0.3-1-0.4-1.6-0.4
+					c-0.8,0-1.5,0.3-2,0.9C191.5,7.7,191.3,8.6,191.3,9.7z"/>
+			</g>
+		</g>
+        <path d="M0,0v17.1h17.1V0H0z M7.2,13.9H3V7.5h1.5v5.2h2.7V13.9z M14.6,14.9L2.3,2.5l0.3-0.3l12.3,12.3L14.6,14.9z M14.9,4h-2.7
+			v1.5h2.5v1.2h-2.5v2.5h-1.5V2.8h4.3V4z"/>
+	</g>
+</g>
+                            <g id="Layer_3" class="st0">
+	<g class="st1">
+		<text transform="matrix(1 0 0 0.9 22.3717 113.7491)" class="st2 st3">Lee`s</text>
+        <text transform="matrix(1 0 0 0.9 65.587 113.749)" class="st4 st3">Furniture &amp; Bedding</text>
+	</g>
+                                <rect x="-4.1" y="95.8" class="st1" width="22.9" height="22.9"/>
+                                <text transform="matrix(1 0 0 1 -0.2112 111.4181)" class="st5 st6"
+                                      style="font-size:12px;">L</text>
+                                <text transform="matrix(1 0 0 1 8.5445 111.4181)" class="st5 st6"
+                                      style="font-size:12px;">F</text>
+</g>
+                            <g id="Layer_2" class="st0">
+	<text transform="matrix(1 0 0 0.9 66.1606 100.933)" class="st1 st4 st3">Lee`s</text>
+                                <text transform="matrix(1 0 0 0.9 67.6925 109.177)" class="st1 st2"
+                                      style="font-size:8px;">Furniture</text>
+</g>
+</svg>
                     </a>
                     <a href="#!" class="header__logo header__logo_mobile">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="47" height="47" viewBox="0 0 47 47">
-                            <image id="Vector_Smart_Object_copy_4" data-name="Vector Smart Object copy 4" width="47" height="47" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAvCAYAAABzJ5OsAAABjElEQVRoge1ZMU5DMQx9oC6sCFVdkDoxMbAx9xLMHIZTcAQm9kqUW7AycAYGlnYglb5i/yRu7DiV8iSr+m7y9V4S+yfOBYA9zhSX50ocg7wjBnkvpMjvgnWLRYbYE4A3ABvyTx2+APwVvuEKwB3xBuwT9gHgJvym2kltTVjM4yHxbuKIzUJAM/IWApqS1xYQk/9k2pSYqLGWABfyWgLcyGsIcCVfKyAmvwo+zn6Y/tXkawRIss0301+F/KkCVMjntgcl2IQtRM1W4gXAPfH+Y0k8ExBFDWZAJWBLRn4L4Hfy/BgCLIbGDIhBFGVG6Z1pI50BlZFP7edPxXQGTM8DViepJgIsj4HmAjRSZQpzQfwaJYG5NJkFCYRMcOUCljOTE1mr6oHJEmpZ+lAX0LpuoyrAo+ikJsCrYqYiwLPcVy3Au1ZZJaCHQmuVAJL8Mx+pFJ6Z/mYfsp5K3OIZ6K0+LxJQchsoKUdfA7glXjl2zGaOBVlLnVg2Bnq/hz0uHXb0xyWyFwZ5LwzyLgBwAKrKbKgm4TooAAAAAElFTkSuQmCC"/>
-                        </svg>
-
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                        <svg version="1.1" id="Layer_1_copy" xmlns="http://www.w3.org/2000/svg"
+                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" viewBox="0 0 17.1 17.1" style="enable-background:new 0 0 17.1 17.1;"
+                             xml:space="preserve">
+<path d="M0,0v17.1h17.1V0H0z M7.2,13.9H3V7.5h1.5v5.2h2.7V13.9z M14.6,14.9L2.3,2.5l0.3-0.3l12.3,12.3L14.6,14.9z M14.9,4h-2.7v1.5
+	h2.5v1.2h-2.5v2.5h-1.5V2.8h4.3V4z"/>
+</svg>
                     </a>
                 </div>
                 <div class="header__side">
                     <a href="#!" class="header__search-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="23" viewBox="0 0 24 23">
-                            <image id="Vector_Smart_Object_copy_4" data-name="Vector Smart Object copy 4" width="24" height="23" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAXCAYAAAARIY8tAAACKUlEQVRIia3VS4iOYRQH8B+TYtiMhVwml0FCjBrS0DQZcttIJIWFlWIrGzaycYmi7EhIyWY2rCaycw8NxcLdoMy4Tc0MYvRwXt7m+75pLv6b9zzvc875d85zLkOqqqqUwBxsxhLMxKhQe4O7uIjz+FTc/A+KEUzFMawu0C5EO/bjEL4X3BYhWIfTGBnnDjThGt5iBCZjJebl7G5iDd71RrAR5zAU33AEB3pJwcK4r4/zE9TifV6prKKiIn3n4hKGoRXLcAZdBW7/oSWiTTZ1GI0anC1G0Bihf8VS3CpwVxpXMAYLMAXPcD/TTuloiNASDuN2SVelsROv4nZ3Sn2eYFPIXVERA0FnvEfCdMzPE9SF3BRlN1A05uzq8wRZGT0chHPRgG0h/y3NRFAW8ocCk/7jc5iU5wk6Qx7/HwjGxbc1T/Ag5NoC9f6hOjo94XGeoCnk1JkzBkGwJSdnPn8TnMSPOB8sMOsbUpPuCM3LeJ5ZpU7+iMpo8xRBOt/oh/M0Cq5iLLqjr17nI0jYhachH8We3F1vqIw3zFJ7HNfz+pmTNDFXxEhO2Ic7WI/hRQiS47141KP61mJaXrHnPpiIC/HgGTpig7XEVpuE2bn7n5GihjgnvVVoViQNL7EY2/Ai/pXHvw2x5TLn3THia2ICb4//E2LCVheLoGf6FsVOnhWPmcZ5SuO9cJ5N0AxbcSJsv2B5bwQDRaqiU7GI2vpSKf1FWrupONrR/AtTNGw5jyT3iAAAAABJRU5ErkJggg=="/>
-                        </svg>
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                             x="0px" y="0px"
+                             viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0 {
+        display: none;
+    }
+
+    .st1 {
+        display: inline;
+        fill: none;
+        stroke: #000000;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+</style>
+                            <g id="Layer_1" class="st0">
+	<circle class="st1" cx="11" cy="11" r="8"/>
+                                <line class="st1" x1="21" y1="21" x2="16.6" y2="16.6"/>
+</g>
+                            <g id="Layer_1_copy">
+	<path d="M21.7,20.3L18,16.6c1.2-1.5,2-3.5,2-5.6c0-5-4-9-9-9c-5,0-9,4-9,9c0,5,4,9,9,9c2.1,0,4.1-0.7,5.6-2l3.7,3.7
+		c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3C22.1,21.3,22.1,20.7,21.7,20.3z M4,11c0-3.9,3.1-7,7-7c3.9,0,7,3.1,7,7
+		c0,1.9-0.8,3.7-2,4.9c0,0,0,0,0,0s0,0,0,0c-1.3,1.3-3,2-4.9,2C7.1,18,4,14.9,4,11z"/>
+</g>
+</svg>
                     </a>
                     <form class="header__search">
                         <input type="search" name="header-search" placeholder="Search...">
-                        <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="23" viewBox="0 0 24 23">
-                            <image id="Vector_Smart_Object_copy_4" data-name="Vector Smart Object copy 4" width="24" height="23" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAXCAYAAAARIY8tAAACKUlEQVRIia3VS4iOYRQH8B+TYtiMhVwml0FCjBrS0DQZcttIJIWFlWIrGzaycYmi7EhIyWY2rCaycw8NxcLdoMy4Tc0MYvRwXt7m+75pLv6b9zzvc875d85zLkOqqqqUwBxsxhLMxKhQe4O7uIjz+FTc/A+KEUzFMawu0C5EO/bjEL4X3BYhWIfTGBnnDjThGt5iBCZjJebl7G5iDd71RrAR5zAU33AEB3pJwcK4r4/zE9TifV6prKKiIn3n4hKGoRXLcAZdBW7/oSWiTTZ1GI0anC1G0Bihf8VS3CpwVxpXMAYLMAXPcD/TTuloiNASDuN2SVelsROv4nZ3Sn2eYFPIXVERA0FnvEfCdMzPE9SF3BRlN1A05uzq8wRZGT0chHPRgG0h/y3NRFAW8ocCk/7jc5iU5wk6Qx7/HwjGxbc1T/Ag5NoC9f6hOjo94XGeoCnk1JkzBkGwJSdnPn8TnMSPOB8sMOsbUpPuCM3LeJ5ZpU7+iMpo8xRBOt/oh/M0Cq5iLLqjr17nI0jYhachH8We3F1vqIw3zFJ7HNfz+pmTNDFXxEhO2Ic7WI/hRQiS47141KP61mJaXrHnPpiIC/HgGTpig7XEVpuE2bn7n5GihjgnvVVoViQNL7EY2/Ai/pXHvw2x5TLn3THia2ICb4//E2LCVheLoGf6FsVOnhWPmcZ5SuO9cJ5N0AxbcSJsv2B5bwQDRaqiU7GI2vpSKf1FWrupONrR/AtTNGw5jyT3iAAAAABJRU5ErkJggg=="/>
-                        </svg>
+                        <button type="submit">
+                            <?xml version="1.0" encoding="utf-8"?>
+                            <!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0 {
+        display: none;
+    }
+
+    .st1 {
+        display: inline;
+        fill: none;
+        stroke: #000000;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+</style>
+                                <g id="Layer_1" class="st0">
+	<circle class="st1" cx="11" cy="11" r="8"/>
+                                    <line class="st1" x1="21" y1="21" x2="16.6" y2="16.6"/>
+</g>
+                                <g id="Layer_1_copy">
+	<path d="M21.7,20.3L18,16.6c1.2-1.5,2-3.5,2-5.6c0-5-4-9-9-9c-5,0-9,4-9,9c0,5,4,9,9,9c2.1,0,4.1-0.7,5.6-2l3.7,3.7
+		c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3C22.1,21.3,22.1,20.7,21.7,20.3z M4,11c0-3.9,3.1-7,7-7c3.9,0,7,3.1,7,7
+		c0,1.9-0.8,3.7-2,4.9c0,0,0,0,0,0s0,0,0,0c-1.3,1.3-3,2-4.9,2C7.1,18,4,14.9,4,11z"/>
+</g>
+</svg>
                         </button>
                     </form>
                     <div class="header__icons">
                         <a class="header__like" data-quantity="8">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="18" viewBox="0 0 20 18">
-                                <image id="Vector_Smart_Object1" data-name="Vector Smart Object1" width="20" height="18" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAABmklEQVQ4jZ3Tu2pUURTG8Z+jFsNITKEPkEEUn2D6KZUkmguKRRARC4tgb2OhvVjFFGkSgqIkgURQG2vzAMYb+ADaKJIiYYwsZh04nDOJiR8czr5867/XZq91rN1uSw3hHq7hPBrYwjM8Sc8sruMi/uAznuMxfoWhAIbhFUYM1rdcPWj/ciQQWQzjdZo/YgwtNDGaWY7kt5VrzfSE90PuBWM4MnyI+/iEDn5WTj+FFzmexu/K/mm8xwU8CuAXnMNVrNUu09fx/PdqO31dwSq+BrCXD3AWP2rWw+kMvsdDNUqntv4TVo7tBXAzJ9M12+FVxG4GcD4nD/JRjqpOxoaeBnAR65n22yNCOxnTSsZSAPey+t9kt7xDtxZaVze9Q1mDwdhrpG07i3Q9i3bjH9BuepoZM54MjZJpB1MV6KUaqr9Whk1lrCqwgE5iOQPWMvNCY7nWTM9EGRY6UTufXczk+AZelsoiWvBkwmYGdc4gYCiMERCn38RK6UYLuLNfG1avXIXewlz64ovx7QN6et8MC0VJ3S3NYxxrg4W/HzNZoDsvQMUAAAAASUVORK5CYII="/>
-                            </svg>
+
+                            <?xml version="1.0" encoding="utf-8"?>
+                            <!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                            <svg version="1.1" id="Layer_1_copy" xmlns="http://www.w3.org/2000/svg"
+                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                 y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;"
+                                 xml:space="preserve">
+<path d="M12,4.5c2.3-2.1,6-2,8.2,0.2c2.3,2.3,2.3,5.9,0.2,8.2L12,21.5L3.5,13c-2.1-2.4-2-6,0.2-8.2C6,2.5,9.6,2.4,12,4.5z M18.8,6.2
+	c-1.5-1.5-3.9-1.6-5.5-0.2L12,7.2L10.7,6c-1.6-1.4-4-1.3-5.5,0.2C3.7,7.7,3.6,10,5,11.6l7,7l7-7C20.4,10,20.3,7.7,18.8,6.2z"/>
+</svg>
                         </a>
                         <a class="header__cart" data-quantity="3">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="21" viewBox="0 0 22 21">
-                                <image id="Vector_Smart_Object" data-name="Vector Smart Object" width="22" height="21" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAVCAYAAABCIB6VAAABYklEQVQ4jaWVzysFURTHP+9hQSm9ksQrRrbyc21nYcFGdjYWdhb2/AtSNnZKSvlPEE9I6b1MSpFCbFgQnTqTmbk/vJn51H0z735P3849p3OnFARBAxgiyTKwSwHKwDVwp+tBrWaLmAqtwFzsfwV4BiaNyIyUU+EvQAgMAN1FM05zCgwCG8CtoTZHw2W8AKwaSvN8u4yFG2DHUP1U9KShz7gD2DJUPzOqnqebR6yB1RwNHNdnzWYcz3rCUPyMqnrmMj7OaTymT2sp8mbcCQwDj7L+M84ygSNAScqAY0CEN+BCg9eBKyMiSQuwojtH8iO3mxGlLAIHlrH3ca/le3JlLBwCdWAe6DLUJD8yxsC+ntZZioiarsz4jtmm9d0Dpgz1D2nYmsZNR7u+Gkvwpr7LNPYAX5a4JTUVPoA+4NWXcX/sXS4XuTts9MY226N++Iy3gUvgU0vy7oiTb+OJnkYurRDgFzGyQaYqMiT9AAAAAElFTkSuQmCC"/>
-                            </svg>
+                            <?xml version="1.0" encoding="utf-8"?>
+                            <!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0 {
+        display: none;
+    }
+
+    .st1 {
+        display: inline;
+        fill: none;
+        stroke: #000000;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+</style>
+                                <g id="Layer_1" class="st0">
+	<circle class="st1" cx="9" cy="21" r="1"/>
+                                    <circle class="st1" cx="20" cy="21" r="1"/>
+                                    <path class="st1"
+                                          d="M1,1h4l2.7,13.4c0.2,1,1,1.6,2,1.6h9.7c1,0,1.8-0.7,2-1.6L23,6H6"/>
+</g>
+                                <g id="Layer_1_copy">
+	<g>
+		<circle cx="9" cy="21" r="2"/>
+	</g>
+                                    <g>
+		<circle cx="20" cy="21" r="2"/>
+	</g>
+                                    <g>
+		<path d="M9.6,17c-1.4,0-2.6-1-2.9-2.4L5,6.2c0,0,0-0.1,0-0.1L4.2,2H1C0.4,2,0,1.6,0,1s0.4-1,1-1h4c0.5,0,0.9,0.3,1,0.8L6.8,5H23
+			c0.3,0,0.6,0.1,0.8,0.4C24,5.6,24,5.9,24,6.2l-1.6,8.4c-0.3,1.4-1.6,2.4-3,2.4L9.6,17C9.7,17,9.6,17,9.6,17z M7.2,7l1.4,7.2
+			c0.1,0.5,0.5,0.8,1,0.8h9.7c0.5,0,0.9-0.3,1-0.8L21.8,7H7.2z"/>
+	</g>
+</g>
+</svg>
                         </a>
                     </div>
                     <a href="#!" class="header__hamburger">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="19" viewBox="0 0 23 19">
-                            <image id="Vector_Smart_Object31_copy" data-name="Vector Smart Object31 copy" width="23" height="19" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAATCAYAAAB7u5a2AAAAeElEQVQ4je2VMQqAMAxFn6I3cBKKguAqLu69gTfzSO4OiqtrV0+gi2TuWIMIfWMCLxk+SdJU9Qr0vM+WAkZBLJgM6IDWa4VzKC0d+QrJ+QRYhfmzyC8g91rh3JLzERgU5ItXifwbiWKpdRUlijtQKMhPeRZOQQzgHsl9Dl51KptZAAAAAElFTkSuQmCC"/>
-                        </svg>
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                             x="0px" y="0px"
+                             viewBox="0 0 17.3 12.9" style="enable-background:new 0 0 17.3 12.9;" xml:space="preserve">
+<style type="text/css">
+	.st0 {
+        display: none;
+    }
+
+    .st1 {
+        display: inline;
+        fill: none;
+        stroke: #231F20;
+        stroke-width: 1.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    .st2 {
+        fill: #231F20;
+    }
+</style>
+                            <g id="Layer_1" class="st0">
+	<path class="st1" d="M0.7,0.8h15.8"/>
+                                <path class="st1" d="M0.7,6.3h15.8"/>
+                                <path class="st1" d="M0.7,12.1h15.8"/>
+</g>
+                            <g id="Layer_1_copy">
+	<g>
+		<g>
+			<path class="st2"
+                  d="M16.5,1.5H0.8C0.3,1.5,0,1.2,0,0.8S0.3,0,0.8,0h15.8c0.4,0,0.8,0.3,0.8,0.8S17,1.5,16.5,1.5z"/>
+		</g>
+        <g>
+			<path class="st2"
+                  d="M16.5,7.1H0.8C0.3,7.1,0,6.8,0,6.3s0.3-0.8,0.8-0.8h15.8c0.4,0,0.8,0.3,0.8,0.8S17,7.1,16.5,7.1z"/>
+		</g>
+        <g>
+			<path class="st2"
+                  d="M16.5,12.9H0.8c-0.4,0-0.8-0.3-0.8-0.8s0.3-0.8,0.8-0.8h15.8c0.4,0,0.8,0.3,0.8,0.8S17,12.9,16.5,12.9z"/>
+		</g>
+	</g>
+</g>
+</svg>
                     </a>
                 </div>
             </div>
         </div>
         <nav class="header__nav nav">
             <div class="nav__container">
-                    <ul class="nav__ul">
-                        <li class="nav__li"><a href="#!" class="nav__link">Living Room</a></li>
-                        <li class="nav__li"><a href="#!" class="nav__link">Bedroom</a></li>
-                        <li class="nav__li"><a href="#!" class="nav__link">Dining Room</a></li>
-                        <li class="nav__li"><a href="#!" class="nav__link">Entertainment</a></li>
-                        <li class="nav__li"><a href="#!" class="nav__link">Accents</a></li>
-                        <li class="nav__li"><a href="#!" class="nav__link">Office</a></li>
-                        <li class="nav__li"><a href="#!" class="nav__link">Bathroom</a></li>
-                        <li class="nav__li"><a href="#!" class="nav__link">Outdoor</a></li>
-                        <li class="nav__li"><a href="#!" class="nav__link">Mattresses</a></li>
-                    </ul>
+                <ul class="nav__ul">
+                    <li class="nav__li mobile-visible"><a href="#!" class="nav__link">About Us</a></li>
+                    <li class="nav__li mobile-visible"><a href="#!" class="nav__link">Financing</a></li>
+                    <li class="nav__li mobile-visible"><a href="#!" class="nav__link">Our Stores</a></li>
+                    <li class="nav__li"><a href="#!" class="nav__link">Living Room</a></li>
+                    <li class="nav__li"><a href="#!" class="nav__link">Bedroom</a></li>
+                    <li class="nav__li"><a href="#!" class="nav__link">Dining Room</a></li>
+                    <li class="nav__li"><a href="#!" class="nav__link">Entertainment</a></li>
+                    <li class="nav__li"><a href="#!" class="nav__link">Accents</a></li>
+                    <li class="nav__li"><a href="#!" class="nav__link">Office</a></li>
+                    <li class="nav__li"><a href="#!" class="nav__link">Bathroom</a></li>
+                    <li class="nav__li"><a href="#!" class="nav__link">Outdoor</a></li>
+                    <li class="nav__li"><a href="#!" class="nav__link">Mattresses</a></li>
+                </ul>
             </div>
         </nav>
     </header>
 
     <main class="main app-page">
         <div class="app-page__container">
-            <h1 class="app-page__heading">Tommy Bahama Outdoor</h1>
-            <div class="app-page__breadcrumbs breadcrumbs">
-                <a href="#!" class="breadcrumbs__link">Home</a>
-                <a href="#!" class="breadcrumbs__link">All Products</a>
-                <a href="#!" class="breadcrumbs__link">Ttommy Bbahama Outdoor</a>
+            <div class="app-block-top">
+                <h1 class="app-page__heading app-block-top__heading">Tommy Bahama Outdoor</h1>
+                <div class="app-page__breadcrumbs app-block-top__breadcrumbs breadcrumbs">
+                    <a href="#!" class="breadcrumbs__link">Home</a>
+                    <a href="#!" class="breadcrumbs__link">All Products</a>
+                    <a href="#!" class="breadcrumbs__link">Ttommy Bbahama Outdoor</a>
+                </div>
             </div>
-            <div class="app-page__slider">
+            <div class="app-page__slider app-block-swiper">
                 <!-- Slider main container -->
                 <div class="swiper mySwiper">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
-                        <div class="swiper-slide"><img src="assets/img/slider1.png" alt="Product" loading="lazy"
-                                                       class="responsive"></div>
-                        <div class="swiper-slide"><img src="assets/img/slider1.png" alt="Product" loading="lazy"
-                                                       class="responsive"></div>
-                        <div class="swiper-slide"><img src="assets/img/slider1.png" alt="Product" loading="lazy"
-                                                       class="responsive"></div>
-                        <div class="swiper-slide"><img src="assets/img/slider1.png" alt="Product" loading="lazy"
-                                                       class="responsive"></div>
+                        <div class="swiper-slide">
+                            <picture>
+                                <source media="(max-width:450px)" srcset="assets/img/slider1-mobile.png">
+                                <source media="(max-width:768px)" srcset="assets/img/slider1-tablet.png">
+                                <img src="assets/img/slider1.png" loading="lazy" alt="Product" class="img-responsive">
+                            </picture>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture>
+                                <source media="(max-width:450px)" srcset="assets/img/slider1-mobile.png">
+                                <source media="(max-width:768px)" srcset="assets/img/slider1-tablet.png">
+                                <img src="assets/img/slider1.png" loading="lazy" alt="Product" class="img-responsive">
+                            </picture>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture>
+                                <source media="(max-width:450px)" srcset="assets/img/slider1-mobile.png">
+                                <source media="(max-width:768px)" srcset="assets/img/slider1-tablet.png">
+                                <img src="assets/img/slider1.png" loading="lazy" alt="Product" class="img-responsive">
+                            </picture>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture>
+                                <source media="(max-width:450px)" srcset="assets/img/slider1-mobile.png">
+                                <source media="(max-width:768px)" srcset="assets/img/slider1-tablet.png">
+                                <img src="assets/img/slider1.png" loading="lazy" alt="Product" class="img-responsive">
+                            </picture>
+                        </div>
                     </div>
                     <!-- If we need pagination -->
                     <div class="swiper-pagination"></div>
 
                     <!-- If we need navigation buttons -->
                     <div class="swiper-button-prev">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31"
-                             height="31" viewBox="0 0 31 31">
-                            <image id="Vector_Smart_Object1_copy_16" data-name="Vector Smart Object1 copy 16" width="31"
-                                   height="31"
-                                   xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAfCAYAAAAfrhY5AAABZ0lEQVRIic2XPWrDMBSAv7pDN889QsdA09Khu5fmBCGDoUtukDGbL9QxU+hg7BQKWXqADM0NEkj9ioxU0ihW7WBH/cBgnuT3Yf3YTxciQk36wBPwCNwA18Al8AV8Ah/AK/ACLGqlVHLHFYjISESW0oylfi5w5HbKeyKyaCg9ZKHzHMtfKY9FZGOlOo2Nzmd5rICITFqSHjL5Sx5bj7TLrxHYX+09IAWurFXZHlvgAXhXGY08ADLgtkOx4Q24B4pAB4ZnEqM9w/JOj3/TffxDnucSx7Gs12urzcHSLLh+dR83aZpKGIZq3mQ+nzv7HuFOyad2vJk4SRKrvQZTJZ95ECtmSr6ywg5aEitWSr6zwhVkWdaWWLHDCjkYDAalOIqi6k4N8P7mXufc62r3us+9fuG8ftvRxd45Ge0XE17/5wXwrCuNLtlqT2He2KBKm3HH8rEpoUr+U/XqvW73fmIxV6dnNX+nVOAb0nRueoa5Li0AAAAASUVORK5CYII="/>
-                        </svg>
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                             x="0px" y="0px"
+                             viewBox="0 0 53.1 53.1" style="enable-background:new 0 0 53.1 53.1;" xml:space="preserve">
+<style type="text/css">
+	.st0 {
+        display: none;
+    }
+
+    .st1 {
+        display: inline;
+        fill: #FFFFFF;
+    }
+
+    .st2 {
+        display: inline;
+        fill: none;
+        stroke: #000000;
+        stroke-width: 3;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    .st3 {
+        fill: #FFFFFF;
+    }
+</style>
+                            <g id="Layer_1" class="st0">
+	<circle class="st1" cx="26.5" cy="26.5" r="26.5"/>
+                                <polyline class="st2" points="23.2,17.5 32.2,26.5 23.2,35.5 	"/>
+</g>
+                            <g id="Layer_1_copy">
+	<g>
+		<circle class="st3" cx="26.5" cy="26.5" r="26.5"/>
+	</g>
+                                <g>
+		<path d="M23.2,37c-0.4,0-0.8-0.1-1.1-0.4c-0.6-0.6-0.6-1.5,0-2.1l7.9-7.9l-7.9-7.9c-0.6-0.6-0.6-1.5,0-2.1c0.6-0.6,1.5-0.6,2.1,0
+			l9,9c0.6,0.6,0.6,1.5,0,2.1l-9,9C24,36.9,23.6,37,23.2,37z"/>
+	</g>
+</g>
+</svg>
                     </div>
                     <div class="swiper-button-next">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31"
-                             height="31" viewBox="0 0 31 31">
-                            <image id="Vector_Smart_Object1_copy_15" data-name="Vector Smart Object1 copy 15" width="31"
-                                   height="31"
-                                   xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAfCAYAAAAfrhY5AAABY0lEQVRIic2XPWrDQBBGX5QineocIaUhTkiR3k18AuNCkMY3cOlOF0rpSqQQkgIBNzmAi/gGNjiasGIXHG+saI2kzQcLYpaZN/ur2QsRoaGGwBPwCNwA18Al8AV8Ah/AK/ACFI1CKnhNC0RkKiIrcdNK+wU1sWvhAxEpHKHHKnSc3+KfhEcisrVCnaetjmdxLIOIzFuCHmv+FzyyXNrVjxk43O0DIAWurF3ZnnbAA/CuIhp4AGTAbYdgozfgHigDbZj0BEZzJtWXnv/G53iz2UgURZLnudXnoJXZcHcuXkmSqHWSMAwlTVOr30FDBV+4esVx3EYCCwVfWuZ+Elgq+Noy95PAWsH3lvnMBLIss/prtOd0X3ONRqMqgfF47OTnfeRe19zrbvd6zr3ecF7vdnSx16emh8WE1/95CTzrSqNL7TSnNCM2UqXNrGP4zJRQlf5T9eq9bvf+YjGt07eav1cq8A0nWm56hPYBJAAAAABJRU5ErkJggg=="/>
-                        </svg>
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                             x="0px" y="0px"
+                             viewBox="0 0 53.1 53.1" style="enable-background:new 0 0 53.1 53.1;" xml:space="preserve">
+<style type="text/css">
+	.st0 {
+        display: none;
+    }
+
+    .st1 {
+        display: inline;
+        fill: #FFFFFF;
+    }
+
+    .st2 {
+        display: inline;
+        fill: none;
+        stroke: #000000;
+        stroke-width: 3;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    .st3 {
+        fill: #FFFFFF;
+    }
+</style>
+                            <g id="Layer_1" class="st0">
+	<circle class="st1" cx="26.5" cy="26.5" r="26.5"/>
+                                <polyline class="st2" points="23.2,17.5 32.2,26.5 23.2,35.5 	"/>
+</g>
+                            <g id="Layer_1_copy">
+	<g>
+		<circle class="st3" cx="26.5" cy="26.5" r="26.5"/>
+	</g>
+                                <g>
+		<path d="M23.2,37c-0.4,0-0.8-0.1-1.1-0.4c-0.6-0.6-0.6-1.5,0-2.1l7.9-7.9l-7.9-7.9c-0.6-0.6-0.6-1.5,0-2.1c0.6-0.6,1.5-0.6,2.1,0
+			l9,9c0.6,0.6,0.6,1.5,0,2.1l-9,9C24,36.9,23.6,37,23.2,37z"/>
+	</g>
+</g>
+</svg>
                     </div>
 
                     <!-- If we need scrollbar -->
                     <div class="swiper-scrollbar"></div>
                 </div>
             </div>
-            <img src="assets/img/abaco.png" alt="Abaco" loading="lazy" class="app-page__intro">
-            <p class="app-page__text">
-                Soft contemporary designs feature clean lines and an elegant fusion of materials that convey the
-                sophisticated look of English walnut and woven leather. Aluminum frames feature an artisan dry-brushed
-                finish that replicates the unique grain lines in wood. Flat woven all-weather wicker, in a refined
-                basket weave pattern, is finished to emulate the rich look of leather. Occasional tables feature durable
-                white sintered stone tops with subtle gray veining, offering the classic look of Carrera marble. The
-                Abaco collection represents a designer approach to outdoor living with an assortment comprised of
-                28-pieces, including bistro and large-scale dining, occasional tables, deep seating, and a customizable
-                sectional.
-            </p>
-            <a href="#!" class="app-page__btn btn btn_dark">Explore Catalog</a>
+            <div class="app-block-description">
+                <img src="assets/img/abaco.png" alt="Abaco" loading="lazy"
+                     class="app-page__intro app-block-description__intro">
+                <p class="app-page__text app-block-description__text">
+                    Soft contemporary designs feature clean lines and an elegant fusion of materials that convey the
+                    sophisticated look of English walnut and woven leather. Aluminum frames feature an artisan
+                    dry-brushed
+                    finish that replicates the unique grain lines in wood. Flat woven all-weather wicker, in a refined
+                    basket weave pattern, is finished to emulate the rich look of leather. Occasional tables feature
+                    durable
+                    white sintered stone tops with subtle gray veining, offering the classic look of Carrera marble. The
+                    Abaco collection represents a designer approach to outdoor living with an assortment comprised of
+                    28-pieces, including bistro and large-scale dining, occasional tables, deep seating, and a
+                    customizable
+                    sectional.
+                </p>
+                <a href="#!" class="app-page__btn app-block-description__btn btn btn_dark">Explore Catalog</a>
+            </div>
             <div class="app-page__catalog catalog">
                 <div class="catalog__item catalog__item_mobile">
                     <a href="#!" class="catalog__link">
@@ -383,12 +781,160 @@
     <footer class="footer">
         <div class="footer__container">
             <div class="footer__logo">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="391"
-                     height="36" viewBox="0 0 391 36">
-                    <image id="Vector_Smart_Object11_copy_5" data-name="Vector Smart Object11 copy 5" width="391"
-                           height="36"
-                           xlink:href="data:img/png;base64,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"/>
-                </svg>
+                <?xml version="1.0" encoding="utf-8"?>
+                <!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 197.5 17.1" style="enable-background:new 0 0 197.5 17.1;" xml:space="preserve">
+<style type="text/css">
+	.st0 {
+        display: none;
+    }
+
+    .st1 {
+        display: inline;
+    }
+
+    .st2 {
+        font-family: 'Roboto-Medium';
+    }
+
+    .st3 {
+        font-size: 15.3463px;
+    }
+
+    .st4 {
+        font-family: 'Roboto-Light';
+    }
+
+    .st5 {
+        display: inline;
+        fill: #FFFFFF;
+    }
+
+    .st6 {
+        font-family: 'Roboto-Black';
+    }
+
+    .st7 {
+        font-size: 9px;
+    }
+
+    .st8 {
+        display: inline;
+        fill: none;
+        stroke: #FFFFFF;
+        stroke-width: 0.4;
+        stroke-miterlimit: 10;
+    }
+
+    .st9 {
+        fill: #FFFFFF;
+    }
+</style>
+                    <g id="Layer_1_1_" class="st0">
+	<rect y="0" class="st1" width="17.1" height="17.1"/>
+                        <g class="st1">
+		<text transform="matrix(1.1111 0 0 1 20.9087 13.6999)" class="st2 st3">Lee`s</text>
+                            <text transform="matrix(1.1111 0 0 1 63.686 13.6999)" class="st4 st3">Furniture &amp; Bedding</text>
+	</g>
+                        <text transform="matrix(1 0 0 1 2.4673 13.9366)" class="st5 st6 st7">L</text>
+                        <text transform="matrix(1 0 0 1 10.1226 9.2335)" class="st5 st6 st7">F</text>
+                        <line class="st8" x1="2.4" y1="2.4" x2="14.7" y2="14.7"/>
+</g>
+                    <g id="Layer_1_copy">
+	<g>
+		<g>
+			<g>
+				<path class="st9" d="M26.1,12.2h5.5v1.5H24V2.8h2.1V12.2z"/>
+                <path class="st9" d="M36.4,13.8c-1.3,0-2.3-0.4-3.1-1.1s-1.2-1.7-1.2-2.9V9.6c0-0.8,0.2-1.5,0.5-2.2C32.9,6.8,33.4,6.3,34,6
+					c0.6-0.4,1.3-0.5,2.1-0.5c1.2,0,2.2,0.4,2.8,1.1c0.7,0.7,1,1.7,1,3v0.7H34c0.1,0.7,0.3,1.2,0.7,1.6c0.4,0.4,1,0.6,1.6,0.6
+					c0.9,0,1.7-0.3,2.3-1l1.1,0.9c-0.4,0.5-0.8,0.9-1.4,1.1C37.8,13.7,37.1,13.8,36.4,13.8z M36.1,6.9c-0.6,0-1,0.2-1.3,0.5
+					s-0.6,0.8-0.7,1.5H38V8.8c0-0.6-0.2-1.1-0.5-1.4C37.1,7.1,36.7,6.9,36.1,6.9z"/>
+                <path class="st9" d="M45,13.8c-1.3,0-2.3-0.4-3.1-1.1s-1.2-1.7-1.2-2.9V9.6c0-0.8,0.2-1.5,0.5-2.2c0.3-0.6,0.8-1.1,1.5-1.5
+					c0.6-0.4,1.3-0.5,2.1-0.5c1.2,0,2.2,0.4,2.8,1.1c0.7,0.7,1,1.7,1,3v0.7h-5.9c0.1,0.7,0.3,1.2,0.7,1.6c0.4,0.4,1,0.6,1.6,0.6
+					c0.9,0,1.7-0.3,2.3-1l1.1,0.9c-0.4,0.5-0.8,0.9-1.4,1.1C46.5,13.7,45.8,13.8,45,13.8z M44.8,6.9c-0.6,0-1,0.2-1.3,0.5
+					s-0.6,0.8-0.7,1.5h3.9V8.8c0-0.6-0.2-1.1-0.5-1.4C45.8,7.1,45.4,6.9,44.8,6.9z"/>
+                <path class="st9" d="M51.8,4.5h-1.7l-2.2-2.3h2.3L51.8,4.5z"/>
+                <path class="st9" d="M58,11.5c0-0.3-0.1-0.6-0.4-0.7c-0.3-0.2-0.8-0.3-1.5-0.4c-0.7-0.1-1.3-0.3-1.7-0.5c-1-0.4-1.5-1.1-1.5-1.9
+					c0-0.7,0.3-1.3,1-1.8s1.5-0.7,2.5-0.7c1.1,0,1.9,0.2,2.6,0.7c0.7,0.5,1,1.1,1,1.9h-2c0-0.3-0.1-0.6-0.4-0.9
+					c-0.3-0.2-0.7-0.3-1.1-0.3c-0.4,0-0.8,0.1-1.1,0.3C55.1,7.4,55,7.6,55,7.9s0.1,0.5,0.4,0.7c0.3,0.2,0.8,0.3,1.6,0.5
+					s1.4,0.3,1.9,0.6c0.5,0.2,0.8,0.5,1,0.8S60,11,60,11.4c0,0.7-0.3,1.3-1,1.8s-1.6,0.7-2.6,0.7c-0.7,0-1.4-0.1-2-0.4
+					c-0.6-0.2-1-0.6-1.3-1s-0.5-0.9-0.5-1.4h2c0,0.4,0.2,0.8,0.5,1s0.8,0.3,1.3,0.3s0.9-0.1,1.2-0.3C57.8,12,58,11.8,58,11.5z"/>
+			</g>
+            <g>
+				<path class="st9" d="M71.9,8.6h-5.7v5.1h-1V2.8h7.5v0.8h-6.5v4.2h5.7V8.6z"/>
+                <path class="st9" d="M79.4,12.7c-0.6,0.8-1.6,1.2-2.9,1.2c-1,0-1.7-0.3-2.2-0.8s-0.8-1.2-0.8-2.2V5.6h1v5.2
+					c0,1.5,0.7,2.3,2.1,2.3s2.4-0.5,2.7-1.6V5.6h1v8.1h-1L79.4,12.7z"/>
+                <path class="st9" d="M86.5,6.4c-0.2,0-0.4-0.1-0.7-0.1c-0.6,0-1.1,0.2-1.6,0.5c-0.4,0.3-0.7,0.8-0.9,1.4v5.6h-1V5.6h1v1.3
+					c0.5-1,1.4-1.4,2.5-1.4c0.3,0,0.5,0,0.7,0.1V6.4z"/>
+                <path class="st9" d="M88.4,5.6V7c0.3-0.5,0.8-0.9,1.3-1.1c0.5-0.3,1.1-0.4,1.7-0.4c1,0,1.7,0.2,2.2,0.7s0.7,1.2,0.7,2.2v5.3h-1
+					V8.4c0-0.7-0.2-1.3-0.5-1.6s-0.9-0.5-1.6-0.5c-0.6,0-1.2,0.2-1.6,0.5c-0.5,0.3-0.8,0.8-1.1,1.4v5.6h-1V5.6H88.4z"/>
+                <path class="st9" d="M96,3.3c0-0.2,0.1-0.3,0.2-0.4c0.1-0.1,0.3-0.2,0.5-0.2s0.4,0.1,0.5,0.2c0.1,0.1,0.2,0.3,0.2,0.4
+					s-0.1,0.3-0.2,0.4c-0.1,0.1-0.3,0.2-0.5,0.2s-0.4-0.1-0.5-0.2S96,3.4,96,3.3z M97.2,13.7h-1V5.6h1V13.7z"/>
+                <path class="st9" d="M100.8,3.5v2.1h1.9v0.7h-1.9v5.4c0,0.5,0.1,0.8,0.3,1c0.2,0.2,0.5,0.3,0.9,0.3c0.2,0,0.4,0,0.8-0.1v0.7
+					c-0.3,0.1-0.6,0.1-1.1,0.1c-0.7,0-1.2-0.2-1.5-0.5c-0.3-0.4-0.5-0.9-0.5-1.6V6.3H98V5.6h1.7V3.5H100.8z"/>
+                <path class="st9" d="M109.8,12.7c-0.6,0.8-1.6,1.2-2.9,1.2c-1,0-1.7-0.3-2.2-0.8s-0.8-1.2-0.8-2.2V5.6h1v5.2
+					c0,1.5,0.7,2.3,2.1,2.3s2.4-0.5,2.7-1.6V5.6h1v8.1h-1L109.8,12.7z"/>
+                <path class="st9" d="M116.8,6.4c-0.2,0-0.4-0.1-0.7-0.1c-0.6,0-1.1,0.2-1.6,0.5c-0.4,0.3-0.7,0.8-0.9,1.4v5.6h-1V5.6h1v1.3
+					c0.5-1,1.4-1.4,2.5-1.4c0.3,0,0.5,0,0.7,0.1V6.4z"/>
+                <path class="st9" d="M121,13.8c-0.8,0-1.5-0.2-2.1-0.5s-1.1-0.8-1.4-1.4c-0.3-0.6-0.5-1.3-0.5-2V9.6c0-0.8,0.2-1.5,0.5-2.1
+					s0.8-1.1,1.4-1.5s1.2-0.5,1.9-0.5c1.1,0,2,0.3,2.6,1s1,1.6,1,2.8v0.5H118V10c0,0.9,0.3,1.7,0.9,2.3s1.3,0.9,2.2,0.9
+					c0.5,0,1-0.1,1.4-0.3s0.8-0.5,1.1-0.8l0.6,0.4C123.5,13.4,122.4,13.8,121,13.8z M120.8,6.2c-0.7,0-1.4,0.2-1.9,0.7
+					s-0.8,1.2-0.9,2h5.4V8.8c0-0.8-0.3-1.4-0.7-1.9S121.6,6.2,120.8,6.2z"/>
+                <path class="st9" d="M131.5,7.8c-0.5-0.5-0.8-1-1.1-1.4s-0.3-0.8-0.3-1.2c0-0.8,0.3-1.4,0.8-1.8s1.2-0.7,2-0.7s1.4,0.2,1.9,0.6
+					s0.7,0.9,0.7,1.5c0,0.7-0.5,1.4-1.4,2.1l-1.3,0.9l3.3,3.5c0.5-0.7,0.8-1.6,0.8-2.5h0.9c0,1.2-0.4,2.3-1.1,3.1l1.7,1.7h-1.2
+					l-1-1.1c-0.4,0.4-0.9,0.7-1.5,0.9s-1.2,0.3-1.8,0.3c-1.2,0-2.1-0.3-2.7-0.8s-1-1.2-1-2.1c0-0.5,0.2-1,0.5-1.5s1-1,1.8-1.6
+					L131.5,7.8z M132.8,13.1c0.5,0,1-0.1,1.5-0.3s0.9-0.5,1.3-0.8l-3.4-3.5l-0.1-0.1l-0.4,0.3c-1.1,0.8-1.6,1.6-1.6,2.3
+					s0.2,1.2,0.7,1.6C131.3,12.9,132,13.1,132.8,13.1z M131.1,5.1c0,0.6,0.4,1.3,1.1,2.2l1.1-0.7c0.4-0.2,0.6-0.5,0.9-0.8
+					c0.2-0.3,0.3-0.6,0.3-1s-0.1-0.7-0.4-1s-0.7-0.4-1.2-0.4s-1,0.2-1.3,0.5C131.3,4.2,131.1,4.6,131.1,5.1z"/>
+                <path class="st9" d="M143.3,13.7V2.8h3.6c1.3,0,2.3,0.2,3,0.7s1,1.2,1,2.1c0,0.6-0.2,1.1-0.5,1.5S149.6,7.8,149,8
+					c0.7,0.1,1.3,0.5,1.7,0.9s0.6,1,0.6,1.7c0,1-0.3,1.7-1,2.3s-1.7,0.8-2.9,0.8H143.3z M144.3,7.7h2.8c0.9,0,1.5-0.2,2-0.5
+					s0.7-0.9,0.7-1.5c0-0.7-0.2-1.2-0.7-1.6c-0.5-0.3-1.2-0.5-2.2-0.5h-2.6V7.7z M144.3,8.5V13h3.1c0.9,0,1.6-0.2,2.1-0.6
+					s0.8-1,0.8-1.7s-0.2-1.2-0.7-1.6s-1.2-0.6-2-0.6C147.6,8.5,144.3,8.5,144.3,8.5z"/>
+                <path class="st9" d="M156.5,13.8c-0.8,0-1.5-0.2-2.1-0.5s-1.1-0.8-1.4-1.4c-0.3-0.6-0.5-1.3-0.5-2V9.6c0-0.8,0.2-1.5,0.5-2.1
+					s0.8-1.1,1.4-1.5c0.6-0.4,1.2-0.5,1.9-0.5c1.1,0,2,0.3,2.6,1s1,1.6,1,2.8v0.5h-6.4V10c0,0.9,0.3,1.7,0.9,2.3
+					c0.6,0.6,1.3,0.9,2.2,0.9c0.5,0,1-0.1,1.4-0.3s0.8-0.5,1.1-0.8l0.6,0.4C159,13.4,157.9,13.8,156.5,13.8z M156.3,6.2
+					c-0.7,0-1.4,0.2-1.9,0.7s-0.8,1.2-0.9,2h5.4V8.8c0-0.8-0.3-1.4-0.7-1.9S157.1,6.2,156.3,6.2z"/>
+                <path class="st9" d="M160.9,9.6c0-1.3,0.3-2.3,0.9-3c0.6-0.7,1.5-1.1,2.5-1.1c1.2,0,2.1,0.4,2.8,1.3V2.2h1v11.5h-0.9v-1.1
+					c-0.6,0.8-1.6,1.2-2.8,1.2c-1,0-1.9-0.4-2.5-1.1C161.3,11.9,160.9,10.9,160.9,9.6L160.9,9.6z M161.9,9.7c0,1,0.2,1.8,0.7,2.4
+					s1.1,0.9,1.9,0.9c1.2,0,2.1-0.5,2.6-1.5V7.8c-0.5-1.1-1.4-1.6-2.6-1.6c-0.8,0-1.5,0.3-2,0.9C162.1,7.7,161.9,8.6,161.9,9.7z"/>
+                <path class="st9" d="M169.7,9.6c0-1.3,0.3-2.3,0.9-3c0.6-0.7,1.5-1.1,2.5-1.1c1.2,0,2.1,0.4,2.8,1.3V2.2h1v11.5H176v-1.1
+					c-0.6,0.8-1.6,1.2-2.8,1.2c-1,0-1.9-0.4-2.5-1.1C170.1,11.9,169.7,10.9,169.7,9.6L169.7,9.6z M170.7,9.7c0,1,0.2,1.8,0.7,2.4
+					s1.1,0.9,1.9,0.9c1.2,0,2.1-0.5,2.6-1.5V7.8c-0.5-1.1-1.4-1.6-2.6-1.6c-0.8,0-1.5,0.3-2,0.9C170.9,7.7,170.7,8.6,170.7,9.7z"/>
+                <path class="st9" d="M178.8,3.3c0-0.2,0.1-0.3,0.2-0.4c0.1-0.1,0.3-0.2,0.5-0.2s0.4,0.1,0.5,0.2c0.1,0.1,0.2,0.3,0.2,0.4
+					s-0.1,0.3-0.2,0.4c-0.1,0.1-0.3,0.2-0.5,0.2s-0.4-0.1-0.5-0.2C178.8,3.6,178.8,3.4,178.8,3.3z M180,13.7h-1V5.6h1V13.7z"/>
+                <path class="st9" d="M182.9,5.6V7c0.3-0.5,0.8-0.9,1.3-1.1c0.5-0.3,1.1-0.4,1.7-0.4c1,0,1.7,0.2,2.2,0.7s0.7,1.2,0.7,2.2v5.3h-1
+					V8.4c0-0.7-0.2-1.3-0.5-1.6s-0.9-0.5-1.6-0.5c-0.6,0-1.2,0.2-1.6,0.5c-0.5,0.3-0.8,0.8-1.1,1.4v5.6h-1V5.6H182.9z"/>
+                <path class="st9" d="M190.3,9.6c0-1.3,0.3-2.3,0.9-3c0.6-0.7,1.5-1.1,2.5-1.1c1.2,0,2.2,0.4,2.8,1.3l0.1-1.2h0.9v7.9
+					c0,1-0.3,1.9-1,2.5s-1.5,0.9-2.6,0.9c-0.6,0-1.2-0.1-1.8-0.4s-1-0.6-1.3-1l0.6-0.5c0.7,0.8,1.5,1.2,2.5,1.2
+					c0.8,0,1.5-0.2,1.9-0.7s0.7-1.1,0.7-1.8v-1c-0.6,0.8-1.6,1.2-2.8,1.2c-1,0-1.9-0.4-2.5-1.1c-0.6-0.7-0.9-1.8-0.9-3L190.3,9.6
+					L190.3,9.6z M191.3,9.7c0,1,0.2,1.8,0.7,2.4s1.1,0.9,1.9,0.9c1.2,0,2.1-0.5,2.6-1.5V7.8c-0.2-0.5-0.6-0.9-1-1.2
+					c-0.4-0.3-1-0.4-1.6-0.4c-0.8,0-1.5,0.3-2,0.9C191.5,7.7,191.3,8.6,191.3,9.7z"/>
+			</g>
+		</g>
+        <path class="st9" d="M0,0v17.1h17.1V0H0z M7.2,13.9H3V7.5h1.5v5.2h2.7V13.9z M14.6,14.9L2.3,2.5l0.3-0.3l12.3,12.3L14.6,14.9z
+			 M14.9,4h-2.7v1.5h2.5v1.2h-2.5v2.5h-1.5V2.8H15V4H14.9z"/>
+	</g>
+</g>
+                    <g id="Layer_3" class="st0">
+	<g class="st1">
+		<text transform="matrix(1.1111 0 0 1 22.3716 113.7492)" class="st2 st3">Lee`s</text>
+        <text transform="matrix(1.1111 0 0 1 65.5869 113.7492)" class="st4 st3">Furniture &amp; Bedding</text>
+	</g>
+                        <rect x="-4.1" y="95.8" class="st1" width="22.9" height="22.9"/>
+                        <text transform="matrix(1 0 0 1 -0.2112 111.4181)" class="st5 st6"
+                              style="font-size:12px;">L</text>
+                        <text transform="matrix(1 0 0 1 8.5445 111.4181)" class="st5 st6"
+                              style="font-size:12px;">F</text>
+</g>
+                    <g id="Layer_2_1_" class="st0">
+	<text transform="matrix(1.1111 0 0 1 66.1606 100.9328)" class="st1 st4 st3">Lee`s</text>
+                        <text transform="matrix(1.1111 0 0 1 67.6924 109.1769)" class="st1 st2"
+                              style="font-size:7.2px;">Furniture</text>
+</g>
+</svg>
+
                 <p class="footer__copyright">
                     Copyright© 2022
                 </p>
@@ -414,32 +960,83 @@
             </div>
             <div class="footer__socials">
                 <a href="#!" target="_blank" class="footer__social">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36"
-                         height="36" viewBox="0 0 36 36">
-                        <image id="Vector_Smart_Object1" data-name="Vector Smart Object1" width="36" height="36"
-                               xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAACpklEQVRYhc2YPWsUURSG3zMssUgQy0SQrAQ2ARubgCkkgkVCSLDbLmj8DZZWaSxtBAN+pbDV3sZGxDWFiRAhomBAVlMYFVExCfjKWc/KzD2zs7Of5oFt7j33Pc/Ox52dFbQIyVMAZgCcBTAB4ASAQUv5AeA9gC0ATwA8EpFXrfZoCskBkksk19k667Z2oFsyCyTftSESohkLrkELIoMk77vYztHMQdcwC5IjJF/2QKaOZo9kKCSOzDDJty6i+2iPYSeQcpo2+iBTZyM8fRII3QNwyZnmYwfALQCPAXwAsA9gCICemlGbS2NVRJbcOMk555+fmySPuNBkfhZzYXGB5JuMBVmsuu4pZKyn9S7EhRZdST6+kTzm23typC3GhdbcdD7uuM7Joz5KsmifZqzVF5aaFGZx0Zn8zSyT/JyxrhGlgj0o2+VjiozeWXdjD9xWmIkATHcgtO9GgGKbMsq0Co274c4odLB6PLJvdFgoRrabHhaGRK/2nDIPAFwJxnZE5Fd8wH6IHQ/qzgO47RJT0PO9ByBz2ze+i8i2Gw0QEb3QE3Ukj7rCdPb0lFVTp7rLRM60amQ/yHtNKWf+lgpV3HD3ybu1VPSiPgPgmZvy6OvNi2D0qohsxgdIngRwPai74NLSmdIAldpu8GxpxrkwluTpJmsaoQ4SiYje9iupvv1lRV0ia6lCu/9RZrd+UGpCIvIVwLIr6x/L5oAo1vJGn+64kIr1RkJIRH4DKAP45Jb0Du1Vtt5JIZPSW3teHxN9kNEe89bzH1FYJSLPAcwC+NJDGc2etV4JnJBJPa1tUsCmm+wczZyyHo5UIZN6DWASwDUAB66gdQ4sa9Ky24fkmL7ykPwZ7LJ5dmpdo2vHun6s9aXQ/g17SLKaIaRzWnM574tkDQB/ALVLcNFdet4dAAAAAElFTkSuQmCC"/>
-                    </svg>
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 20 19.9" style="enable-background:new 0 0 20 19.9;" xml:space="preserve">
+<style type="text/css">
+	.st0 {
+        fill: #FFFFFF;
+    }
+</style>
+                        <path class="st0" d="M10,0C4.5,0,0,4.5,0,10c0,5,3.7,9.1,8.4,9.9v-7H5.9V10h2.5V7.8c0-2.5,1.5-3.9,3.8-3.9c1.1,0,2.2,0.2,2.2,0.2
+	v2.5h-1.3c-1.2,0-1.6,0.8-1.6,1.6V10h2.8l-0.4,2.9h-2.3v7C16.3,19.1,20,15,20,10C20,4.5,15.5,0,10,0z"/>
+</svg>
                 </a>
                 <a href="#!" target="_blank" class="footer__social">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36"
-                         height="36" viewBox="0 0 36 36">
-                        <image id="Vector_Smart_Object" data-name="Vector Smart Object" width="36" height="36"
-                               xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAACC0lEQVRYhc2Yv0scQRTHv2+QS0Ss01yQgMWJha2QwtJImmBjSiuLIBZW/hViZeuVprKSa2NhfxaikMYfvRBRDmy+YfTtcTdvcG/37vbmU87OvveZX7szIygIyUUAawC+AmgA+AxgRqM8A7gHcA3gHEBLRC6L5siFZI3kFsk2i9PWd2ujklkneVNCJMTHWDcJCojMkjw2YYfHx5w1Cd+DZJ3k5RhkMnzs+jsKfT3jZe5MiNFzlyulwzTOnon1VN/wSSB0DGAj8PwHoB2U+eX+ybSoHL9F5Kd5U1dTjD+Rus1IvWHorj6nCfw3Yt9YVsd+9p1ymnITwNwEhebUoSv0y1SpnlcHp/+mpYLpz/R/NUqWvIvTH2UhRORIRBYAfAGwDeAUQGcEcmt+Qp/krA6zymKQ/EhyleQByb8mymCc+EBXOVUHEgohOU9yh2SLZMdEjXPlX3yKPhpSqBeS0yS/k3ww0ft5cj2bq7EhIh0R8fPsMSfHjDNFE8bptjMVnp3ugVPhfko/cI2Sk3UPwLeguCkiTVN5MK6n9HTwo2QA35CVoGyYVXnuh6xliidHy+m56SIBmQvvki37Q/O4el4dMiE/CW8nKHOrDm9CIvICYNdUq45ddSi9yc+IbfZ9a29MzTeWAXwIyuKbfCRyDDIkdVDs6al0jtLB8KVx2RCIpXEdE0hVdmGV1pUegP/hCz/e0mQt+gAAAABJRU5ErkJggg=="/>
-                    </svg>
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
+<style type="text/css">
+	.st0 {
+        fill: #FFFFFF;
+    }
+</style>
+                        <path class="st0" d="M64,0C28.7,0,0,28.7,0,64c0,35.3,28.7,64,64,64c35.3,0,64-28.7,64-64C128,28.7,99.3,0,64,0z M96.6,69.5v6.2
+	v24.8H72.7V75.7H54.8v24.8h-7.1H31v-47V27.4h16.7v17l48.8,14V69.5z"/>
+</svg>
                 </a>
                 <a href="#!" target="_blank" class="footer__social">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36"
-                         height="36" viewBox="0 0 36 36">
-                        <image id="Vector_Smart_Object5" data-name="Vector Smart Object5" width="36" height="36"
-                               xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAADYklEQVRYhc2YTUgVURTH/2d8iR/pog9J0FpkZgqtbOUmIiLBQIzoY9EiSlq1qkWBK7E2Ea0rciNmtKwQoi8iV0m9ElHKRSoVkhUEEmS9f1w905s3d+48xzTeD4Y33PNxz7tf59wRJIRkE4BWAC0AGgDUAihXL3MApgGMAxgCMCgio0n7yAvJYpKdJNNMTlpti1cqmA6S75cRSBjjo8PqIEEgFSQHLLf/jvFZYXUYB8kakqOrEIyP8V0TE0LOyJhgpiwXK89U3qB0mlZzZKJGKmf6JBTQAIDDVqSLfAFwC8ALAN8taTSVAHYBOApgfaQGcFtEjlituptc9JKstIyWiLFVHy7+7j7RYMwZ8RbAlogubojIKdXzAOzUw7DI0szltx6Sb0Qko/bXAZy0NIFJAPUi8tMfnU5H5B9JlqlOHcnXlkY8GbWpUx9l6jOKzuB0uU7gHpWnSI5Z0nguq90htU2prx6HVdoPpskSZWlTnd2WZPHf95HcS3ITyWqS+7QtoznP72PW+ND3NstTlqaUJkoXM9q+OST/BqBDRJ6G2j8BeEDyGoDjJK8COKg7zPcxAzetKc3aLua13QvIaTrxgyG5DsAelT0Wka8i8syMki7qopCPeUdfhhZPS4gk9InIEw2mXXfIHX0mtQ0i8hzAzYS+Gzzdwkno1WCqAfQDWBuwNe/9KsMyAqr1AsXVUhlRPbPgSyNsSlVmeGVJ4yn3YsXR/NLWVKR0kTX6m7EkefC07ExCo+o+cnRoFv1DfU+6Puc83QlJWEiEImJSzbkIu7MqMxyzpPFMp7QgT/JPTpucJCIjInKFpNlxB1R2V0QW1g3J7QDOWNbxjKf0dtDuUItKoGZ93CO5X0TGNICcxUuyHsB9AGWWdbRPnyEzZYNWc5YqffsQajen7rDmpUaSos8Okt0AXgLYGrLxfVTBzaD/j1zJtUvlJSSnLWmWeX1cGNsS9dXl0EkHh9hVfkz49ymSzSQ/WBr5MTbNyN7vJhwWC+XHUgq0SyJyQfVKNW9ttLSi+az57YfaXwRwPkIzt0BD/hK2269nloPWRd2W1yy5JWwgqLgi/53mpmEAs5Y0mg0AzHSdALAtUsNV5KNArkEWBXVRDIxU4VylQ9NXGB8bQoEVxueYUFD/7YNVYX3SA/AHd1wV/hpDlfIAAAAASUVORK5CYII="/>
-                    </svg>
+
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 373.3 373.3" style="enable-background:new 0 0 373.3 373.3;" xml:space="preserve">
+<style type="text/css">
+	.st0 {
+        fill-rule: evenodd;
+        clip-rule: evenodd;
+        fill: #FFFFFF;
+    }
+</style>
+                        <g>
+	<path class="st0" d="M236.2,101.1h-99c-20.3,0-36.9,16.5-36.9,36.9v98.5c0,20.3,16.5,36.9,36.9,36.9h99c20.3,0,36.9-16.5,36.9-36.9
+		V138C273.1,117.6,256.5,101.1,236.2,101.1z M186.9,249.9h-0.5c-34.2,0-62.1-28.1-62.1-62.6c0-16.5,6.5-32.2,18.3-44.1
+		c11.8-12,27.4-18.5,43.9-18.5h0.5c34,0,62.6,28.7,62.6,62.6C249.6,221.8,221.5,249.9,186.9,249.9z M245,145.2c-9,0-16-7-16-16
+		s7-16,16-16c8.7,0,16,7.3,16,16S253.6,145.2,245,145.2z"/>
+                            <path class="st0" d="M186.7,0C83.6,0,0,83.6,0,186.7s83.6,186.7,186.7,186.7c103.1,0,186.7-83.6,186.7-186.7S289.8,0,186.7,0z
+		 M298.8,237c0,34.2-27.9,62.1-62.1,62.1h-100c-34.2,0-62.1-27.9-62.1-62.1v-99.5c0-34.2,27.9-62.1,62.1-62.1h100
+		c34.2,0,62.1,27.9,62.1,62.1V237z"/>
+                            <path class="st0" d="M186.9,151.9h-0.5c-19.2,0-35.3,16.2-35.3,35.3c0,19.8,15.8,35.8,35.3,35.8h0.5c19.5,0,35.3-16.1,35.3-35.8
+		C222.3,168.1,206.1,151.9,186.9,151.9z"/>
+</g>
+</svg>
                 </a>
                 <a href="#!" target="_blank" class="footer__social">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36"
-                         height="36" viewBox="0 0 36 36">
-                        <image id="Vector_Smart_Object6" data-name="Vector Smart Object6" width="36" height="36"
-                               xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAADBklEQVRYhc2YwUsVURTGvzOFUWZIQmSoJS2yntAiisgIdyVFmptattJ/wEXbgvwT3LVq0WsRQkQRBEEoFEW8ArMg4aFgtAvFUpO+uHGG7ptznTfzesb7bWbm3nO+Oe/ed+89ZwQ5IVkAMACgD0APgE4AzaqyAmABwEcA0wCeiMhM3ndUhWQTyRGSJeanpL5N9QpmmGS5hkCSOI1h84IcgbSQLBrZf8dptpgXpkGyg+TMFgQT47Q7UkKoGBkXzLyRqD/zVYPSadrKkQmNVMX0SSKgIoCrJtJ0FgHMAVgGsBdAL4DdqR6V3BeRa6ZVV1NWvpG8RfJwQCci2U/yQQ694aRIU46l/YjkPs93F8njJE+Q3J/QHSS5ZBQs5Yp9SjeuLLglu019jukorCX83pAc8LTPkfyZQXvEDyjLDvyB5E61v0Tyu7Go5LqnP256LaXYuGC6wlxW+y5vGtzo3CP5IuDhbPaoTxvJVWNhKTjjMdNs+eL+rCo+ob0bJM9qm5B8brzIIW+UQv1JxiI9tavxUkR+qc0VvT4WkSl3IyIE8Dag0e7dl02vpS/SFKIaX/VXujQjXkmlhM/BgMYP737D9Fp6Is1nqtGqI+HynTW13RH76HT2BzQWvPss7+mMvOQqjVNe31O9nvbaTgJoS/i7aXztPR9N0Y9pjkxTmG6SF7Tnhl6XPcuBgNczEVmC7lkAuoxFgEjTzizcIXnEm6opz6c74e8WwE3veTTjO1Zc9LNm8W2O23c+ae+ZWIXkeZLr2u6uo15fb8Y9yDHrHCZNc3VW47OH5Ha9HnKbJ8kDXjAut/qcQ3cy0uogL69EZF193LEwJCJlEXkoIou6UQ46OwAmI0hhOs/R4XPbG4V4yt+TvKsHcK1FQSEWzVveXFS/dtNTO3822njZT2w+ikHeaWNoudfK3xhyJmj0/tChU74WyqaQzJnCtupSrxfhAjJHYeiyxTnTWhtFE4gXUNYyqF6lkimDDA1VKHoj1TildGL6GuNjQyKwxvgckwjqv32waqxPegB+Az4I9fN0peMkAAAAAElFTkSuQmCC"/>
-                    </svg>
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg version="1.1" id="Isolation_Mode" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                         y="0px" viewBox="0 0 448.6 448.6" style="enable-background:new 0 0 448.6 448.6;"
+                         xml:space="preserve">
+<style type="text/css">
+	.st0 {
+        fill: #FFFFFF;
+    }
+</style>
+                        <path class="st0" d="M224.3,0C100.4,0,0,100.4,0,224.3c0,123.9,100.4,224.3,224.3,224.3c123.9,0,224.3-100.4,224.3-224.3
+	C448.6,100.4,348.2,0,224.3,0z M305.4,263c-27.9,34.5-73,36.8-93.8,15.6c-1.6-1.6-2.9-3.5-4.5-5.5c-0.2,0.8-0.4,1.4-0.6,2.1
+	c-10,39.2-11.1,47.9-21.4,66.1c-4.9,8.6-10.4,16.8-16.5,24.7c-0.7,0.9-1.3,2-2.7,1.8c-1.5-0.3-1.6-1.7-1.8-2.9
+	c-1.6-11.9-2.6-23.8-2.2-35.9c0.5-15.7,2.5-21,22.6-105.9c0.3-1.3,0-2.4-0.5-3.5c-4.8-13-5.8-26.3-1.6-39.7
+	c9.1-28.9,42-31.2,47.7-7.3c3.5,14.8-5.8,34.1-13,62.7c-5.9,23.6,21.8,40.3,45.5,23.1c21.9-15.9,30.4-53.9,28.8-80.9
+	c-3.2-53.8-62.1-65.4-99.5-48.1c-42.9,19.8-52.6,73-33.3,97.2c2.5,3.1,4.3,5,3.5,8.1c-1.2,4.9-2.3,9.8-3.7,14.6
+	c-1,3.6-4,4.9-7.7,3.4c-7.1-2.9-13.1-7.4-17.9-13.4c-16.4-20.4-21.1-60.6,0.6-94.7c24.1-37.8,68.9-53,109.8-48.4
+	c48.8,5.6,79.7,38.9,85.5,76.8C331.5,190.4,329.6,232.9,305.4,263z"/>
+</svg>
                 </a>
             </div>
         </div>

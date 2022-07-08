@@ -1,5 +1,5 @@
 .footer {
-  background-color: var(--dark);
+  background-color: #0c1105;
   color: var(--light);
 
   &_link {
@@ -19,13 +19,14 @@
 
   &__logo {
     svg {
+      width: 390px;
       margin-bottom: 62px;
     }
   }
 
   &__copyright {
     font-size: 13px;
-    line-height: 1.538;
+    line-height: 153%;
     margin: 0;
   }
 
@@ -36,10 +37,10 @@
     margin: 0;
     padding: 0;
     font-size: 18px;
-    font-weight: bold;
     text-transform: uppercase;
-    line-height: 1.167;
+    line-height: 116%;
     margin-bottom: 17px;
+    font-weight: 500;
   }
 
   &__ul {
@@ -51,10 +52,10 @@
   &__li {
     color: inherit;
     font-size: 13px;
-    line-height: 1.077;
+    line-height: 100%;
 
     &:not(:last-child) {
-      margin-bottom: 8px;
+      margin-bottom: 7px;
     }
   }
 
@@ -67,6 +68,12 @@
 
   &__social {
     display: block;
+    svg {
+      width: 36px;
+      .st0 {
+        display: block;
+      }
+    }
   }
 
   @media (max-width: $mobile) {
@@ -79,8 +86,7 @@
     &__logo {
       svg {
         margin-bottom: 0px;
-        width: 100%;
-        max-width: 315px;
+        width: 315px;
       }
     }
     &__copyright {
@@ -91,16 +97,24 @@
     }
     &__heading {
       font-size: 20px;
-      line-height: 1.05;
+      line-height: 105%;
       margin-bottom: 21px;
     }
     &__li {
 
       font-size: 14px;
-      line-height: 1.714;
+      line-height: 171%;
 
       &:not(:last-child) {
         margin-bottom: 17px;
+      }
+    }
+  }
+  @media (max-width: 345px) {
+    &__logo {
+      svg {
+        width: 100%;
+        max-width: 315px;
       }
     }
   }

@@ -20,7 +20,7 @@
   &__li {
     font-size: 14px;
     color: rgba(0, 0, 0, 0.502);
-    line-height: 1.5;
+    line-height: 150%;
 
     a {
       color: inherit;
@@ -39,9 +39,15 @@
   &__logo {
 
     &_desktop {
+      svg {
+        width: 392px;
+        transform: translateY(10px);
+      }
     }
 
     &_mobile {
+      width: 47px;
+      height: 47px;
       display: none;
     }
   }
@@ -53,6 +59,7 @@
   }
 
   &__search-icon {
+    width: 24px;
     display: none;
   }
 
@@ -68,12 +75,12 @@
       max-width: 183px;
       font-size: 15px;
       color: rgba(0, 0, 0, 0.502);
-      line-height: 1.4;
+      line-height: 140%;
 
       &::placeholder {
-        font-size: 15px;
-        color: rgba(0, 0, 0, 0.502);
-        line-height: 1.4;
+        font-size: inherit;
+        color: inherit;
+        line-height: inherit;
       }
     }
 
@@ -86,6 +93,10 @@
       position: absolute;
       top: 8px;
       right: 5px;
+      svg {
+        width: 20px;
+        transform: translateY(2px);
+      }
     }
   }
 
@@ -95,13 +106,15 @@
     gap: 15px;
   }
 
+
+
   &__like, &__cart {
     position: relative;
 
     &:before {
       content: attr(data-quantity);
       font-size: 8px;
-      line-height: 2.1;
+      line-height: 210%;
       //display: block;
       display: flex;
       justify-content: center;
@@ -111,32 +124,51 @@
       height: 16px;
       top: 0;
       left: 0;
-      background-image: url(../../img/header-icon-bg.png);
+      //background-image: url(../../img/header-icon-bg.png);
+      background-color: var(--dark);
+      border-radius: 5px;
       background-size: contain;
       background-repeat: no-repeat;
       color: var(--light);
       z-index: 1;
-      transform: translateY(-110%) translateX(15%);
+    }
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -6px;
+      left: 13px;
+      width: 8px;
+      height: 8px;
+      background-color: var(--dark);
+      transform-origin: top;
+      transform: rotate(45deg);
+      pointer-events: none;
     }
   }
 
   &__like {
-    cursor: pointer;
-
+    &:before {
+      transform: translateY(-115%) translateX(20%);
+    }
+    &:after {
+      top: -8px;
+      left: 11px;
+    }
     svg {
-      cursor: pointer;
+      width: 24px;
     }
   }
 
   &__cart {
-    cursor: pointer;
     &:before {
-      transform: translateY(-100%) translateX(20%);
+      transform: translateY(-110%) translateX(35%);
     }
-
-    svg {
-      cursor: pointer;
+    &:after {
+      top: -7px;
+      left: 14px;
     }
+    width: 26px;
   }
 
   &__hamburger {
@@ -144,7 +176,7 @@
   }
 
   &__nav {
-    margin-top: 24px;
+    margin-top: 23px;
   }
 
   @media (max-width: $pre-mobile) {
@@ -153,6 +185,11 @@
       display: none;
     }
 
+    &__main {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      align-items: flex-end;
+    }
 
     &__logos {
     }
@@ -192,7 +229,7 @@
       &:before {
         content: attr(data-quantity);
         font-size: 8px;
-        line-height: 2.1;
+        line-height: 210%;
         //display: block;
         display: flex;
         justify-content: center;
@@ -202,27 +239,62 @@
         height: 16px;
         top: 0;
         left: 0;
-        background-image: url(../../img/header-icon-bg.png);
+        //background-image: url(../../img/header-icon-bg.png);
+        background-color: var(--dark);
+        border-radius: 5px;
         background-size: contain;
         background-repeat: no-repeat;
         color: var(--light);
         z-index: 1;
-        transform: translateY(-110%) translateX(15%);
+      }
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -6px;
+        left: 13px;
+        width: 8px;
+        height: 8px;
+        background-color: var(--dark);
+        transform-origin: top;
+        transform: rotate(45deg);
       }
     }
 
     &__like {
+      &:before {
+        transform: translateY(-115%) translateX(25%);
+      }
+      &:after {
+        top: -8px;
+        left: 11px;
+        //transform: rotate(45deg) translateY(-155%) translateX(120%);
+      }
       svg {
         width: 24px;
       }
     }
 
     &__cart {
+      &:before {
+        transform: translateY(-110%) translateX(40%);
+      }
+      &:after {
+        top: -7px;
+        left: 14.5px;
+      }
       width: 26px;
     }
 
     &__hamburger {
       display: block;
+      svg {
+        height: 19px;
+        .st2 {
+          stroke-width: 0;
+          fill: var(--dark);
+        }
+      }
     }
 
     &__nav {

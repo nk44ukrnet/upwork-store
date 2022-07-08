@@ -1,0 +1,37 @@
+.app-block-description {
+  &__intro {
+    display: table;
+    margin-top: 48px;
+    margin-bottom: 35px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 185%;
+    font-weight: 300;
+    color: #010101;
+    margin: 0;
+  }
+
+  &__btn {
+    margin-top: 31px;
+    margin-bottom: 68px;
+  }
+  @media (max-width: $mobile) {
+    &__intro {
+      display: table;
+      text-align: center;
+      margin: 23px auto 35px;
+      width: 156px;
+    }
+    &__text {
+      font-size: 15px;
+      line-height: 146%;
+      text-align: center;
+    }
+    &__btn {
+      margin-top: 34px;
+      margin-bottom: 54px;
+    }
+  }
+}

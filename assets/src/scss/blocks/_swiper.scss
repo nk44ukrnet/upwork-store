@@ -1,0 +1,121 @@
+.app-block-swiper {
+  .swiper {
+  }
+
+  .mySwiper {
+  }
+
+  .swiper-wrapper {
+  }
+
+  .swiper-slide {
+  }
+
+  .swiper-pagination {
+    .swiper-pagination-bullet {
+      width: 9px;
+      height: 9px;
+      border: 1px solid var(--light);
+      border-radius: 50%;
+      background-color: transparent;
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: var(--light);
+    }
+  }
+
+  .swiper-button-prev {
+    width: 31px;
+    height: 31px;
+    left: 28px;
+    opacity: 1;
+    transform: rotate(180deg);
+
+    &:before, &:after {
+      content: '';
+      opacity: 0;
+    }
+  }
+
+  .swiper-button-next {
+    width: 31px;
+    height: 31px;
+    opacity: 1;
+    right: 28px;
+
+    &:before, &:after {
+      content: '';
+      opacity: 0;
+    }
+  }
+
+  .swiper-scrollbar {
+    display: none;
+  }
+
+  .swiper-pagination {
+    bottom: 34px;
+  }
+
+  @media (max-width: $mobile) {
+    .swiper {
+    }
+    .mySwiper {
+    }
+    .swiper-wrapper {
+    }
+    .swiper-slide {
+      img {
+        min-height: 210px;
+        object-fit: cover;
+        object-position: center center;
+      }
+    }
+    .swiper-pagination {
+      .swiper-pagination-bullet {
+        width: 9px;
+        height: 9px;
+        border: 1px solid var(--light);
+        border-radius: 50%;
+        background-color: transparent;
+        opacity: 1;
+      }
+
+      .swiper-pagination-bullet-active {
+        background-color: var(--light);
+      }
+    }
+    .swiper-button-prev {
+      display: none;
+      width: 31px;
+      height: 31px;
+      left: 28px;
+      opacity: 1;
+
+      &:before, &:after {
+        content: '';
+        opacity: 0;
+      }
+    }
+    .swiper-button-next {
+      display: none;
+      width: 31px;
+      height: 31px;
+      opacity: 1;
+      right: 28px;
+
+      &:before, &:after {
+        content: '';
+        opacity: 0;
+      }
+    }
+    .swiper-scrollbar {
+      display: none;
+    }
+    .swiper-pagination {
+      bottom: 16px;
+    }
+  }
+}

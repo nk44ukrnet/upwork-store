@@ -1,11 +1,7 @@
-.color {
-  color: red;
-}
-
-
 @import "base/_normalize",
 "base/_variables",
 "base/_fonts",
+"base/_vendor",
 "base/_structure",
 "base/_breadcrumbs",
 "base/_footer",
@@ -13,6 +9,10 @@
 "base/_pagination",
 "base/_navigation";
 
-@import "blocks/_catalog";
+
+@import "blocks/_catalog",
+"blocks/_swiper",
+"blocks/_top-part",
+"blocks/_description";
 
 @import "pages/_products";

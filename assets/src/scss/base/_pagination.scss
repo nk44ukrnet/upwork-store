@@ -14,13 +14,14 @@
     text-decoration: none;
     font-size: 18px;
     text-transform: uppercase;
-    line-height: 1.167;
+    line-height: 116%;
     width: 40px;
     height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+    font-weight: 300;
   }
 
   &__active {
@@ -35,7 +36,7 @@
     color: rgb(0, 0, 0);
     font-weight: bold;
     text-transform: uppercase;
-    line-height: 1;
+    line-height: 100%;
     transform: translateY(-20%);
   }
   @media (max-width: $mobile) {
@@ -46,10 +47,9 @@
     }
     &__dots {
         font-size: 18px;
-        font-family: "Rubik", sans-serif;
         color: rgb(0, 0, 0);
         text-transform: uppercase;
-        line-height: 1.105;
+        line-height: 110%;
     }
   }
 }
