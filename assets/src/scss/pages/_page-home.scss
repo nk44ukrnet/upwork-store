@@ -1,0 +1,35 @@
+.app-page-home {
+
+  &__container {
+  }
+
+  &__message {
+
+    margin-top: 29px;
+    margin-bottom: 25px;
+
+    &:after {
+      content: ' »';
+    }
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    column-gap: 25px;
+  }
+
+  @media (max-width: $mobile) {
+
+    &__message {
+      margin-top: 21px;
+      margin-bottom: 21px;
+    }
+
+    &__top {
+      column-gap: 10px;
+    }
+  }
+}
+
+

@@ -1,0 +1,29 @@
+.home-top-box {
+  display: flex;
+  column-gap: 23px;
+  border: 1px solid #ebebeb;
+  box-sizing: border-box;
+  width: 380px;
+
+  &__picture {
+    display: block;
+    width: 150px;
+    height: 145px;
+    object-fit: cover;
+    object-position: center center;
+    flex: 0 0 150px;
+  }
+
+  &__desc {
+    flex: 1 1 auto;
+  }
+
+  &__title {
+  }
+
+  &__p {
+  }
+
+  &__double-img {
+  }
+}
