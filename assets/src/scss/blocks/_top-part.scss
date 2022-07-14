@@ -11,6 +11,9 @@
     padding-bottom: 12px;
     border-bottom: 1px solid #e5e5e5;
     max-width: 1127px;
+    &_wide {
+      max-width: none;
+    }
   }
 
   &__breadcrumbs {

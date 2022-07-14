@@ -1102,6 +1102,12 @@ body {
     opacity: 1;
   }
 }
+.breadcrumbs_align-left {
+  justify-content: flex-start;
+}
+.breadcrumbs_align-left:before {
+  display: none;
+}
 
 .footer {
   background-color: #0c1105;
@@ -1730,6 +1736,9 @@ body {
   border-bottom: 1px solid #e5e5e5;
   max-width: 1127px;
 }
+.app-block-top__heading_wide {
+  max-width: none;
+}
 .app-block-top__breadcrumbs {
   margin-bottom: 38px;
 }
@@ -1784,6 +1793,203 @@ body {
 @media (max-width: 768px) {
   .app-page__pagination {
     margin-bottom: 47px;
+  }
+}
+
+.app-page-single .app-block-top__breadcrumbs {
+  margin-bottom: 49px;
+}
+.app-page-single__holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 48px;
+  column-gap: 5px;
+  margin-bottom: 60px;
+}
+.app-page-single__item:nth-child(1) {
+  width: 100%;
+  max-width: 230px;
+}
+.app-page-single__item:nth-child(2) {
+  width: 100%;
+  max-width: 903px;
+}
+.app-page-single__heading {
+  margin: 0;
+  font-size: 22px;
+  line-height: 100%;
+  margin-bottom: 28px;
+}
+.app-page-single__text {
+  font-size: 15px;
+  line-height: 173%;
+}
+@media (max-width: 768px) {
+  .app-page-single__heading {
+    margin-bottom: 18px;
+    line-height: 120%;
+  }
+  .app-page-single__item:nth-child(1) {
+    width: 100%;
+    max-width: none;
+  }
+  .app-page-single__item:nth-child(2) {
+    width: 100%;
+    max-width: none;
+  }
+  .app-page-single__text {
+    line-height: 146%;
+  }
+}
+
+.app-page-single-sidebar {
+  display: flex;
+  flex-direction: column;
+}
+.app-page-single-sidebar > *:not(:last-child) {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 15px;
+}
+.app-page-single-sidebar > *:not(:first-child) {
+  padding-top: 15px;
+}
+.app-page-single-sidebar__item {
+  box-sizing: border-box;
+  font-size: 15px;
+  line-height: 100%;
+}
+.app-page-single-sidebar__item_active {
+  font-weight: 600;
+}
+.app-page-single-sidebar__item_active svg {
+  opacity: 1 !important;
+}
+.app-page-single-sidebar__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--dark);
+  text-decoration: none;
+}
+.app-page-single-sidebar__link svg {
+  height: 11px;
+  opacity: 0.5;
+}
+@media (max-width: 768px) {
+  .app-page-single-sidebar > *:not(:last-child) {
+    padding-bottom: 12px;
+  }
+  .app-page-single-sidebar > *:not(:first-child) {
+    padding-top: 12px;
+  }
+}
+
+.app-page-brand__about {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  align-items: center;
+  column-gap: 32px;
+  margin-top: 60px;
+  margin-bottom: 68px;
+}
+.app-page-brand__item iframe {
+  width: 583px;
+  height: 329px;
+  display: block;
+}
+.app-page-brand__item:nth-child(2) {
+  width: 100%;
+  max-width: 522px;
+}
+.app-page-brand__image {
+  display: inline-block;
+  margin-bottom: 34px;
+  width: 265px;
+}
+.app-page-brand__text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 162%;
+  color: rgb(1, 1, 1);
+}
+.app-page-brand__btn {
+  display: none;
+}
+@media (max-width: 768px) {
+  .app-page-brand__btn {
+    margin-bottom: 37px;
+    display: table;
+  }
+  .app-page-brand__text {
+    margin: 0;
+    margin-bottom: 35px;
+    font-size: 15px;
+    line-height: 146px;
+  }
+  .app-page-brand__about {
+    row-gap: 0;
+    margin-top: 31px;
+    margin-bottom: 0;
+  }
+  .app-page-brand__item iframe {
+    display: none;
+  }
+  .app-page-brand__item:nth-child(2) {
+    width: 100%;
+    max-width: none;
+  }
+  .app-page-brand__btn {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .app-page-brand__image {
+    display: inline-block;
+    margin-bottom: 34px;
+    width: 265px;
+    margin: 0 auto 34px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.brand-grid {
+  margin-top: 68px;
+  margin-bottom: 72px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min-content, 370px));
+  justify-content: space-between;
+  column-gap: 43px;
+  row-gap: 46px;
+}
+.brand-grid__item {
+  position: relative;
+}
+.brand-grid__img {
+  max-width: 370px;
+}
+.brand-grid__link {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 38px;
+  color: var(--light);
+  font-size: 26px;
+  line-height: 100%;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  .brand-grid {
+    margin-top: 37px;
+    margin-bottom: 19px;
+    grid-template-columns: repeat(auto-fill, minmax(min-content, 320px));
+    row-gap: 17px;
+    justify-content: center;
+  }
+  .brand-grid__link {
+    bottom: 28px;
   }
 }
 

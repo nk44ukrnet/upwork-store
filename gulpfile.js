@@ -4,6 +4,15 @@ var rename = require("gulp-rename");
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 
+gulp.task('sass', async function() {
+    setTimeout(()=>{
+    gulp.src([
+        'assets/src/scss/app.scss'
+    ])
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('assets/src/scss'))
+    },100)
+});
 
 gulp.task('css', function(){
     return gulp.src('assets/src/scss/app.css')
@@ -42,5 +51,3 @@ gulp.task('js', function (done) {
 });
 
 gulp.task('dev', gulp.series('css', 'js'));
-
-

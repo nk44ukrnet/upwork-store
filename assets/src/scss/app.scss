@@ -1,3 +1,4 @@
+
 @import "base/_normalize",
 "base/_variables",
 "base/_fonts",
@@ -15,4 +16,6 @@
 "blocks/_top-part",
 "blocks/_description";
 
-@import "pages/_products";
+@import "pages/_products",
+"pages/_page-single",
+"pages/_page-brand";

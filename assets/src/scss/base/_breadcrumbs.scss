@@ -35,4 +35,10 @@
       opacity: 1;
     }
   }
+  &_align-left {
+  justify-content: flex-start;
+    &:before {
+      display: none;
+    }
+  }
 }
