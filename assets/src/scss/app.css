@@ -311,6 +311,7 @@ template {
 :root {
   --dark: #000;
   --light: #fff;
+  --footer-mobile-margin: 19px;
 }
 
 /* rubik-300 - latin */
@@ -1834,6 +1835,7 @@ body {
   right: 29px;
   left: auto;
   position: absolute;
+  width: -moz-fit-content;
   width: fit-content;
 }
 .home-top1__content {
@@ -1885,6 +1887,40 @@ body {
   .home-top1__swiper {
     grid-column-start: span 1;
     grid-row-start: span 1;
+    display: flex;
+    min-height: 229px;
+  }
+  .home-top1__swiper .swiper-pagination {
+    bottom: 94px;
+    right: 50%;
+    transform: translateX(50%);
+    left: auto;
+    position: absolute;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .home-top1__swiper img {
+    object-fit: cover;
+    height: 229px;
+  }
+  .home-top1__content {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+  }
+  .home-top1__btn {
+    padding: 16px 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 16px;
+    line-height: 131%;
+    bottom: 30px;
+  }
+  .home-top1__btn svg {
+    height: 22px;
   }
 }
 
@@ -1952,10 +1988,11 @@ body {
     width: 118px;
     height: 116px;
     flex: 0 0 118px;
+    object-fit: cover;
+    object-position: center center;
   }
   .home-top-box__double-img:nth-of-type(2) {
     width: 165px;
-    height: 160px;
     object-fit: contain;
     object-position: center center;
   }
@@ -2040,7 +2077,7 @@ body {
     line-height: 120%;
   }
   .app-page-single-page-with-sidebar__holder {
-    margin-bottom: 50px;
+    margin-bottom: var(--footer-mobile-margin);
   }
   .app-page-single-page-with-sidebar__item:nth-child(1) {
     width: 100%;
@@ -2201,7 +2238,7 @@ body {
 @media (max-width: 768px) {
   .brand-grid {
     margin-top: 37px;
-    margin-bottom: 19px;
+    margin-bottom: var(--footer-mobile-margin);
     grid-template-columns: repeat(auto-fill, minmax(min-content, 320px));
     row-gap: 17px;
     justify-content: center;

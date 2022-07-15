@@ -39,6 +39,7 @@
       right: 29px;
       left: auto;
       position: absolute;
+      width: -moz-fit-content;
       width: fit-content;
     }
 
@@ -107,6 +108,43 @@
     &__swiper {
       grid-column-start: span 1;
       grid-row-start: span 1;
+      display: flex;
+      min-height: 229px;
+
+      .swiper-pagination {
+        bottom: 94px;
+        right: 50%;
+        transform: translateX(50%);
+        left: auto;
+        position: absolute;
+        width: -moz-fit-content;
+        width: fit-content;
+      }
+
+      img {
+        object-fit: cover;
+        height: 229px;
+      }
+    }
+    &__content {
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+    }
+    &__btn {
+      padding: 16px 30px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      width: -moz-fit-content;
+      width: fit-content;
+      font-size: 16px;
+      line-height: 131%;
+      bottom: 30px;
+
+      svg {
+        height: 22px;
+      }
     }
   }
 }

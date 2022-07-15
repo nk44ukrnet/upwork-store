@@ -127,7 +127,7 @@
 
   @media (max-width: $mobile) {
     margin-top: 37px;
-    margin-bottom: 19px;
+    margin-bottom: var(--footer-mobile-margin);
     grid-template-columns: repeat(auto-fill, minmax(min-content, 320px));
     row-gap: 17px;
     justify-content: center;

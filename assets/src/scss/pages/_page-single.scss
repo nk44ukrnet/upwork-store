@@ -53,7 +53,7 @@
       line-height: 120%;
     }
     &__holder {
-      margin-bottom: 50px;
+      margin-bottom: var(--footer-mobile-margin);
     }
     &__item {
       &:nth-child(1) {

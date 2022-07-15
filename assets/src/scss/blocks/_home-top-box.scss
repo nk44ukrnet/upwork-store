@@ -69,11 +69,12 @@
         width: 118px;
         height: 116px;
         flex: 0 0 118px;
+        object-fit: cover;
+        object-position: center center;
       }
 
       &:nth-of-type(2) {
         width: 165px;
-        height: 160px;
         object-fit: contain;
         object-position: center center;
       }
