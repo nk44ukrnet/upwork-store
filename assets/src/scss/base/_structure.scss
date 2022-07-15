@@ -61,11 +61,11 @@ body {
 }
 //swiper circles casual
 .swiper-button-prev-arrowed {
-  display: none;
+  //display: none;
   width: 31px;
   height: 31px;
   left: 28px;
-  opacity: 1;
+  opacity: 1 !important;
   transform: rotate(180deg);
 
   &:before, &:after {
@@ -74,10 +74,10 @@ body {
   }
 }
 .swiper-button-next-arrowed {
-  display: none;
+  //display: none;
   width: 31px;
   height: 31px;
-  opacity: 1;
+  opacity: 1 !important;
   right: 28px;
 
   &:before, &:after {

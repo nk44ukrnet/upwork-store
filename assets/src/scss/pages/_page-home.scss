@@ -13,12 +13,6 @@
     }
   }
 
-  &__top {
-    display: flex;
-    flex-direction: column;
-    //row-gap: 25px;
-    row-gap: 19px;
-  }
 
   @media (max-width: $mobile) {
 
@@ -32,5 +26,7 @@
     }
   }
 }
+
+
 
 

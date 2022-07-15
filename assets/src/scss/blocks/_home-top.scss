@@ -1,9 +1,25 @@
-.home-top {
+.home-top1 {
+  display: grid;
+  box-sizing: border-box;
+  margin-bottom: 50px;
 
+  grid-template-columns: repeat(3, 380px);
+  justify-content: space-between;
+  gap: 25px;
+  align-items: flex-start;
+
+  & > * {
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+
+  &__item {
+  }
 
   &__swiper {
-    width: 100%;
-    flex: 1 1 auto;
+    grid-column-start: span 2;
+    grid-row-start: span 2;
 
     .swiper {
     }
@@ -19,6 +35,11 @@
     }
 
     .swiper-pagination {
+      bottom: 23px;
+      right: 29px;
+      left: auto;
+      position: absolute;
+      width: fit-content;
     }
 
     .swiper-button-next {
@@ -32,9 +53,7 @@
 
     .swiper-button-prev-arrowed {
     }
-  }
 
-  &__img {
   }
 
   &__content {
@@ -70,22 +89,24 @@
     }
   }
 
-  &__part {
-    flex-wrap: nowrap;
+  @media (max-width: 1236px) {
+    grid-template-columns:  repeat(2, 380px);
+    justify-content: center;
   }
+  @media (max-width: 882px) {
+    grid-template-columns:  repeat(2, 318px);
+    gap: 10px;
 
-  &__row, &__part {
-    display: flex;
-    gap: 24px;
+    .swiper-button-next, .swiper-button-prev {
+      display: none;
+    }
   }
-
-  &__row {
-    flex-direction: column;
-    flex-wrap: wrap;
-    row-gap: 19px;
-  }
-
-  &__item {
+  @media (max-width: $mobile) {
+    margin-bottom: 40px;
+    grid-template-columns: 318px;
+    &__swiper {
+      grid-column-start: span 1;
+      grid-row-start: span 1;
+    }
   }
 }
-

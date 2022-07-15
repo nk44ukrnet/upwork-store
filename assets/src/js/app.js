@@ -201,9 +201,18 @@ window.addEventListener('DOMContentLoaded', function () {
     }
     //swiper home page top
     try {
-        let checkSwiperExist = document.querySelector('.app-block-swiper .mySwiper');
+        let checkSwiperExist = document.querySelector('.home-top1__swiper .mySwiper-home-top');
         if (checkSwiperExist) {
-
+            let swiperHomeTop = new Swiper(".mySwiper-home-top", {
+                navigation: {
+                    nextEl: ".swiper-button-next-arrowed",
+                    prevEl: ".swiper-button-prev-arrowed",
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
         }
     } catch (e) {
         console.log('swiper error [home-top]', e);
