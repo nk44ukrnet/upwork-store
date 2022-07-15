@@ -49,6 +49,8 @@
   &__grid {
   }
 
+
+  
   @media (max-width: $mobile) {
     &__btn {
       margin-bottom: 37px;
@@ -117,6 +119,10 @@
     font-size: 26px;
     line-height: 100%;
     text-decoration: none;
+  }
+  @media (max-width: 1236px) {
+      justify-content: center;
+      align-items: center;
   }
 
   @media (max-width: $mobile) {

@@ -1,26 +1,35 @@
 .home-top {
 
-  &__part {
-
-  }
 
   &__swiper {
+    width: 100%;
+    flex: 1 1 auto;
+
     .swiper {
     }
+
     .mySwiper-home-top {
     }
+
     .swiper-wrapper {
     }
+
     .swiper-slide {
+      position: relative;
     }
+
     .swiper-pagination {
     }
+
     .swiper-button-next {
     }
+
     .swiper-button-next-arrowed {
     }
+
     .swiper-button-prev {
     }
+
     .swiper-button-prev-arrowed {
     }
   }
@@ -29,18 +38,51 @@
   }
 
   &__content {
+    position: absolute;
+    bottom: 19px;
+    left: 20px;
   }
 
   &__heading {
+    margin: 0;
+    color: var(--light);
+    font-size: 40px;
+    line-height: 100%;
+    margin-bottom: 20px;
+    font-weight: 300;
   }
 
   &__footer {
   }
 
   &__btn {
+    color: var(--dark);
+    background-color: var(--light);
+    padding: 16px 25px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: -moz-fit-content;
+    width: fit-content;
+
+    svg {
+      height: 22px;
+    }
+  }
+
+  &__part {
+    flex-wrap: nowrap;
+  }
+
+  &__row, &__part {
+    display: flex;
+    gap: 24px;
   }
 
   &__row {
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 19px;
   }
 
   &__item {

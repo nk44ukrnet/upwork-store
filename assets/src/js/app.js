@@ -181,7 +181,7 @@ window.addEventListener('DOMContentLoaded', function () {
     } catch (e) {
         console.log('header issue', e);
     }
-//swiper
+//swiper catalog page
     try {
         let checkSwiperExist = document.querySelector('.app-block-swiper .mySwiper');
         if (checkSwiperExist) {
@@ -197,6 +197,15 @@ window.addEventListener('DOMContentLoaded', function () {
             });
         }
     } catch (e) {
-        console.log('swiper error', e);
+        console.log('swiper error [catalog page]', e);
+    }
+    //swiper home page top
+    try {
+        let checkSwiperExist = document.querySelector('.app-block-swiper .mySwiper');
+        if (checkSwiperExist) {
+
+        }
+    } catch (e) {
+        console.log('swiper error [home-top]', e);
     }
 })

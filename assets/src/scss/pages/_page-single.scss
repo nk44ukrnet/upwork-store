@@ -1,4 +1,4 @@
-.app-page-single {
+.app-page-single-page-with-sideabar {
 
   &__container {
   }
@@ -18,18 +18,20 @@
     flex-wrap: wrap;
     justify-content: space-between;
     row-gap: 48px;
-    column-gap: 5px;
+    column-gap: 53px;
     margin-bottom: 60px;
   }
 
   &__item {
     &:nth-child(1) {
       width: 100%;
-      max-width: 230px;
+      //max-width: 230px;
+      flex: 1 1 230px;
     }
     &:nth-child(2) {
       width: 100%;
-      max-width: 903px;
+      //max-width: 903px;
+      flex: 1 1 903px;
     }
   }
 
@@ -44,10 +46,14 @@
       font-size: 15px;
     line-height: 173%;
   }
+
   @media (max-width: $mobile) {
     &__heading {
       margin-bottom: 18px;
       line-height: 120%;
+    }
+    &__holder {
+      margin-bottom: 50px;
     }
     &__item {
       &:nth-child(1) {

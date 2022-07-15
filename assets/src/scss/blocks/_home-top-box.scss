@@ -1,17 +1,21 @@
 .home-top-box {
+  color: var(--dark);
+  text-decoration: none;
   display: flex;
   column-gap: 23px;
   border: 1px solid #ebebeb;
   box-sizing: border-box;
   width: 380px;
+  align-items: center;
 
   &__picture {
     display: block;
-    width: 150px;
-    height: 145px;
+    width: 149px;
+    height: 146px;
     object-fit: cover;
     object-position: center center;
-    flex: 0 0 150px;
+    flex: 0 0 149px;
+    margin: 0;
   }
 
   &__desc {
@@ -19,11 +23,30 @@
   }
 
   &__title {
+    font-size: 18px;
+    line-height: 133%;
+    margin: 0;
+    margin-bottom: 16px;
   }
 
   &__p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 135%;
   }
 
   &__double-img {
+    &:nth-of-type(1) {
+      display: block;
+      width: 149px;
+      height: 146px;
+      object-fit: cover;
+      object-position: center center;
+      flex: 0 0 149px;
+    }
+
+    &:nth-of-type(2) {
+      width: 165px;
+    }
   }
 }
