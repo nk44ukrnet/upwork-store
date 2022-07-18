@@ -1,0 +1,51 @@
+.app-block-shop-by-category {
+
+  &__container {
+    margin-bottom: 57px;
+  }
+
+  &__heading {
+    margin-bottom: 23px;
+  }
+
+  &__holder {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 378px));
+    justify-content: space-between;
+    column-gap: 29px;
+    row-gap: 23px;
+    text-align: center;
+  }
+
+  &__item {
+  }
+
+  &__title {
+    margin: 0;
+    margin-top: 16px;
+    font-size: 18px;
+    line-height: 100%;
+    color: rgb(101, 91, 85);
+  }
+  @media (max-width: 1236px) {
+    &__holder {
+      justify-content: center;
+    }
+  }
+  @media (max-width: $mobile) {
+    &__container {
+      margin-bottom: 50px;
+    }
+    &__holder {
+      grid-template-columns: repeat(auto-fit, minmax(min-content, 150px));
+      column-gap: 20px;
+      row-gap: 15px;
+      img {
+        height: 104px;
+        object-fit: cover;
+        object-position: center center;
+      }
+    }
+  }
+}
+

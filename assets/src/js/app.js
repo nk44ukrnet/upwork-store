@@ -217,4 +217,111 @@ window.addEventListener('DOMContentLoaded', function () {
     } catch (e) {
         console.log('swiper error [home-top]', e);
     }
+    //swiper shop-by-room
+    try {
+        let checkSwiperExist = document.querySelector('.app-block-shop-by-room__swiper .swiper-shop-by-room');
+        if (checkSwiperExist) {
+            let swiperShopByRoom = new Swiper(".swiper-shop-by-room", {
+                slidesPerView: 4,
+                spaceBetween: 29,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    // when window width is >= 320px
+                    320: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    // when window width is >= 768px
+                    768: {
+                        slidesPerView: 4,
+                        spaceBetween: 29
+                    },
+                },
+            });
+        }
+
+    } catch (e) {
+        console.log('swiper error [shop by room]');
+    }
+    //swiper shop-by-brand
+    try {
+        let checkSwiperExist = document.querySelector('.app-block-shop-by-brand__swiper .swiper-shop-by-brand');
+        if (checkSwiperExist) {
+            let swiperShopByBrand = new Swiper(".swiper-shop-by-brand", {
+                slidesPerView: 5,
+                spaceBetween: 29,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    // when window width is >= 320px
+                    320: {
+                        slidesPerView: 2,
+                        spaceBetween: 40
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 40
+                    },
+                    1250: {
+                        slidesPerView: 5,
+                        spaceBetween: 67
+                    },
+
+                },
+            });
+        }
+
+    } catch (e) {
+        console.log('swiper error [shop by brand]');
+    }
+    //swiper explore
+    try {
+        let checkSwiperExist = document.querySelector('.app-block-explore__swiper .swiper-explore');
+        if (checkSwiperExist) {
+            let swiperExplore = new Swiper(".swiper-explore", {
+                slidesPerView: 6,
+                spaceBetween: 28,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    // when window width is >= 320px
+                    320: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
+                    },
+                    1250: {
+                        slidesPerView: 6,
+                        spaceBetween: 28
+                    },
+
+                },
+            });
+        }
+
+    } catch (e) {
+        console.log('swiper error [explore]');
+    }
 })

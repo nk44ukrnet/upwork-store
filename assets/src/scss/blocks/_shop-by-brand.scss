@@ -1,0 +1,93 @@
+.app-block-shop-by-brand {
+
+  &__container {
+  }
+
+  &__heading {
+    margin-bottom: 25px;
+  }
+
+  &__swiper {
+    .swiper {
+      margin-bottom: 57px;
+
+    }
+
+    .swiper-shop-by-brand {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    .swiper-wrapper {
+      align-items: center;
+    }
+
+    .swiper-slide {
+    }
+
+    .img-responsive {
+    }
+
+    .swiper-pagination {
+      display: none;
+    }
+
+    .swiper-pagination-dark {
+    }
+
+    .swiper-button-next {
+    }
+
+    .swiper-button-next-bg {
+    }
+
+    .st0 {
+    }
+
+    .st1 {
+    }
+
+    .swiper-button-prev {
+    }
+
+    .swiper-button-prev-bg {
+    }
+  }
+
+  @media (max-width: $mobile) {
+    &__heading {
+      margin-bottom: 11px;
+    }
+    &__swiper {
+      .swiper-shop-by-brand {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 28px;
+      }
+
+      img {
+        width: 124px;
+      }
+
+      .swiper-wrapper {
+        align-items: center;
+        //justify-content: center;
+      }
+
+      .swiper-pagination {
+        display: block;
+        bottom: -3px;
+      }
+
+      .swiper-button-next {
+        display: none;
+      }
+
+      .swiper-button-prev {
+        display: none;
+      }
+    }
+  }
+}
+
+

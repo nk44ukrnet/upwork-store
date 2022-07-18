@@ -11,12 +11,21 @@ body {
   box-sizing: border-box;
 }
 
+.container-md {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1317px;
+}
+
 .img-responsive {
   display: block;
   width: 100%;
   height: auto;
 }
-.mobile-visible  {
+
+.mobile-visible {
   display: none;
   @media (max-width: $pre-mobile) {
     display: block;
@@ -38,6 +47,7 @@ body {
     background-color: var(--dark);
     color: var(--light);
   }
+
   @media (max-width: $mobile) {
     margin-left: auto;
     margin-right: auto;
@@ -58,7 +68,23 @@ body {
   .swiper-pagination-bullet-active {
     background-color: var(--light);
   }
+
+  &.swiper-pagination-dark {
+    .swiper-pagination-bullet {
+      width: 9px;
+      height: 9px;
+      border: 1px solid var(--dark);
+      border-radius: 50%;
+      background-color: transparent;
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: var(--dark);
+    }
+  }
 }
+
 //swiper circles casual
 .swiper-button-prev-arrowed {
   //display: none;
@@ -67,21 +93,96 @@ body {
   left: 28px;
   opacity: 1 !important;
   transform: rotate(180deg);
+  background-color: var(--light);
+  border-radius: 50%;
 
   &:before, &:after {
     content: '';
     opacity: 0;
   }
 }
+
 .swiper-button-next-arrowed {
   //display: none;
   width: 31px;
   height: 31px;
   opacity: 1 !important;
   right: 28px;
+  background-color: var(--light);
+  border-radius: 50%;
 
   &:before, &:after {
     content: '';
     opacity: 0;
+  }
+}
+
+.heading-md {
+  font-size: 28px;
+  line-height: 100%;
+  font-weight: 300;
+  @media (max-width: $mobile) {
+    text-align: center;
+    font-size: 22px;
+  }
+}
+
+.swiper-button-next-bg, .swiper-button-prev-bg {
+  position: absolute;
+  height: 100%;
+  width: 25px;
+  left: auto;
+  right: auto;
+  top: auto;
+  bottom: auto;
+  transform: translate(0, 0);
+  opacity: 1;
+  background-color: var(--light);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.swiper-button-disabled {
+    opacity: 1;
+  }
+
+  &:before, &:after {
+    display: none;
+  }
+
+  svg {
+    height: 20px;
+  }
+}
+
+.swiper-button-prev-bg {
+  top: 0;
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.swiper-button-next-bg {
+  top: 0;
+  right: 0;
+}
+
+.heading-link {
+  a {
+  font-size: 16px;
+  color: rgb(101, 91, 85);
+  line-height: 168%;
+  }
+  svg {
+    display: inline-block;
+    height: 10px;
+    //vertical-align: middle;
+  }
+
+  @media (max-width: $mobile) {
+    display: block;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
   }
 }

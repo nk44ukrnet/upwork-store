@@ -1,0 +1,175 @@
+.app-block-explore {
+
+  &__container {
+  }
+
+  &__heading {
+    margin-bottom: 25px;
+  }
+
+  &__swiper {
+    .swiper {
+      margin-bottom: 72px;
+    }
+
+    .swiper-explore {
+    }
+
+    .swiper-wrapper {
+      padding-left: 40px;
+      padding-right: 40px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .swiper-slide {
+      width: 100%;
+      max-width: 177px;
+    }
+
+    .img-responsive {
+    }
+
+    .swiper-pagination {
+      display: none;
+    }
+
+    .swiper-pagination-dark {
+    }
+
+    .swiper-button-next {
+    }
+
+    .swiper-button-next-bg {
+    }
+
+    .swiper-button-prev {
+    }
+
+    .swiper-button-prev-bg {
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    color: rgb(101, 91, 85);
+    line-height: 150%;
+    margin-top: 22px;
+    margin-bottom: 12px;
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 21px;
+    font-size: 14px;
+    color: rgb(101, 91, 85);
+  }
+
+  &__btn {
+    border: 1px solid #0c1105;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: rgb(12, 17, 5);
+    line-height: 131%;
+    text-decoration: none;
+    padding: 14px 10px;
+    box-sizing: border-box;
+    svg {
+      height: 10px;
+      margin-left: 8px;
+    }
+  }
+
+  .container-md {
+  }
+
+  @media (max-width: $mobile) {
+    &__heading {
+      margin-bottom: 21px;
+    }
+    .heading-link {
+      margin-top: 15px;
+    }
+
+    &__swiper {
+      .swiper {
+        margin-bottom: 42px;
+      }
+
+      .swiper-explore {
+      }
+
+      .swiper-wrapper {
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 35px;
+      }
+
+      .swiper-slide {
+        width: 100%;
+        max-width: 149px;
+      }
+
+      .img-responsive {
+      }
+
+      .swiper-pagination {
+        display: block;
+        bottom: -3px;
+      }
+
+      .swiper-pagination-dark {
+      }
+
+      .swiper-button-next {
+        display: none;
+      }
+
+      .swiper-button-next-bg {
+      }
+
+      .swiper-button-prev {
+        display: none;
+      }
+
+      .swiper-button-prev-bg {
+      }
+    }
+
+    &__title {
+      font-size: 16px;
+      line-height: 168%;
+      margin-top: 22px;
+      margin-bottom: 12px;
+    }
+
+    &__subtitle {
+      line-height: 100%;
+    }
+
+    &__btn {
+      border: 1px solid #0c1105;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      color: rgb(12, 17, 5);
+      line-height: 131%;
+      text-decoration: none;
+      padding: 14px 10px;
+      box-sizing: border-box;
+      svg {
+        height: 10px;
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+
+
+
+
+

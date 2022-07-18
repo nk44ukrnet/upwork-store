@@ -1,0 +1,164 @@
+.app-block-subscribe {
+  background-color: #f7f7f7;
+
+  &__container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 68px;
+    padding-bottom: 65px;
+  }
+
+  &__heading {
+    font-size: 32px;
+    color: rgb(12, 17, 5);
+    line-height: 140%;
+    font-weight: 400;
+    margin-bottom: 41px;
+
+    strong {
+      font-weight: 600;
+    }
+  }
+
+  form {
+    position: relative;
+
+    width: 100%;
+    max-width: 602px;
+    margin: 0 auto;
+
+    input[type="email"] {
+      display: block;
+      width: 100%;
+      height: 68px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding-right: 190px;
+      padding-left: 27px;
+      box-sizing: border-box;
+      border: 1px solid #0c1105;
+      outline: none;
+
+      &, &::placeholder {
+        height: 68px;
+        color: rgb(94, 94, 94);
+        font-size: 18px;
+        line-height: 200%;
+      }
+    }
+
+    button[type="submit"] {
+      background-color: #0c1105;
+      height: 45px;
+      width: 100%;
+      max-width: 151px;
+      padding: 12px 32px 15px 42px;
+      color: #fff;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      right: 9px;
+      transform: translateY(-50%);
+      font-size: 16px;
+      line-height: 131%;
+
+      svg {
+        display: inline-block;
+        height: 10px;
+        margin-left: 5px;
+
+        #Layer_1_copy {
+          fill: #fff;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $mobile) {
+    background-color: #f7f7f7;
+
+    &__container {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding-top: 42px;
+      padding-bottom: 42px;
+    }
+
+    &__heading {
+      font-size: 30px;
+      color: rgb(12, 17, 5);
+      line-height: 140%;
+      font-weight: 400;
+      margin-bottom: 28px;
+
+      strong {
+        font-weight: 600;
+      }
+    }
+
+    form {
+      position: relative;
+
+      width: 100%;
+      max-width: none;
+      margin: 0 auto;
+
+      input[type="email"] {
+        display: block;
+        width: 100%;
+        height: 50px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding-right: 20px;
+        padding-left: 20px;
+        box-sizing: border-box;
+        border: 1px solid #0c1105;
+        outline: none;
+        margin-bottom: 12px;
+
+        &, &::placeholder {
+          text-align: center;
+          height: 50px;
+          color: rgb(94, 94, 94);
+          font-size: 18px;
+          line-height: 200%;
+        }
+      }
+
+      button[type="submit"] {
+        background-color: #0c1105;
+        height: 52px;
+        width: 100%;
+        max-width: none;
+        padding: 18px;
+        text-align: center;
+        color: #fff;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        position: static;
+        transform: translateY(0%);
+        font-size: 16px;
+        line-height: 131%;
+
+        svg {
+          display: inline-block;
+          height: 10px;
+          margin-left: 5px;
+
+          #Layer_1_copy {
+            fill: #fff;
+          }
+        }
+      }
+    }
+  }
+}
