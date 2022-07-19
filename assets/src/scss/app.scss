@@ -1,8 +1,9 @@
 
+@import "vendor/swiper-styles";
+
 @import "base/_normalize",
 "base/_variables",
 "base/_fonts",
-"base/_vendor",
 "base/_structure",
 "base/_breadcrumbs",
 "base/_footer",
@@ -13,7 +14,7 @@
 
 @import "blocks/_catalog",
 "blocks/_swiper",
-"blocks/_top-part",
+"blocks/page-title",
 "blocks/_message",
 "blocks/_home-top",
 "blocks/_home-top-box",

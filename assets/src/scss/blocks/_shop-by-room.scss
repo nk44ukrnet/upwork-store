@@ -29,6 +29,8 @@
       position: relative;
       z-index: 1;
       text-align: center;
+      text-decoration: none;
+      color: inherit;
 
       &::after {
         content: '';
@@ -68,10 +70,12 @@
 
   &__title {
     margin: 0;
-    font-size: 14px;
-    line-height: 190%;
+    font-size: 18px;
+    line-height: 150%;
     margin-top: 16px;
     margin-bottom: 5px;
+    color: var(--dark);
+    text-decoration: none;
   }
 
   &__subtitle {
@@ -99,9 +103,20 @@
       }
 
     }
+    &__title {
+      margin-bottom: 0px;
+        font-size: 16px;
+      line-height: 168%;
+    }
+    &__img {
+      height: 114px;
+      object-fit: cover;
+      object-position: center center;
+    }
     &__subtitle {
       display: block;
       margin: 0;
+      color: var(--dark);
     }
   }
 }

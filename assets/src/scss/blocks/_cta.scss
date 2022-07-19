@@ -62,7 +62,7 @@
   &__title {
     margin: 0;
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     font-size: 22px;
     line-height: 163%;
   }
@@ -151,7 +151,6 @@
         margin-right: 0;
         transform: translateX(0);
       }
-
     }
 
     &__content {
@@ -186,15 +185,45 @@
       gap: 20px;
       justify-content: center;
     }
+    &__svg {
+      height: 72px;
+      //overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
     &__cell {
       text-align: center;
+      align-items: center;
 
       svg {
         height: 67px;
         margin-bottom: 16px;
       }
 
+      &:nth-child(1) {
+       svg  {
+         height: 67px;
+       }
+      }
+      &:nth-child(2) {
+        svg  {
+          width: 110px;
+          height: 50px;
+          //transform: translateX(0%);
+        }
+      }
+      &:nth-child(3) {
+        svg  {
+          height: 72px;
+        }
+      }
+      &:nth-child(4) {
+        svg  {
+          height: 70px;
+        }
+      }
       display: flex;
       flex-direction: column;
     }

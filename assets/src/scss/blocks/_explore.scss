@@ -52,7 +52,7 @@
 
   &__title {
     font-size: 18px;
-    color: rgb(101, 91, 85);
+    color: var(--dark);
     line-height: 150%;
     margin-top: 22px;
     margin-bottom: 12px;
@@ -62,7 +62,7 @@
     margin: 0;
     margin-bottom: 21px;
     font-size: 14px;
-    color: rgb(101, 91, 85);
+    color: var(--dark);
   }
 
   &__btn {

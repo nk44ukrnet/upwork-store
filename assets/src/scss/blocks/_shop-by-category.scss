@@ -18,6 +18,8 @@
   }
 
   &__item {
+    text-decoration: none;
+    color: inherit;
   }
 
   &__title {
@@ -25,7 +27,7 @@
     margin-top: 16px;
     font-size: 18px;
     line-height: 100%;
-    color: rgb(101, 91, 85);
+    color: var(--dark);
   }
   @media (max-width: 1236px) {
     &__holder {
@@ -39,12 +41,17 @@
     &__holder {
       grid-template-columns: repeat(auto-fit, minmax(min-content, 150px));
       column-gap: 20px;
-      row-gap: 15px;
+      row-gap: 17px;
       img {
         height: 104px;
         object-fit: cover;
         object-position: center center;
       }
+    }
+    &__title {
+      line-height: 100%;
+      font-weight: 500;
+      color: var(--dark);
     }
   }
 }

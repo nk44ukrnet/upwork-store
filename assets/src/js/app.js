@@ -201,7 +201,7 @@ window.addEventListener('DOMContentLoaded', function () {
     }
     //swiper home page top
     try {
-        let checkSwiperExist = document.querySelector('.home-top1__swiper .mySwiper-home-top');
+        let checkSwiperExist = document.querySelector('.app-block-home-top__swiper .mySwiper-home-top');
         if (checkSwiperExist) {
             let swiperHomeTop = new Swiper(".mySwiper-home-top", {
                 navigation: {

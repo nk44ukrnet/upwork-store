@@ -1,11 +1,11 @@
-.home-top1 {
+.app-block-home-top {
   display: grid;
   box-sizing: border-box;
   margin-bottom: 50px;
 
   grid-template-columns: repeat(3, 380px);
   justify-content: space-between;
-  gap: 25px;
+  gap: 23px;
   align-items: flex-start;
 
   & > * {
@@ -42,6 +42,7 @@
       width: -moz-fit-content;
       width: fit-content;
     }
+
     .swiper-pagination-inner {
       display: none;
     }
@@ -93,7 +94,7 @@
       margin-left: 8px;
       display: inline-block;
       vertical-align: middle;
-      transform: translateY(15%);
+      transform: translateY(-5%);
     }
   }
 
@@ -118,6 +119,22 @@
       display: flex;
       min-height: 229px;
 
+      .swiper-slide {
+        position: relative;
+
+        &::before {
+          content: '';
+          width: 100%;
+          height: 100%;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: rgba(#000, 0.3);
+          z-index: 2;
+        }
+      }
+
       .swiper-pagination {
         bottom: 94px;
         right: 50%;
@@ -128,6 +145,7 @@
         width: fit-content;
         display: none;
       }
+
       .swiper-pagination-inner {
         display: block;
         position: static;
@@ -144,19 +162,35 @@
       }
     }
     &__content {
-      position: static;
+      position: relative;
+      z-index: 2;
+      right: auto;
+      left: auto;
+      bottom: auto;
+      top: auto;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
     &__btn {
-      padding: 16px 25px;
+      //padding: 16px 25px;
+      padding: 0;
       font-size: 16px;
-      line-height: 131%;
+      line-height: 100%;
       position: static;
       transform: translateX(0);
+      box-sizing: border-box;
+      height: 45px;
+      width: 151px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
+      svg {
+        transform: translateY(-5%);
+      }
     }
     &__heading {
       width: -moz-fit-content;
