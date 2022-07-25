@@ -3094,30 +3094,38 @@ body {
 .app-page-category__sidebar .filter-item .filter-content {
   display: none;
 }
-.app-page-category__sidebar .filter-item.active .filter-heading {
+.app-page-category__sidebar .filter-item.active div.gamma.widget-title {
   font-weight: bold;
 }
-.app-page-category__sidebar .filter-item.active .filter-heading svg {
+.app-page-category__sidebar .filter-item.active div.gamma.widget-title::after {
   transform: rotate(-90deg);
   opacity: 1;
 }
 .app-page-category__sidebar .filter-item.active .filter-content {
   display: block;
 }
-.app-page-category__sidebar .filter-heading {
+.app-page-category__sidebar div.gamma.widget-title {
   display: flex;
   justify-content: space-between;
   text-decoration: none;
   color: var(--dark);
   font-size: 15px;
   line-height: 100%;
+  position: relative;
 }
-.app-page-category__sidebar .filter-heading svg {
-  height: 10px;
-  transform: rotate(90deg);
+.app-page-category__sidebar div.gamma.widget-title::after {
+  content: "";
+  width: 5px;
+  height: 11px;
+  background-image: url(../../img/arrow-1.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
   opacity: 0.5;
-  display: inline-block;
-  vertical-align: middle;
+  transform: rotate(90deg);
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 2px;
 }
 .app-page-category__sidebar .filter-content form {
   padding-top: 21px;
@@ -3221,7 +3229,7 @@ body {
     display: table;
     margin: 0 auto;
   }
-  .app-page-category__sidebar .filter-heading, .app-page-category__sidebar .filter-content {
+  .app-page-category__sidebar .widget {
     padding-left: 20px;
     padding-right: 22px;
   }

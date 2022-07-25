@@ -184,7 +184,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
     //filters sidebar toggle by svg arrow
     try {
-        let filterTrigger = document.querySelectorAll('.filter-heading svg');
+        let filterTrigger = document.querySelectorAll('.filter-item .gamma.widget-title');
         if(filterTrigger) {
             filterTrigger.forEach(trigger=>{
                 trigger.addEventListener('click', e=>{
@@ -197,6 +197,21 @@ window.addEventListener('DOMContentLoaded', function () {
         }
     } catch (e) {
         console.log('filter sidebar ', e)
+    }
+    //filter mobile trigger expand
+    try {
+        let triggerBtn = document.querySelector('.trigger-mobile-expand');
+        if(triggerBtn) {
+            triggerBtn.addEventListener('click', e=>{
+                let current = e.target,
+                    closestSidebar = current.closest('.app-page-category__sidebar');
+                if(closestSidebar) {
+                    closestSidebar.classList.toggle('mobile-disabled');
+                }
+            })
+        }
+    } catch (e) {
+        console.log('filter mobile trigger expand error ', e);
     }
 //swiper catalog page
     try {

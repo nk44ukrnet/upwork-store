@@ -46,19 +46,21 @@
       &:last-child {
         padding-top: 15px;
       }
+
       .filter-content {
         display: none;
       }
 
       &.active {
-        .filter-heading {
+        div.gamma.widget-title {
           font-weight: bold;
-
-          svg {
+          &::after {
             transform: rotate(-90deg);
             opacity: 1;
+
           }
         }
+
         .filter-content {
           display: block;
         }
@@ -67,22 +69,30 @@
     }
 
 
-    .filter-heading {
+    div.gamma.widget-title {
       display: flex;
       justify-content: space-between;
       text-decoration: none;
       color: var(--dark);
       font-size: 15px;
       line-height: 100%;
+      position: relative;
 
-      svg {
-        //width: 11px;
-        height: 10px;
-        transform: rotate(90deg);
+      &::after {
+        content: '';
+        width: 5px;
+        height: 11px;
+        background-image: url(../../img/arrow-1.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
         opacity: .5;
-        display: inline-block;
-        vertical-align: middle;
+        transform: rotate(90deg);
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 2px;
       }
+
     }
 
     .filter-content {
@@ -210,7 +220,7 @@
         margin: 0 auto;
       }
 
-      .filter-heading, .filter-content {
+      .widget {
         padding-left: 20px;
         padding-right: 22px;
       }
