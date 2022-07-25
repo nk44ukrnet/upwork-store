@@ -186,3 +186,19 @@ body {
     margin: 0 auto;
   }
 }
+
+.dots-dark {
+  display: flex;
+  gap: 6px;
+  .dot {
+    width: 9px;
+    height: 9px;
+    display: block;
+    border: 1px solid var(--dark);
+    box-sizing: border-box;
+    border-radius: 50%;
+    &.active {
+      background-color: var(--dark);
+    }
+  }
+}
