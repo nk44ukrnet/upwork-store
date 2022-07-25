@@ -181,6 +181,23 @@ window.addEventListener('DOMContentLoaded', function () {
     } catch (e) {
         console.log('header issue', e);
     }
+
+    //filters sidebar toggle by svg arrow
+    try {
+        let filterTrigger = document.querySelectorAll('.filter-heading svg');
+        if(filterTrigger) {
+            filterTrigger.forEach(trigger=>{
+                trigger.addEventListener('click', e=>{
+                    let current = e.target;
+                    if(current.closest('.filter-item')) {
+                        current.closest('.filter-item').classList.toggle('active');
+                    }
+                })
+            })
+        }
+    } catch (e) {
+        console.log('filter sidebar ', e)
+    }
 //swiper catalog page
     try {
         let checkSwiperExist = document.querySelector('.app-block-swiper .mySwiper');
