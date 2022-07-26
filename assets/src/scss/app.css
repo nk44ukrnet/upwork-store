@@ -3084,6 +3084,7 @@ body {
   padding-top: 15px;
   padding-bottom: 15px;
   border-bottom: 1px solid #e5e5e5;
+  cursor: pointer;
 }
 .app-page-category__sidebar .filter-item_first {
   padding-top: 0;
