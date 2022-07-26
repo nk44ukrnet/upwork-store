@@ -3327,6 +3327,20 @@ body {
 .app-page-product-main .woocommerce-product-gallery .dots-dark {
   display: none;
 }
+.app-page-product-main .woocommerce-product-gallery .controls-wrapper {
+  position: relative;
+}
+.app-page-product-main .woocommerce-product-gallery .controls-wrapper .next {
+  position: absolute;
+  bottom: -20px;
+  left: 45%;
+  z-index: 2;
+  transform: rotate(90deg) translateX(-50%);
+  cursor: pointer;
+}
+.app-page-product-main .woocommerce-product-gallery .controls-wrapper .next svg {
+  height: 11px;
+}
 .app-page-product-main .woocommerce-product-gallery .flex-control-nav {
   list-style-type: none;
   display: flex;
@@ -3391,6 +3405,9 @@ body {
   font-size: 14px;
   color: rgb(1, 1, 1);
   line-height: 164%;
+}
+.app-page-product-main .entry-summary .product_meta .tagged_as > * {
+  margin-bottom: 5px;
 }
 .app-page-product-main .entry-summary .product_meta [rel=tag] {
   background-color: #f0f0f0;
@@ -3533,6 +3550,32 @@ body {
   margin: 0;
   margin-bottom: 12px;
 }
+.app-page-product-main .related-products .products-wrapper {
+  position: relative;
+}
+.app-page-product-main .related-products .products-wrapper .next, .app-page-product-main .related-products .products-wrapper .prev {
+  position: absolute;
+  cursor: pointer;
+}
+.app-page-product-main .related-products .products-wrapper .next svg, .app-page-product-main .related-products .products-wrapper .prev svg {
+  height: 13px;
+}
+.app-page-product-main .related-products .products-wrapper .prev {
+  top: 40%;
+  left: -28px;
+  transform: translateY(-40%);
+}
+.app-page-product-main .related-products .products-wrapper .prev svg {
+  transform: rotate(180deg);
+}
+.app-page-product-main .related-products .products-wrapper .next {
+  top: 40%;
+  right: -28px;
+  transform: translateY(-40%);
+}
+.app-page-product-main .related-products .products-wrapper .dots-dark {
+  display: none;
+}
 .app-page-product-main .related-products .products {
   list-style-type: none;
   display: flex;
@@ -3565,29 +3608,6 @@ body {
   object-fit: contain;
   object-position: center center;
   margin-bottom: 20px;
-}
-.app-page-product-main .related-products .next, .app-page-product-main .related-products .prev {
-  position: absolute;
-  cursor: pointer;
-}
-.app-page-product-main .related-products .next svg, .app-page-product-main .related-products .prev svg {
-  height: 13px;
-}
-.app-page-product-main .related-products .prev {
-  top: 40%;
-  left: -28px;
-  transform: translateY(-40%);
-}
-.app-page-product-main .related-products .prev svg {
-  transform: rotate(180deg);
-}
-.app-page-product-main .related-products .next {
-  top: 40%;
-  right: -28px;
-  transform: translateY(-40%);
-}
-.app-page-product-main .related-products .dots-dark {
-  display: none;
 }
 @media (max-width: 1167px) {
   .app-page-product-main .product-page {
@@ -3624,6 +3644,16 @@ body {
     margin: 0;
     margin-bottom: 20px;
   }
+  .app-page-product-main .related-products .products-wrapper .next, .app-page-product-main .related-products .products-wrapper .prev {
+    display: none;
+  }
+  .app-page-product-main .related-products .products-wrapper .dots-dark {
+    display: flex;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .app-page-product-main .related-products .products {
     column-gap: 10px;
     justify-content: center;
@@ -3646,16 +3676,6 @@ body {
     height: 114px;
     margin-bottom: 14px;
   }
-  .app-page-product-main .related-products .next, .app-page-product-main .related-products .prev {
-    display: none;
-  }
-  .app-page-product-main .related-products .dots-dark {
-    display: flex;
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
 }
 @media (max-width: 768px) {
   .app-page-product-main .woocommerce-product-gallery {
@@ -3670,7 +3690,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
   }
-  .app-page-product-main .woocommerce-product-gallery .flex-control-nav {
+  .app-page-product-main .woocommerce-product-gallery .controls-wrapper, .app-page-product-main .woocommerce-product-gallery .flex-control-nav {
     display: none;
     width: 0;
     height: 0;

@@ -16,6 +16,21 @@
       display: none;
     }
 
+    .controls-wrapper {
+      position: relative;
+      .next {
+        position: absolute;
+        bottom: -20px;
+        left: 45%;
+        z-index: 2;
+        transform: rotate(90deg) translateX(-50%);
+        cursor: pointer;
+
+        svg {
+          height: 11px;
+        }
+      }
+    }
     .flex-control-nav {
       list-style-type: none;
       display: flex;
@@ -93,6 +108,10 @@
       font-size: 14px;
       color: rgb(1, 1, 1);
       line-height: 164%;
+
+      .tagged_as  > * {
+        margin-bottom: 5px;
+      }
 
       [rel="tag"] {
         background-color: #f0f0f0;
@@ -273,6 +292,37 @@
       margin: 0;
       margin-bottom: 12px;
     }
+    .products-wrapper {
+      position: relative;
+      .next, .prev {
+        position: absolute;
+        cursor: pointer;
+
+        svg {
+          height: 13px;
+        }
+      }
+
+      .prev {
+        top: 40%;
+        left: -28px;
+        transform: translateY(-40%);
+
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+
+      .next {
+        top: 40%;
+        right: -28px;
+        transform: translateY(-40%);
+      }
+
+      .dots-dark {
+        display: none;
+      }
+    }
 
     .products {
       list-style-type: none;
@@ -312,34 +362,7 @@
       margin-bottom: 20px;
     }
 
-    .next, .prev {
-      position: absolute;
-      cursor: pointer;
 
-      svg {
-        height: 13px;
-      }
-    }
-
-    .prev {
-      top: 40%;
-      left: -28px;
-      transform: translateY(-40%);
-
-      svg {
-        transform: rotate(180deg);
-      }
-    }
-
-    .next {
-      top: 40%;
-      right: -28px;
-      transform: translateY(-40%);
-    }
-
-    .dots-dark {
-      display: none;
-    }
   }
 
   @media (max-width: 1167px) {
@@ -388,6 +411,19 @@
         margin-bottom: 20px;
       }
 
+      .products-wrapper {
+        .next, .prev {
+          display: none;
+        }
+        .dots-dark {
+          display: flex;
+          position: absolute;
+          bottom: 30px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
       .products {
         column-gap: 10px;
         justify-content: center;
@@ -414,16 +450,7 @@
         margin-bottom: 14px;
       }
 
-      .next, .prev {
-        display: none;
-      }
-      .dots-dark {
-        display: flex;
-       position: absolute;
-        bottom: 30px;
-        left: 50%;
-        transform: translateX(-50%);
-      }
+
     }
   }
   @media (max-width: $mobile) {
@@ -438,7 +465,7 @@
         left: 50%;
         transform: translateX(-50%);
       }
-      .flex-control-nav {
+      .controls-wrapper, .flex-control-nav {
         display: none;
         width: 0;
         height: 0;
