@@ -1,0 +1,32 @@
+.woo-cart {
+
+  .woocommerce-cart-form {
+    .woocommerce-cart-form__contents {
+      width: 100%;
+      max-width: 774px;
+      display: flex;
+      position: relative;
+    }
+
+    .item {
+
+    }
+
+    .product-thumbnail {
+      img {
+        @extend .img-responsive;
+        max-width: 136px;
+      }
+
+      margin-right: 25px;
+    }
+
+    .product-like {
+      svg {
+        width: 17px;
+        opacity: .5;
+      }
+    }
+  }
+
+}

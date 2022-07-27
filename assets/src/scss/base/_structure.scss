@@ -389,3 +389,24 @@ body {
     }
   }
 }
+
+.total {
+  font-size: 28px;
+  line-height: 100%;
+}
+
+.promo {
+  text-decoration: none;
+  display: inline-block;
+
+  span {
+    color: var(--dark);
+    font-size: 13px;
+  }
+
+  svg {
+    width: 15px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
