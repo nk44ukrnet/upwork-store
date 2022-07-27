@@ -409,10 +409,8 @@
             <form name="checkout" method="post" class="checkout woocommerce-checkout woo-checkout" action="#"
                   enctype="multipart/form-data" novalidate="novalidate">
 
-
                 <div class="woocommerce-billing-fields">
                     <h3>Shipping Address</h3>
-
 
                     <div class="woocommerce-billing-fields__field-wrapper">
                         <p class="form-row form-row-first validate-required">
@@ -653,17 +651,146 @@
 
                     </div>
 
+                    <div class="woocommerce-shipping-fields">
+                        <h3>Delivery Method</h3>
+                        <div class="delivery-container">
+                            <div class="delivery-heading expand-heading">
+                                <strong>4 items</strong>
+                                <span class="expand expand-trigger active">
+                                    Collapse<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                 viewBox="0 0 9 16" style="enable-background:new 0 0 9 16;"
+                                                 xml:space="preserve">
+<style type="text/css">
+	.st0 {
+        display: none;
+    }
+
+    .st1 {
+        display: inline;
+        fill: none;
+        stroke: #000000;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+</style>
+<g id="Layer_1" class="st0">
+	<polyline class="st1" points="1,1 8,8 1,15 	"/>
+</g>
+<g id="Layer_1_copy">
+	<g>
+		<path d="M1,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4L6.6,8L0.3,1.7c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l7,7
+			c0.4,0.4,0.4,1,0,1.4l-7,7C1.5,15.9,1.3,16,1,16z"/>
+	</g>
+</g>
+</svg>
+                                </span>
+                            </div>
+                            <div class="delivery-holder expand-body active">
+                                <div class="delivery-item">
+                                    <div class="delivery-img">
+                                        <img src="assets/img/checkout1.png" alt="Product" loading="lazy">
+                                    </div>
+                                    <div class="delivery-text">
+                                        <h2><span>Get it between Tue,</span> Feb 22 - Fri, Feb 25</h2>
+                                        <p>FREE Ground</p>
+                                    </div>
+                                </div>
+                                <div class="delivery-item">
+                                    <div class="delivery-img">
+                                        <img src="assets/img/checkout2.png" alt="Product" loading="lazy">
+                                    </div>
+                                    <div class="delivery-text">
+                                        <h2><span>Get it between Tue,</span> Feb 22 - Fri, Feb 25</h2>
+                                        <p>FREE Ground</p>
+                                    </div>
+                                </div>
+                                <div class="delivery-item">
+                                    <div class="delivery-img">
+                                        <img src="assets/img/checkout3.png" alt="Product" loading="lazy">
+                                    </div>
+                                    <div class="delivery-text">
+                                        <h2><span>Get it between Tue,</span> Feb 22 - Fri, Feb 25</h2>
+                                        <p>FREE Ground</p>
+                                    </div>
+                                </div>
+                                <div class="delivery-item">
+                                    <div class="delivery-img">
+                                        <img src="assets/img/checkout4.png" alt="Product" loading="lazy">
+                                    </div>
+                                    <div class="delivery-text">
+                                        <h2><span>Get it between Tue,</span> Feb 22 - Fri, Feb 25</h2>
+                                        <p>FREE Ground</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="da-content"></div>
+
+                    <div class="woocommerce-payment-info">
+                        <h3>Payment Info</h3>
+                        <p class="text">Wayfair accepts all major credit and debit cards. Your card will be saved for
+                            future purchases.</p>
+                        <img src="assets/img/cards.png" alt="Cards" class="cards-img" loading="lazy">
+                        <div class="holder custom-inputs">
+                            <div class="group">
+                                <p class="form-row form-row-first validate-required">
+                                    <span class="woocommerce-input-wrapper">
+                                        <input type="text" class="input-text" placeholder=" " value="">
+                                    <label>Name</label>
+                                    </span>
+                                </p>
+                                <p class="form-row form-row-card-date validate-required">
+                                    <span class="woocommerce-input-wrapper">
+                                        <input type="text" class="input-text" placeholder=" " value="">
+                                    <label>MM/YY</label>
+                                    </span>
+                                </p>
+                                <p class="form-row form-row-card-cvc validate-required">
+                                    <span class="woocommerce-input-wrapper">
+                                        <input type="text" class="input-text" placeholder=" " value="">
+                                    <label>CVC</label>
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="group">
+                                <p class="form-row validate-required">
+                                    <span class="woocommerce-input-wrapper">
+                                        <input type="text" class="input-text" placeholder=" " value="">
+                                    <label>Card Number</label>
+                                    </span>
+                                </p>
+                                <p class="form-row validate-required">
+                                    <span class="woocommerce-input-wrapper">
+                                        <select>
+                                            <option value="" selected>Billing Address</option>
+                                            <option value="Address 1">Address 1</option>
+                                            <option value="Address 2">Address 2</option>
+                                        </select>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="submit-holder">
+                            <button type="submit" class="button alt">save & continue</button>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="cart-summary">
-                <h2 class="cart-summary__heading">Cart Summary</h2>
+                <div data-da=".da-content,1177,1" class="cart-summary woocommerce-checkout-review-order">
+                    <h2 class="cart-summary__heading ">Cart Summary</h2>
                     <div class="holder">
-                        <div class="heading">
+                        <div class="heading expand-heading">
                             <strong>4 items</strong>
-                            <span class="expand expand-trigger">
+                            <span class="expand expand-trigger active">
                             Collapse<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                 viewBox="0 0 9 16" style="enable-background:new 0 0 9 16;" xml:space="preserve">
+                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                         viewBox="0 0 9 16" style="enable-background:new 0 0 9 16;"
+                                         xml:space="preserve">
 <style type="text/css">
 	.st0 {
         display: none;
@@ -691,13 +818,13 @@
                         </span>
                         </div>
 
-                        <div class="blocks expand-body">
+                        <div class="blocks expand-body active">
                             <div class="cell">
                                 <img src="assets/img/checkout1.png" alt="Product" loading="lazy">
                                 <div class="content">
                                     <p class="title">Ivory Coast Woven Bed </p>
                                     <p class="specification">Item specification...</p>
-                                    <p class="price"><span>$123.45</span> <span class="old">$123.45</span></p>
+                                    <p class="price"><span>$123.45</span><span class="old">$123.45</span></p>
                                 </div>
                             </div>
                             <div class="cell">
@@ -705,7 +832,7 @@
                                 <div class="content">
                                     <p class="title">Hanbury Nightstand </p>
                                     <p class="specification">Item specification...</p>
-                                    <p class="price"><span>$123.45</span> <span class="old"></span></p>
+                                    <p class="price"><span>$123.45</span></p>
                                 </div>
                             </div>
                             <div class="cell">
@@ -713,7 +840,7 @@
                                 <div class="content">
                                     <p class="title">Carlisle Rectangular Mirror </p>
                                     <p class="specification">Item specification...</p>
-                                    <p class="price"><span class="old"></span></p>
+                                    <p class="price"><span>$123.45</span></p>
                                 </div>
                             </div>
                             <div class="cell">
@@ -721,7 +848,7 @@
                                 <div class="content">
                                     <p class="title">Carins Round Mirror </p>
                                     <p class="specification">Item specification...</p>
-                                    <p class="price"><span>$123.45</span> <span class="old"></span></p>
+                                    <p class="price"><span>$123.45</span></p>
                                 </div>
                             </div>
                         </div>
@@ -734,7 +861,7 @@
 
                             <p class="total">Total: <strong>$987.65</strong></p>
 
-                            <a href=#!" class="promo">
+                            <a href="#!" class="promo">
                                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                      viewBox="0 0 19.1 19.2" style="enable-background:new 0 0 19.1 19.2;"
@@ -746,110 +873,11 @@
 	c-0.1-0.9-0.8-1.6-1.7-1.7l-0.2,0L11.9,1.2z M7.1,1.2c-0.5,0-1,0.2-1.4,0.6C5.4,2.1,5.2,2.6,5.2,3.1c0,1,0.7,1.8,1.7,1.9l0.2,0L9,5
 	V3.1c0-1-0.7-1.8-1.7-1.9L7.1,1.2z"/>
 </svg>
-                                <span class="underlined"></span>
+                                <span class="underlined">Ad Gift Card/Promo Code</span>
                             </a>
                         </div>
                     </div>
                 </div>
-
-                <div class="woocommerce-shipping-fields">
-                </div>
-                <div class="woocommerce-additional-fields">
-
-
-                    <h3>Additional information</h3>
-
-
-                    <div class="woocommerce-additional-fields__field-wrapper">
-                        <p class="form-row notes" id="order_comments_field" data-priority=""><label
-                                for="order_comments" class="">Order notes&nbsp;<span
-                                class="optional">(optional)</span></label><span
-                                class="woocommerce-input-wrapper"><textarea name="order_comments"
-                                                                            class="input-text "
-                                                                            id="order_comments"
-                                                                            placeholder="Notes about your order, e.g. special notes for delivery."
-                                                                            rows="2" cols="5"></textarea></span>
-                        </p></div>
-
-
-                </div>
-
-
-                <h3 id="order_review_heading">Your order</h3>
-
-
-                <div id="order_review" class="woocommerce-checkout-review-order">
-                    <table class="shop_table woocommerce-checkout-review-order-table">
-                        <thead>
-                        <tr>
-                            <th class="product-name">Product</th>
-                            <th class="product-total">Subtotal</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr class="cart_item">
-                            <td class="product-name">
-                                Lowepro Slingshot Edge 250 AW&nbsp; <strong class="product-quantity">×&nbsp;1</strong>
-                            </td>
-                            <td class="product-total">
-                                <span class="woocommerce-Price-amount amount"><bdi><span
-                                        class="woocommerce-Price-currencySymbol">£</span>109.95</bdi></span></td>
-                        </tr>
-                        </tbody>
-                        <tfoot>
-
-                        <tr class="cart-subtotal">
-                            <th>Subtotal</th>
-                            <td><span class="woocommerce-Price-amount amount"><bdi><span
-                                    class="woocommerce-Price-currencySymbol">£</span>109.95</bdi></span></td>
-                        </tr>
-
-
-                        <tr class="order-total">
-                            <th>Total</th>
-                            <td><strong><span class="woocommerce-Price-amount amount"><bdi><span
-                                    class="woocommerce-Price-currencySymbol">£</span>109.95</bdi></span></strong></td>
-                        </tr>
-
-
-                        </tfoot>
-                    </table>
-
-                    <div id="payment" class="woocommerce-checkout-payment">
-                        <ul class="wc_payment_methods payment_methods methods">
-                            <li class="woocommerce-notice woocommerce-notice--info woocommerce-info">Sorry, it seems
-                                that there are no available payment methods for your state. Please contact us if you
-                                require assistance or wish to make alternate arrangements.
-                            </li>
-                        </ul>
-                        <div class="form-row place-order">
-                            <noscript>
-                                Since your browser does not support JavaScript, or it is disabled, please ensure you
-                                click the <em>Update Totals</em> button before placing your order. You may be charged
-                                more than the amount stated above if you fail to do so. <br/>
-                                <button type="submit" class="button alt" name="woocommerce_checkout_update_totals"
-                                        value="Update totals">Update totals
-                                </button>
-                            </noscript>
-
-                            <div class="woocommerce-terms-and-conditions-wrapper">
-                                <div class="woocommerce-privacy-policy-text"></div>
-                            </div>
-
-
-                            <button type="submit" class="button alt" name="woocommerce_checkout_place_order"
-                                    id="place_order" value="Place order" data-value="Place order">Place order
-                            </button>
-
-                            <input type="hidden" id="woocommerce-process-checkout-nonce"
-                                   name="woocommerce-process-checkout-nonce" value="1f33405dee"><input type="hidden"
-                                                                                                       name="_wp_http_referer"
-                                                                                                       value="/storefront/?wc-ajax=update_order_review">
-                        </div>
-                    </div>
-
-                </div>
-
 
             </form>
 

@@ -214,6 +214,24 @@ window.addEventListener('DOMContentLoaded', function () {
         console.log('filter mobile trigger expand error ', e);
     }
 
+    //expand trigger
+    try {
+        let expandTrigger = document.querySelectorAll('.expand-trigger'),
+            expandBody = document.querySelectorAll('.expand-body');
+        if (expandTrigger && expandBody && (expandTrigger.length === expandBody.length)) {
+            expandTrigger.forEach((item, index) => {
+                item.addEventListener('click', function (e) {
+                    if (expandTrigger[index] && expandBody[index]) {
+                        expandTrigger[index].classList.toggle('active');
+                        expandBody[index].classList.toggle('active');
+                    }
+                })
+            })
+        }
+    } catch (e) {
+        console.log('expand/collapse error ', e)
+    }
+
 //swiper catalog page
     try {
         let checkSwiperExist = document.querySelector('.app-block-swiper .mySwiper');
