@@ -1213,7 +1213,7 @@ body {
 .expand-trigger {
   cursor: pointer;
 }
-.expand-trigger:not(.active) svg {
+.expand-trigger:not(.active):not(.no-svg-rotate) svg {
   transform: rotate(90deg) !important;
 }
 
@@ -4183,17 +4183,6 @@ body {
   text-decoration: line-through;
   margin-left: 9px;
 }
-.woo-checkout .cart-summary .summary p {
-  margin: 0;
-  line-height: 140%;
-  font-size: 15px;
-}
-.woo-checkout .cart-summary .summary p .subtotal {
-  font-size: 15px;
-}
-.woo-checkout .cart-summary .summary p:not(:last-child) {
-  margin-bottom: 9px;
-}
 .woo-checkout .cart-summary .summary .total {
   font-size: 28px;
   line-height: 100%;
@@ -4212,6 +4201,35 @@ body {
   width: 15px;
   display: inline-block;
   vertical-align: middle;
+}
+.woo-checkout .cart-summary .summary .gift-card {
+  margin-top: 20px;
+  display: none;
+}
+.woo-checkout .cart-summary .summary .gift-card.active {
+  display: block;
+}
+.woo-checkout .cart-summary .summary .shop_table {
+  display: block;
+}
+.woo-checkout .cart-summary .summary .shop_table tr {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  font-size: 15px;
+}
+.woo-checkout .cart-summary .summary .shop_table tr:not(:last-child) {
+  margin-bottom: 8px;
+}
+.woo-checkout .cart-summary .summary .shop_table tr.total {
+  font-size: 20px;
+  line-height: 100%;
+  margin-top: 25px;
+  margin-bottom: 9px;
+}
+.woo-checkout .cart-summary .summary .shop_table tr.total td, .woo-checkout .cart-summary .summary .shop_table tr.total th {
+  font-size: 28px;
+  line-height: 100%;
 }
 @media (max-width: 832px) {
   .woo-checkout {
@@ -4428,6 +4446,18 @@ body {
     row-gap: 16px;
     width: 100%;
   }
+  .woo-checkout .woocommerce-billing-fields .woocommerce-payment-info .group.da-group-2 > *:nth-child(1) {
+    order: 1;
+  }
+  .woo-checkout .woocommerce-billing-fields .woocommerce-payment-info .group.da-group-2 > *:nth-child(2) {
+    order: 3;
+  }
+  .woo-checkout .woocommerce-billing-fields .woocommerce-payment-info .group.da-group-2 > *:nth-child(3) {
+    order: 2;
+  }
+  .woo-checkout .woocommerce-billing-fields .woocommerce-payment-info .group.da-group-2 > *:nth-child(4) {
+    order: 4;
+  }
   .woo-checkout .woocommerce-billing-fields .woocommerce-payment-info .group .form-row {
     position: relative;
     margin: 0;
@@ -4567,6 +4597,25 @@ body {
     width: 15px;
     display: inline-block;
     vertical-align: middle;
+  }
+}
+@media (max-width: 768px) {
+  .woo-checkout .woocommerce-billing-fields .woocommerce-payment-info .group .form-row.form-row-card-date {
+    max-width: 50%;
+  }
+  .woo-checkout .woocommerce-billing-fields .woocommerce-payment-info .group .form-row.form-row-card-cvc {
+    max-width: 47%;
+  }
+}
+@media (max-width: 680px) {
+  .woo-checkout .woocommerce-billing-fields .woocommerce-payment-info .group {
+    justify-content: space-between;
+  }
+  .woo-checkout .woocommerce-billing-fields .woocommerce-payment-info .group .form-row.form-row-card-date {
+    max-width: 47%;
+  }
+  .woo-checkout .woocommerce-billing-fields .woocommerce-payment-info .group .form-row.form-row-card-cvc {
+    max-width: 46%;
   }
 }
 

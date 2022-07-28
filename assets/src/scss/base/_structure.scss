@@ -214,10 +214,13 @@ body {
   cursor: pointer;
 
   &:not(.active) {
-    svg {
-      transform: rotate(90deg) !important;
+    &:not(.no-svg-rotate) {
+      svg {
+        transform: rotate(90deg) !important;
+      }
     }
   }
+
 }
 
 .expand-body {
@@ -260,6 +263,7 @@ body {
       margin-left: 6px;
     }
   }
+
   @media (max-width: $mobile) {
     margin-bottom: 22px;
   }
@@ -267,6 +271,7 @@ body {
 
 .custom-inputs {
   position: relative;
+
   &:not(.type-checkbox) {
     input {
       display: block;
@@ -324,6 +329,7 @@ body {
       pointer-events: none;
     }
   }
+
   @media (max-width: $mobile) {
     &:not(.type-checkbox) {
       input {
@@ -346,6 +352,7 @@ body {
           font-size: 12px;
           top: 5px;
         }
+
         &:focus {
           border-color: var(--dark);
         }

@@ -743,20 +743,20 @@
                                     <label>Name</label>
                                     </span>
                                 </p>
-                                <p class="form-row form-row-card-date validate-required">
+                                <p class="form-row form-row-card-date validate-required" data-da=".da-group-2,832,1">
                                     <span class="woocommerce-input-wrapper">
                                         <input type="text" class="input-text" placeholder=" " value="">
                                     <label>MM/YY</label>
                                     </span>
                                 </p>
-                                <p class="form-row form-row-card-cvc validate-required">
+                                <p class="form-row form-row-card-cvc validate-required" data-da=".da-group-2,832,1">
                                     <span class="woocommerce-input-wrapper">
                                         <input type="text" class="input-text" placeholder=" " value="">
                                     <label>CVC</label>
                                     </span>
                                 </p>
                             </div>
-                            <div class="group">
+                            <div class="group da-group-2">
                                 <p class="form-row validate-required">
                                     <span class="woocommerce-input-wrapper">
                                         <input type="text" class="input-text" placeholder=" " value="">
@@ -853,15 +853,38 @@
                             </div>
                         </div>
 
-                        <div class="summary">
-                            <p class="item"><strong>Item Subtotal:</strong> <span>$987.65</span></p>
-                            <p class="item"><strong>Shipping:</strong> <span>FREE</span></p>
-                            <p class="item"><strong class="underlined">Estimated Tax:</strong> <span>$34.56</span></p>
-                            <p class="item"><strong>You save:</strong> <span>$123.45</span></p>
+                        <div class="summary cart_totals">
 
-                            <p class="total">Total: <strong>$987.65</strong></p>
+                            <table cellspacing="0" class="shop_table shop_table_responsive">
+                                <tbody>
+                                <tr class="cart-subtotal">
+                                    <th>Item Subtotal:</th>
+                                    <td data-title="Subtotal"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>987.65</bdi></span></td>
+                                </tr>
+                                <tr class="woocommerce-shipping-totals shipping">
+                                    <th>Shipping:</th>
+                                    <td>FREE</td>
+                                </tr>
+                                <tr class="order-total">
+                                    <th>Total:</th>
+                                    <td data-title="Total"><strong><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>2,500.00</bdi></span></strong> </td>
+                                </tr>
+                                <tr class="tax">
+                                    <th class="underlined">Estimated Tax:</th>
+                                    <td><bdi><span class="woocommerce-Price-currencySymbol">$</span>34.56</bdi></td>
+                                </tr>
+                                <tr class="save">
+                                    <th>You save:</th>
+                                    <td><bdi><span class="woocommerce-Price-currencySymbol">$</span>123.45</bdi></td>
+                                </tr>
+                                <tr class="total">
+                                    <td>Total:</td>
+                                    <th><bdi><span class="woocommerce-Price-currencySymbol">$</span>987.65</bdi></th>
+                                </tr>
+                                </tbody>
+                            </table>
 
-                            <a href="#!" class="promo">
+                            <a href="#!" class="promo expand-trigger no-svg-rotate">
                                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                      viewBox="0 0 19.1 19.2" style="enable-background:new 0 0 19.1 19.2;"
@@ -875,6 +898,16 @@
 </svg>
                                 <span class="underlined">Ad Gift Card/Promo Code</span>
                             </a>
+
+                            <div class="gift-card custom-inputs expand-body">
+                                <p class="form-row form-row-first validate-required">
+                                    <span class="woocommerce-input-wrapper">
+                                        <input type="text" class="input-text" placeholder=" " value="">
+                                    <label>Gift card/Promo code</label>
+                                    </span>
+                                </p>
+                                <button type="submit" class="btn btn_dark">Apply</button>
+                            </div>
                         </div>
                     </div>
                 </div>
