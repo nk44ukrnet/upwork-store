@@ -409,152 +409,556 @@
         <div class="woo-cart">
             <form class="woocommerce-cart-form" action="https://lee-furniture.mintsparkshost.com/cart/" method="post">
 
+                <div class="inner __container">
 
-                <div class="woocommerce-cart-form__contents">
-                    <div class="item">
-                        <div class="product-thumbnail">
-                            <img src="assets/img/cart1.png" alt="Product"
-                                 class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" loading="lazy">
-                        </div>
+                    <div class="products-main">
+                        <table class="shop_table shop_table-1 shop_table_responsive cart woocommerce-cart-form__contents"
+                               cellspacing="0">
 
-                        <a href="#!" class="product-like">
-                            <svg version="1.1" id="Layer_1_copy" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                 y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;"
-                                 xml:space="preserve">
+                            <tbody>
+                            <tr class="woocommerce-cart-form__cart-item cart_item">
+
+                                <td class="product-remove">
+                                    <a href="#!" class="remove" aria-label="Remove this item">
+                                        <svg width="12" height="15" viewBox="0 0 12 15" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M2.5 6.7C2.5 6.5 2.4 6.3 2.2 6.2C2.1 6 1.9 6 1.7 6C1.5 6 1.3 6.1 1.2 6.3C1 6.4 1 6.6 1 6.8L1.7 13.4C1.7 13.8 1.9 14.2 2.3 14.5C2.7 14.8 3 15 3.4 15H8.6C9.5 15 10.3 14.3 10.3 13.4L11 6.8C11 6.5 10.9 6.3 10.7 6.1C10.5 6 10.2 6 9.9 6.1C9.7 6.2 9.5 6.4 9.5 6.7L8.8 13.3C8.8 13.4 8.8 13.4 8.7 13.5C8.7 13.5 8.6 13.6 8.5 13.6H3.4C3.3 13.6 3.3 13.6 3.2 13.5C3.2 13.5 3.1 13.4 3.1 13.3L2.5 6.7ZM9 1.8V3H11.2C11.5 3 11.7 3.1 11.8 3.4C11.9 3.7 11.9 3.9 11.8 4.2C11.7 4.5 11.4 4.6 11.2 4.6H0.8C0.5 4.6 0.3 4.5 0.2 4.2C0.0999999 3.9 -1.52737e-07 3.6 0.0999998 3.4C0.2 3.2 0.5 3 0.8 3H3V1.8C3 0.8 3.8 0 4.8 0H7.3C8.2 0 9 0.8 9 1.8ZM4.5 1.8C4.5 1.7 4.5 1.7 4.6 1.6C4.6 1.6 4.7 1.5 4.8 1.5H7.3C7.4 1.5 7.4 1.5 7.5 1.6C7.5 1.6 7.6 1.7 7.6 1.8V3H4.6V1.8H4.5Z"
+                                                  fill="black"/>
+                                        </svg>
+                                        <span>
+                                    Remove
+                                </span>
+                                    </a>
+                                </td>
+
+                                <td class="product-thumbnail">
+                                    <a href="#!">
+                                        <img src="assets/img/cart-p1.png"
+                                             class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                             alt="Product" loading="lazy">
+                                    </a>
+                                </td>
+
+                                <td class="product-name" data-title="Product">
+                                    <a href="#!">Ivory Coast Woven Bed</a>
+                                    <span>Item specification...</span>
+                                </td>
+
+                                <td class="product-price">
+                            <span class="woocommerce-Price-amount amount"><bdi><span
+                                    class="woocommerce-Price-currencySymbol">$</span>123.45</bdi>
+                            </span>
+                                    <div class="old-price"><span
+                                            class="woocommerce-Price-currencySymbol">$</span>123.45
+                                    </div>
+                                </td>
+
+                                <td class="product-quantity">
+                                    <div class="quantity">
+                                        <label class="screen-reader-text">Quantity</label>
+                                        <select class="qty">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                </td>
+
+                                <td class="product-favorites">
+                                    <a href="#!" class="woocommerce-favorites favorites">
+                                        <svg version="1.1" id="Layer_1_copy" xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                             viewBox="0 0 24 24"
+                                             style="enable-background:new 0 0 24 24;" xml:space="preserve">
 <path d="M12,4.5c2.3-2.1,6-2,8.2,0.2c2.3,2.3,2.3,5.9,0.2,8.2L12,21.5L3.5,13c-2.1-2.4-2-6,0.2-8.2C6,2.5,9.6,2.4,12,4.5z M18.8,6.2
-	c-1.5-1.5-3.9-1.6-5.5-0.2L12,7.2L10.7,6c-1.6-1.4-4-1.3-5.5,0.2C3.7,7.7,3.6,10,5,11.6l7,7l7-7C20.4,10,20.3,7.7,18.8,6.2z"/>
+	c-1.5-1.5-3.9-1.6-5.5-0.2L12,7.2L10.7,6c-1.6-1.4-4-1.3-5.5,0.2C3.7,7.7,3.6,10,5,11.6l7,7l7-7C20.4,10,20.3,7.7,18.8,6.2z"></path>
 </svg>
-                        </a>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="woocommerce-cart-form__cart-item cart_item">
 
-                        <div class="product-content">
+                                <td class="product-remove">
+                                    <a href="#!" class="remove" aria-label="Remove this item">
+                                        <svg width="12" height="15" viewBox="0 0 12 15" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M2.5 6.7C2.5 6.5 2.4 6.3 2.2 6.2C2.1 6 1.9 6 1.7 6C1.5 6 1.3 6.1 1.2 6.3C1 6.4 1 6.6 1 6.8L1.7 13.4C1.7 13.8 1.9 14.2 2.3 14.5C2.7 14.8 3 15 3.4 15H8.6C9.5 15 10.3 14.3 10.3 13.4L11 6.8C11 6.5 10.9 6.3 10.7 6.1C10.5 6 10.2 6 9.9 6.1C9.7 6.2 9.5 6.4 9.5 6.7L8.8 13.3C8.8 13.4 8.8 13.4 8.7 13.5C8.7 13.5 8.6 13.6 8.5 13.6H3.4C3.3 13.6 3.3 13.6 3.2 13.5C3.2 13.5 3.1 13.4 3.1 13.3L2.5 6.7ZM9 1.8V3H11.2C11.5 3 11.7 3.1 11.8 3.4C11.9 3.7 11.9 3.9 11.8 4.2C11.7 4.5 11.4 4.6 11.2 4.6H0.8C0.5 4.6 0.3 4.5 0.2 4.2C0.0999999 3.9 -1.52737e-07 3.6 0.0999998 3.4C0.2 3.2 0.5 3 0.8 3H3V1.8C3 0.8 3.8 0 4.8 0H7.3C8.2 0 9 0.8 9 1.8ZM4.5 1.8C4.5 1.7 4.5 1.7 4.6 1.6C4.6 1.6 4.7 1.5 4.8 1.5H7.3C7.4 1.5 7.4 1.5 7.5 1.6C7.5 1.6 7.6 1.7 7.6 1.8V3H4.6V1.8H4.5Z"
+                                                  fill="black"/>
+                                        </svg>
+                                        <span>
+                                    Remove
+                                </span>
+                                    </a>
+                                </td>
 
-                            <div class="product-info">
-                                <div class="general">
-                                    <h2 class="product-name">Ivory Coast Woven Bed </h2>
-                                    <p class="product-info">Item specification...</p>
-                                </div>
-                                <div class="price">
-                                    <span class="new">$123.45</span>
-                                    <span class="old">$123.45</span>
-                                </div>
-                            </div>
+                                <td class="product-thumbnail">
+                                    <a href="#!">
+                                        <img src="assets/img/cart-p2.png"
+                                             class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                             alt="Product" loading="lazy">
+                                    </a>
+                                </td>
 
-                            <div class="product-quantity-row">
-                                <div class="product-quantity">
-                                    <label>Quantity</label>
-                                    <select>
-                                        <option value="1" selected>1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                    </select>
-                                </div>
-                                <a href="#!" class="product-remove">
-                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                <td class="product-name" data-title="Product">
+                                    <a href="#!">Carlisle Rectangular Mirror </a>
+                                    <span>Color: Brown</span>
+                                </td>
+
+                                <td class="product-price">
+                            <span class="woocommerce-Price-amount amount"><bdi><span
+                                    class="woocommerce-Price-currencySymbol">$</span>123.45</bdi>
+                            </span>
+                                </td>
+
+                                <td class="product-quantity">
+                                    <div class="quantity">
+                                        <label class="screen-reader-text">Quantity</label>
+                                        <select class="qty">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4" selected>4</option>
+                                        </select>
+                                    </div>
+                                </td>
+
+                                <td class="product-favorites">
+                                    <a href="#!" class="woocommerce-favorites favorites">
+                                        <svg version="1.1" id="Layer_1_copy" xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                             viewBox="0 0 24 24"
+                                             style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<path d="M12,4.5c2.3-2.1,6-2,8.2,0.2c2.3,2.3,2.3,5.9,0.2,8.2L12,21.5L3.5,13c-2.1-2.4-2-6,0.2-8.2C6,2.5,9.6,2.4,12,4.5z M18.8,6.2
+	c-1.5-1.5-3.9-1.6-5.5-0.2L12,7.2L10.7,6c-1.6-1.4-4-1.3-5.5,0.2C3.7,7.7,3.6,10,5,11.6l7,7l7-7C20.4,10,20.3,7.7,18.8,6.2z"></path>
+</svg>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="woocommerce-cart-form__cart-item cart_item">
+
+                                <td class="product-remove">
+                                    <a href="#!" class="remove" aria-label="Remove this item">
+                                        <svg width="12" height="15" viewBox="0 0 12 15" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M2.5 6.7C2.5 6.5 2.4 6.3 2.2 6.2C2.1 6 1.9 6 1.7 6C1.5 6 1.3 6.1 1.2 6.3C1 6.4 1 6.6 1 6.8L1.7 13.4C1.7 13.8 1.9 14.2 2.3 14.5C2.7 14.8 3 15 3.4 15H8.6C9.5 15 10.3 14.3 10.3 13.4L11 6.8C11 6.5 10.9 6.3 10.7 6.1C10.5 6 10.2 6 9.9 6.1C9.7 6.2 9.5 6.4 9.5 6.7L8.8 13.3C8.8 13.4 8.8 13.4 8.7 13.5C8.7 13.5 8.6 13.6 8.5 13.6H3.4C3.3 13.6 3.3 13.6 3.2 13.5C3.2 13.5 3.1 13.4 3.1 13.3L2.5 6.7ZM9 1.8V3H11.2C11.5 3 11.7 3.1 11.8 3.4C11.9 3.7 11.9 3.9 11.8 4.2C11.7 4.5 11.4 4.6 11.2 4.6H0.8C0.5 4.6 0.3 4.5 0.2 4.2C0.0999999 3.9 -1.52737e-07 3.6 0.0999998 3.4C0.2 3.2 0.5 3 0.8 3H3V1.8C3 0.8 3.8 0 4.8 0H7.3C8.2 0 9 0.8 9 1.8ZM4.5 1.8C4.5 1.7 4.5 1.7 4.6 1.6C4.6 1.6 4.7 1.5 4.8 1.5H7.3C7.4 1.5 7.4 1.5 7.5 1.6C7.5 1.6 7.6 1.7 7.6 1.8V3H4.6V1.8H4.5Z"
+                                                  fill="black"/>
+                                        </svg>
+                                        <span>
+                                    Remove
+                                </span>
+                                    </a>
+                                </td>
+
+                                <td class="product-thumbnail">
+                                    <a href="#!">
+                                        <img src="assets/img/cart-p3.png"
+                                             class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                             alt="Product" loading="lazy">
+                                    </a>
+                                </td>
+
+                                <td class="product-name" data-title="Product">
+                                    <a href="#!">Carins Round Mirror</a>
+                                    <span>Item specification...</span>
+                                </td>
+
+                                <td class="product-price">
+                            <span class="woocommerce-Price-amount amount"><bdi><span
+                                    class="woocommerce-Price-currencySymbol">$</span>123.45</bdi>
+                            </span>
+                                    <div class="old-price"><span
+                                            class="woocommerce-Price-currencySymbol">$</span>123.45
+                                    </div>
+                                </td>
+
+                                <td class="product-quantity">
+                                    <div class="quantity">
+                                        <label class="screen-reader-text">Quantity</label>
+                                        <select class="qty">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                </td>
+
+                                <td class="product-favorites">
+                                    <a href="#!" class="woocommerce-favorites favorites">
+                                        <svg version="1.1" id="Layer_1_copy" xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                             viewBox="0 0 24 24"
+                                             style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<path d="M12,4.5c2.3-2.1,6-2,8.2,0.2c2.3,2.3,2.3,5.9,0.2,8.2L12,21.5L3.5,13c-2.1-2.4-2-6,0.2-8.2C6,2.5,9.6,2.4,12,4.5z M18.8,6.2
+	c-1.5-1.5-3.9-1.6-5.5-0.2L12,7.2L10.7,6c-1.6-1.4-4-1.3-5.5,0.2C3.7,7.7,3.6,10,5,11.6l7,7l7-7C20.4,10,20.3,7.7,18.8,6.2z"></path>
+</svg>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="woocommerce-cart-form__cart-item cart_item">
+
+                                <td class="product-remove">
+                                    <a href="#!" class="remove" aria-label="Remove this item">
+                                        <svg width="12" height="15" viewBox="0 0 12 15" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M2.5 6.7C2.5 6.5 2.4 6.3 2.2 6.2C2.1 6 1.9 6 1.7 6C1.5 6 1.3 6.1 1.2 6.3C1 6.4 1 6.6 1 6.8L1.7 13.4C1.7 13.8 1.9 14.2 2.3 14.5C2.7 14.8 3 15 3.4 15H8.6C9.5 15 10.3 14.3 10.3 13.4L11 6.8C11 6.5 10.9 6.3 10.7 6.1C10.5 6 10.2 6 9.9 6.1C9.7 6.2 9.5 6.4 9.5 6.7L8.8 13.3C8.8 13.4 8.8 13.4 8.7 13.5C8.7 13.5 8.6 13.6 8.5 13.6H3.4C3.3 13.6 3.3 13.6 3.2 13.5C3.2 13.5 3.1 13.4 3.1 13.3L2.5 6.7ZM9 1.8V3H11.2C11.5 3 11.7 3.1 11.8 3.4C11.9 3.7 11.9 3.9 11.8 4.2C11.7 4.5 11.4 4.6 11.2 4.6H0.8C0.5 4.6 0.3 4.5 0.2 4.2C0.0999999 3.9 -1.52737e-07 3.6 0.0999998 3.4C0.2 3.2 0.5 3 0.8 3H3V1.8C3 0.8 3.8 0 4.8 0H7.3C8.2 0 9 0.8 9 1.8ZM4.5 1.8C4.5 1.7 4.5 1.7 4.6 1.6C4.6 1.6 4.7 1.5 4.8 1.5H7.3C7.4 1.5 7.4 1.5 7.5 1.6C7.5 1.6 7.6 1.7 7.6 1.8V3H4.6V1.8H4.5Z"
+                                                  fill="black"/>
+                                        </svg>
+                                        <span>
+                                    Remove
+                                </span>
+                                    </a>
+                                </td>
+
+                                <td class="product-thumbnail">
+                                    <a href="#!">
+                                        <img src="assets/img/cart-p4.png"
+                                             class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                             alt="Product" loading="lazy">
+                                    </a>
+                                </td>
+
+                                <td class="product-name" data-title="Product">
+                                    <a href="#!">Hanbury Nightstand </a>
+                                    <span>Color: beige</span>
+                                </td>
+
+                                <td class="product-price">
+                            <span class="woocommerce-Price-amount amount"><bdi><span
+                                    class="woocommerce-Price-currencySymbol">$</span>123.45</bdi>
+                            </span>
+                                    <div class="old-price"><span
+                                            class="woocommerce-Price-currencySymbol">$</span>123.45
+                                    </div>
+                                </td>
+
+                                <td class="product-quantity">
+                                    <div class="quantity">
+                                        <label class="screen-reader-text">Quantity</label>
+                                        <select class="qty">
+                                            <option value="1">1</option>
+                                            <option value="2" selected>2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                </td>
+
+                                <td class="product-favorites">
+                                    <a href="#!" class="woocommerce-favorites favorites">
+                                        <svg version="1.1" id="Layer_1_copy" xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                             viewBox="0 0 24 24"
+                                             style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<path d="M12,4.5c2.3-2.1,6-2,8.2,0.2c2.3,2.3,2.3,5.9,0.2,8.2L12,21.5L3.5,13c-2.1-2.4-2-6,0.2-8.2C6,2.5,9.6,2.4,12,4.5z M18.8,6.2
+	c-1.5-1.5-3.9-1.6-5.5-0.2L12,7.2L10.7,6c-1.6-1.4-4-1.3-5.5,0.2C3.7,7.7,3.6,10,5,11.6l7,7l7-7C20.4,10,20.3,7.7,18.8,6.2z"></path>
+</svg>
+                                    </a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <aside class="aside">
+                        <table class="shop_table shop_table-2 shop-aside">
+                            <tbody>
+                            <tr class="cart-subtotal">
+                                <th>Item Subtotal:</th>
+                                <td data-title="Subtotal"><span class="woocommerce-Price-amount amount"><bdi><span
+                                        class="woocommerce-Price-currencySymbol">$</span>987.65</bdi></span></td>
+                            </tr>
+                            <tr class="woocommerce-shipping-totals shipping">
+                                <th>Shipping to:</th>
+                                <td class="expand-trigger active"><span class="underlined">33629 - Tampa</span>
+                                    <?xml version="1.0" encoding="utf-8"?>
+                                    <!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                                    <svg version="1.1" width="6" height="11" xmlns="http://www.w3.org/2000/svg"
                                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                         viewBox="0 0 12 15" style="enable-background:new 0 0 12 15;"
+                                         viewBox="0 0 9 16" style="enable-background:new 0 0 9 16;"
                                          xml:space="preserve">
 <style type="text/css">
 	.st0 {
-        fill-rule: evenodd;
-        clip-rule: evenodd;
+        display: none;
+    }
+
+    .st1 {
+        display: inline;
+        fill: none;
+        stroke: #000000;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
     }
 </style>
-                                        <g>
-	<path class="st0" d="M2.5,6.7c0-0.2-0.1-0.4-0.3-0.5C2.1,6,1.9,6,1.7,6C1.5,6,1.3,6.1,1.2,6.3C1,6.4,1,6.6,1,6.8l0.7,6.6
-		c0,0.4,0.2,0.8,0.6,1.1S3,15,3.4,15h5.2c0.9,0,1.7-0.7,1.7-1.6L11,6.8c0-0.3-0.1-0.5-0.3-0.7C10.5,6,10.2,6,9.9,6.1
-		C9.7,6.2,9.5,6.4,9.5,6.7l-0.7,6.6c0,0.1,0,0.1-0.1,0.2c0,0-0.1,0.1-0.2,0.1H3.4c-0.1,0-0.1,0-0.2-0.1c0,0-0.1-0.1-0.1-0.2L2.5,6.7
-		z M9,1.8V3h2.2c0.3,0,0.5,0.1,0.6,0.4s0.1,0.5,0,0.8s-0.4,0.4-0.6,0.4H0.8c-0.3,0-0.5-0.1-0.6-0.4S0,3.6,0.1,3.4S0.5,3,0.8,3H3V1.8
-		C3,0.8,3.8,0,4.8,0h2.5C8.2,0,9,0.8,9,1.8z M4.5,1.8c0-0.1,0-0.1,0.1-0.2c0,0,0.1-0.1,0.2-0.1h2.5c0.1,0,0.1,0,0.2,0.1
-		c0,0,0.1,0.1,0.1,0.2V3h-3V1.8z"/>
+                                        <g id="Layer_1" class="st0">
+	<polyline class="st1" points="1,1 8,8 1,15 	"/>
+</g>
+                                        <g id="Layer_1_copy">
+	<g>
+		<path d="M1,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4L6.6,8L0.3,1.7c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l7,7
+			c0.4,0.4,0.4,1,0,1.4l-7,7C1.5,15.9,1.3,16,1,16z"/>
+	</g>
 </g>
 </svg>
-                                    <span>Remove</span>
-                                </a>
-                            </div>
-
+                                </td>
+                            </tr>
+                            <tr class="zip expand-body active">
+                                <td>
+                                    <input type="text" class="zip" placeholder="Zip code">
+                                    <button type="submit" class="btn btn_dark">update</button>
+                                </td>
+                            </tr>
+                            <tr class="tax">
+                                <th class="underlined">Estimated Tax:</th>
+                                <td>
+                                    <bdi><span class="woocommerce-Price-currencySymbol">$</span>34.56</bdi>
+                                </td>
+                            </tr>
+                            <tr class="save">
+                                <th>You save:</th>
+                                <td>
+                                    <bdi><span class="woocommerce-Price-currencySymbol">$</span>123.45</bdi>
+                                </td>
+                            </tr>
+                            <tr class="total">
+                                <td>Total:</td>
+                                <th>
+                                    <bdi><span class="woocommerce-Price-currencySymbol">$</span>987.65</bdi>
+                                </th>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <button type="submit" class="proceed btn btn_dark">
+                            <span class="content">
+                            <span>proceed to checkout</span>
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 viewBox="0 0 9 16" style="enable-background:new 0 0 9 16;" xml:space="preserve">
+                                <g id="Layer_1" class="st0">
+	<polyline class="st1" points="1,1 8,8 1,15 	"/>
+</g>
+                                <g id="Layer_1_copy">
+	<g>
+		<path d="M1,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4L6.6,8L0.3,1.7c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l7,7
+			c0.4,0.4,0.4,1,0,1.4l-7,7C1.5,15.9,1.3,16,1,16z"/>
+	</g>
+</g>
+</svg>
+                            </span>
+                        </button>
+                        <a href="#!" class="promo expand-trigger no-svg-rotate">
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 19.1 19.2"
+                                 style="enable-background:new 0 0 19.1 19.2;" xml:space="preserve">
+<path d="M2.6,19.2c-0.3,0-0.6-0.3-0.6-0.6v-8.4H0.6C0.3,10.2,0,9.9,0,9.6v-4C0,5.3,0.3,5,0.6,5l4,0L4.3,4.4C3.6,2.9,4.2,1,5.8,0.3
+	C6.2,0.1,6.6,0,7.1,0c0.8,0,1.6,0.3,2.2,0.9l0.3,0.3l0.3-0.3C10.5,0.3,11.2,0,12.1,0c0.8,0,1.6,0.3,2.2,0.9c0.6,0.6,0.9,1.4,0.9,2.2
+	c0,0.5-0.1,0.9-0.3,1.3L14.6,5l4,0c0.3,0,0.6,0.3,0.6,0.6v4c0,0.3-0.3,0.6-0.6,0.6h-1.4v8.4c0,0.3-0.3,0.6-0.6,0.6H2.6z M3.1,18H16
+	v-7.9H3.1V18z M1.1,9H18V6.2H1.1V9z M11.9,1.2C11,1.2,10.2,2,10.2,2.9l0,0.2l0,1.9h1.9l0.2,0c0.5-0.1,1-0.3,1.3-0.7S14,3.4,14,2.9
+	c-0.1-0.9-0.8-1.6-1.7-1.7l-0.2,0L11.9,1.2z M7.1,1.2c-0.5,0-1,0.2-1.4,0.6C5.4,2.1,5.2,2.6,5.2,3.1c0,1,0.7,1.8,1.7,1.9l0.2,0L9,5
+	V3.1c0-1-0.7-1.8-1.7-1.9L7.1,1.2z"></path>
+</svg>
+                            <span class="underlined">Ad Gift Card/Promo Code</span>
+                        </a>
+                        <div class="gift-card custom-inputs expand-body">
+                            <p class="form-row form-row-first validate-required">
+                                    <span class="woocommerce-input-wrapper">
+                                        <input type="text" class="input-text" placeholder=" " value="">
+                                    <label>Gift card/Promo code</label>
+                                    </span>
+                            </p>
+                            <button type="submit" class="btn btn_dark">Apply</button>
                         </div>
+                        <div class="financing">
+                            <img src="assets/img/sync.png" width="210" alt="Bank" loading="lazy">
 
+                            <a href="#!" class="learn-more">learn more</a>
+                        </div>
+                    </aside>
+
+                </div>
+
+                <div class="__container">
+                    <div class="assistance">
+                        <div class="item">
+                            <div class="desc">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     viewBox="0 0 21.9 21.9" style="enable-background:new 0 0 21.9 21.9;"
+                                     xml:space="preserve">
+<style type="text/css">
+	.st0 {
+        display: none;
+    }
+
+    .st1 {
+        display: inline;
+        fill: none;
+        stroke: #000000;
+        stroke-width: 0.9921;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+</style>
+                                    <g id="Layer_1" class="st0">
+	<path class="st1" d="M13.4,4.5c2,0.4,3.6,2,3.9,3.9 M13.4,0.5c4.2,0.5,7.5,3.8,7.9,7.9 M20.4,16.4v3c0,1.1-0.9,2-2,2
+		c-0.1,0-0.1,0-0.2,0c-3.1-0.3-6-1.4-8.6-3.1c-2.4-1.5-4.5-3.6-6-6C1.9,9.7,0.8,6.8,0.5,3.7C0.4,2.6,1.2,1.6,2.3,1.5
+		c0.1,0,0.1,0,0.2,0h3c1,0,1.9,0.7,2,1.7c0.1,1,0.4,1.9,0.7,2.8c0.3,0.7,0.1,1.6-0.4,2.1L6.5,9.4c1.4,2.5,3.5,4.6,6,6l1.3-1.3
+		c0.6-0.5,1.4-0.7,2.1-0.4c0.9,0.3,1.8,0.6,2.8,0.7C19.7,14.5,20.4,15.4,20.4,16.4z"/>
+</g>
+                                    <g id="Layer_1_copy">
+	<g>
+		<path d="M18.4,21.9c-0.1,0-0.2,0-0.2,0c-3.1-0.3-6.2-1.4-8.9-3.1c-2.5-1.6-4.6-3.7-6.1-6.2C1.4,10,0.3,6.9,0,3.7
+			C-0.1,2.4,0.9,1.1,2.3,1c0.1,0,0.1,0,0.2,0h3C6.7,1,7.8,1.9,8,3.1C8.1,4.1,8.3,5,8.7,5.9C9,6.8,8.8,7.8,8.1,8.5l-1,1
+			c1.3,2.2,3.1,4,5.3,5.3l1-1c0.7-0.7,1.7-0.9,2.6-0.6c0.9,0.3,1.8,0.6,2.7,0.7c1.3,0.2,2.2,1.3,2.2,2.5v3c0,0.7-0.3,1.3-0.7,1.8
+			C19.7,21.7,19.1,21.9,18.4,21.9z M5.5,2C5.5,2,5.5,2,5.5,2h-3c0,0-0.1,0-0.1,0C1.5,2.1,0.9,2.8,1,3.6c0.3,3,1.4,5.9,3,8.4
+			c1.5,2.3,3.5,4.4,5.8,5.9c2.5,1.6,5.4,2.7,8.4,3c0.4,0,0.9-0.1,1.2-0.4c0.3-0.3,0.4-0.7,0.4-1.1v-3c0,0,0,0,0,0
+			c0-0.8-0.5-1.4-1.3-1.5c-1-0.1-2-0.4-2.9-0.7c-0.5-0.2-1.2-0.1-1.6,0.3l-1.3,1.3c-0.2,0.2-0.4,0.2-0.6,0.1
+			C9.6,14.4,7.5,12.2,6,9.7C5.9,9.5,6,9.2,6.1,9.1l1.3-1.3c0.4-0.4,0.5-1,0.3-1.6C7.4,5.3,7.1,4.3,7,3.3C6.9,2.5,6.3,2,5.5,2z
+			 M17.4,8.9c-0.2,0-0.4-0.2-0.5-0.4c-0.4-1.8-1.7-3.2-3.6-3.6c-0.3-0.1-0.4-0.3-0.4-0.6C13,4.1,13.3,4,13.5,4
+			c2.2,0.4,3.9,2.1,4.3,4.3C17.9,8.6,17.7,8.9,17.4,8.9C17.4,8.9,17.4,8.9,17.4,8.9z M21.4,8.9c-0.2,0-0.5-0.2-0.5-0.4
+			c-0.4-4-3.5-7.1-7.5-7.5c-0.3,0-0.5-0.3-0.4-0.5C13,0.2,13.2,0,13.5,0c4.4,0.5,7.9,3.9,8.4,8.4C21.9,8.7,21.7,8.9,21.4,8.9
+			C21.4,8.9,21.4,8.9,21.4,8.9z"/>
+	</g>
+</g>
+</svg>
+                                <div class="content">
+                                    <h3 class="heading">Shopping Assistance</h3>
+                                    <p class="text">Have questions before you check out? We're here to help!</p>
+                                    <a href="#!" class="cta underlined">Call Us</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="desc">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     viewBox="0 0 23 19" style="enable-background:new 0 0 23 19;" xml:space="preserve">
+<style type="text/css">
+	.st0 {
+        display: none;
+    }
+
+    .st1 {
+        display: inline;
+    }
+
+    .st2 {
+        fill: none;
+        stroke: #000000;
+        stroke-width: 0.9921;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+</style>
+                                    <g id="Layer_1" class="st0">
+	<g class="st1">
+		<polyline class="st2" points="0.5,1.5 0.5,7.5 6.5,7.5 		"/>
+        <polyline class="st2" points="22.5,17.5 22.5,11.5 16.5,11.5 		"/>
+        <path class="st2" d="M20,6.5C18.3,1.8,13.2-0.6,8.5,1C7.2,1.5,6.1,2.2,5.1,3.1L0.5,7.5 M22.5,11.5l-4.6,4.4
+			c-3.5,3.5-9.2,3.5-12.7,0c-0.9-0.9-1.7-2.1-2.1-3.4"/>
+	</g>
+</g>
+                                    <g id="Layer_1_copy">
+	<g>
+		<path d="M7,7.5C7,7.2,6.8,7,6.5,7H1.7l3.7-3.5c0.9-0.9,2-1.6,3.2-2c4.4-1.6,9.3,0.8,10.9,5.2c0.1,0.3,0.4,0.4,0.6,0.3
+			c0.3-0.1,0.4-0.4,0.3-0.6c-0.8-2.4-2.6-4.3-4.9-5.4c-2.3-1.1-4.9-1.2-7.3-0.4C7,1,5.8,1.8,4.8,2.8L1,6.4V1.5C1,1.2,0.8,1,0.5,1
+			S0,1.2,0,1.5v6c0,0,0,0,0,0.1c0,0,0,0.1,0,0.1c0,0,0,0.1,0.1,0.1c0,0,0,0,0,0.1c0,0,0,0,0,0C0.2,7.9,0.4,8,0.5,8h6
+			C6.8,8,7,7.8,7,7.5z"/>
+        <path d="M23,11.4c0,0,0-0.1,0-0.1c0,0,0-0.1-0.1-0.1c0,0,0,0,0-0.1c0,0,0,0,0,0c0,0-0.1-0.1-0.1-0.1c0,0,0,0,0,0c0,0-0.1,0-0.1,0
+			c0,0-0.1,0-0.1,0c0,0,0,0,0,0h-6c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5h4.7l-3.7,3.5c-3.3,3.3-8.7,3.3-12,0
+			c-0.9-0.9-1.6-2-2-3.2c-0.1-0.3-0.4-0.4-0.6-0.3c-0.3,0.1-0.4,0.4-0.3,0.6C3,14,3.8,15.2,4.8,16.2c1.9,1.9,4.3,2.8,6.7,2.8
+			c2.4,0,4.9-0.9,6.7-2.8l3.8-3.6v4.9c0,0.3,0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5L23,11.4C23,11.5,23,11.4,23,11.4z"/>
+	</g>
+</g>
+</svg>
+                                <div class="content">
+                                    <h3 class="heading">Return Policy</h3>
+                                    <p class="text">Most items can be returned within 30 days of delivery.</p>
+                                    <a href="#!" class="cta underlined">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-<!--                <table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">-->
-<!--                    <thead>-->
-<!--                    <tr>-->
-<!--                        <th class="product-remove">&nbsp;</th>-->
-<!--                        <th class="product-thumbnail">&nbsp;</th>-->
-<!--                        <th class="product-name">Product</th>-->
-<!--                        <th class="product-price">Price</th>-->
-<!--                        <th class="product-quantity">Quantity</th>-->
-<!--                        <th class="product-subtotal">Subtotal</th>-->
-<!--                    </tr>-->
-<!--                    </thead>-->
-<!--                    <tbody>-->
+                <div class="__container">
+                    <div class="swiper-section">
+                        <h2 class="heading-md">You Might Also Like</h2>
+                        <div class="swiper swiper-cart-page">
+                            <div class="swiper-wrapper">
+                                <a href="#!" class="swiper-slide">
+                                    <img src="assets/img/cart-slide-1.png" alt="Product" loading="lazy">
+                                    <h3 class="heading">Armiston Double <br> Dresser</h3>
+                                </a>
+                                <a href="#!" class="swiper-slide">
+                                    <img src="assets/img/cart-slide-2.png" alt="Product" loading="lazy">
+                                    <h3 class="heading">Carnaby Drawer Chest</h3>
+                                </a>
+                                <a href="#!" class="swiper-slide">
+                                    <img src="assets/img/cart-slide-3.png" alt="Product" loading="lazy">
+                                    <h3 class="heading">Hanbury Nightstand</h3>
+                                </a>
+                                <a href="#!" class="swiper-slide">
+                                    <img src="assets/img/cart-slide-4.png" alt="Product" loading="lazy">
+                                    <h3 class="heading">Perth Single Dresser</h3>
+                                </a>
+                                <a href="#!" class="swiper-slide">
+                                    <img src="assets/img/cart-slide-4.png" alt="Product" loading="lazy">
+                                    <h3 class="heading">Perth Single Dresser</h3>
+                                </a>
+                            </div>
+                            <div class="swiper-button-next swiper-button-next-bg ">
+                                <?xml version="1.0" encoding="utf-8"?>
+                                <!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     viewBox="0 0 9 16" style="enable-background:new 0 0 9 16;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+    .st1{display:inline;fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+                                    <g id="Layer_1" class="st0">
+	<polyline class="st1" points="1,1 8,8 1,15 	"/>
+</g>
+                                    <g id="Layer_1_copy">
+	<g>
+		<path d="M1,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4L6.6,8L0.3,1.7c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l7,7
+			c0.4,0.4,0.4,1,0,1.4l-7,7C1.5,15.9,1.3,16,1,16z"/>
+	</g>
+</g>
+</svg>
+                            </div>
+                            <div class="swiper-button-prev swiper-button-prev-bg">
+                                <?xml version="1.0" encoding="utf-8"?>
+                                <!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     viewBox="0 0 9 16" style="enable-background:new 0 0 9 16;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+    .st1{display:inline;fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+                                    <g id="Layer_1" class="st0">
+	<polyline class="st1" points="1,1 8,8 1,15 	"/>
+</g>
+                                    <g id="Layer_1_copy">
+	<g>
+		<path d="M1,16c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4L6.6,8L0.3,1.7c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l7,7
+			c0.4,0.4,0.4,1,0,1.4l-7,7C1.5,15.9,1.3,16,1,16z"/>
+	</g>
+</g>
+</svg>
+                            </div>
+                            <div class="swiper-pagination swiper-pagination-dark"></div>
+                        </div>
+                    </div>
+                </div>
 
-<!--                    <tr class="woocommerce-cart-form__cart-item cart_item">-->
 
-<!--                        <td class="product-remove">-->
-<!--                            <a href="https://lee-furniture.mintsparkshost.com/cart/?remove_item=6512bd43d9caa6e02c990b0a82652dca&amp;_wpnonce=48a6fef4df"-->
-<!--                               class="remove" aria-label="Remove this item" data-product_id="11"-->
-<!--                               data-product_sku="01-6401-33-41">×</a></td>-->
-
-<!--                        <td class="product-thumbnail">-->
-<!--                            <a href="https://lee-furniture.mintsparkshost.com/product/antilles-upholstered-panel-bed/"><img-->
-<!--                                    width="324" height="324"-->
-<!--                                    src="https://lee-furniture.mintsparkshost.com/wp-content/uploads/2022/07/image58175-1-324x324.jpg"-->
-<!--                                    class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""-->
-<!--                                    loading="lazy"-->
-<!--                                    srcset="https://lee-furniture.mintsparkshost.com/wp-content/uploads/2022/07/image58175-1-324x324.jpg 324w, https://lee-furniture.mintsparkshost.com/wp-content/uploads/2022/07/image58175-1-150x150.jpg 150w, https://lee-furniture.mintsparkshost.com/wp-content/uploads/2022/07/image58175-1-100x100.jpg 100w"-->
-<!--                                    sizes="(max-width: 324px) 100vw, 324px"></a></td>-->
-
-<!--                        <td class="product-name" data-title="Product">-->
-<!--                            <a href="https://lee-furniture.mintsparkshost.com/product/antilles-upholstered-panel-bed/">Antilles-->
-<!--                                Upholstered Panel Bed</a></td>-->
-
-<!--                        <td class="product-price" data-title="Price">-->
-<!--                            <span class="woocommerce-Price-amount amount"><bdi><span-->
-<!--                                    class="woocommerce-Price-currencySymbol">$</span>2,500.00</bdi></span></td>-->
-
-<!--                        <td class="product-quantity" data-title="Quantity">-->
-<!--                            <div class="quantity">-->
-<!--                                <label class="screen-reader-text" for="quantity_62e13d0748bca">Antilles Upholstered-->
-<!--                                    Panel Bed quantity</label>-->
-<!--                                <input type="number" id="quantity_62e13d0748bca" class="input-text qty text" step="1"-->
-<!--                                       min="0" max="" name="cart[6512bd43d9caa6e02c990b0a82652dca][qty]" value="1"-->
-<!--                                       title="Qty" size="4" placeholder="" inputmode="numeric" autocomplete="off">-->
-<!--                            </div>-->
-<!--                        </td>-->
-
-<!--                        <td class="product-subtotal" data-title="Subtotal">-->
-<!--                            <span class="woocommerce-Price-amount amount"><bdi><span-->
-<!--                                    class="woocommerce-Price-currencySymbol">$</span>2,500.00</bdi></span></td>-->
-<!--                    </tr>-->
-
-
-<!--                    <tr>-->
-<!--                        <td colspan="6" class="actions">-->
-
-<!--                            <div class="coupon">-->
-<!--                                <label for="coupon_code">Coupon:</label> <input type="text" name="coupon_code"-->
-<!--                                                                                class="input-text" id="coupon_code"-->
-<!--                                                                                value="" placeholder="Coupon code">-->
-<!--                                <button type="submit" class="button" name="apply_coupon" value="Apply coupon">Apply-->
-<!--                                    coupon-->
-<!--                                </button>-->
-<!--                            </div>-->
-
-<!--                            <button type="submit" class="button" name="update_cart" value="Update cart"-->
-<!--                                    aria-disabled="false">Update cart-->
-<!--                            </button>-->
-
-
-<!--                            <input type="hidden" id="woocommerce-cart-nonce" name="woocommerce-cart-nonce"-->
-<!--                                   value="48a6fef4df"><input type="hidden" name="_wp_http_referer" value="/cart/"></td>-->
-<!--                    </tr>-->
-
-<!--                    </tbody>-->
-<!--                </table>-->
             </form>
         </div>
 

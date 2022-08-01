@@ -418,3 +418,35 @@ try {
 } catch (e) {
     console.log('swiper product page error ', e);
 }
+
+//swiper cart page
+try {
+    let checkSwiperExist = document.querySelector('.woo-cart .swiper-cart-page');
+
+    if (checkSwiperExist) {
+        let swiperCart = new Swiper(".swiper-cart-page", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                    slidesPerView: 2,
+                    spaceBetween: 27
+                },
+                936: {
+                    slidesPerView: 4,
+                    spaceBetween: 46
+                },
+            },
+        });
+    }
+
+} catch (e) {
+    console.log('swiper cart page error ', e);
+}
