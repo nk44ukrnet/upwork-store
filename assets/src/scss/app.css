@@ -4936,8 +4936,23 @@ body {
   .woo-cart .aside {
     margin-bottom: 30px;
   }
+  .woo-cart .woocommerce-cart-form .inner {
+    justify-content: center;
+    align-items: center;
+  }
+  .woo-cart .woocommerce-cart-form .assistance {
+    margin-inline: auto;
+  }
+  .woo-cart .woocommerce-cart-form .swiper-section {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-inline: auto;
+  }
 }
 @media (max-width: 936px) {
+  .woo-cart .woocommerce-cart-form .swiper-section {
+    width: auto;
+  }
   .woo-cart .woocommerce-cart-form .swiper-section h2.heading-md {
     margin-bottom: 17px;
     text-align: center;
@@ -5049,9 +5064,9 @@ body {
     width: 17px;
   }
   .woo-cart .woocommerce-cart-form .aside {
-    flex: 0 0 320px;
+    flex: 0 0 auto;
     width: 100%;
-    max-width: 320px;
+    max-width: 360px;
     border: 1px solid var(--dark);
     padding: 30px;
     box-sizing: border-box;

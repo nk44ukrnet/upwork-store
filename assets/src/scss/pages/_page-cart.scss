@@ -410,11 +410,26 @@
     .aside {
       margin-bottom: 30px;
     }
+    .woocommerce-cart-form {
+      .inner {
+        justify-content: center;
+        align-items: center;
+      }
+      .assistance {
+        margin-inline: auto;
+      }
+      .swiper-section {
+        width: -moz-fit-content;
+        width: fit-content;
+        margin-inline: auto;
+      }
+    }
   }
 
   @media (max-width: 936px) {
     .woocommerce-cart-form {
       .swiper-section {
+        width: auto;
         h2.heading-md {
           margin-bottom: 17px;
           text-align: center;
@@ -451,6 +466,7 @@
 
   @media (max-width: 804px) {
     .woocommerce-cart-form {
+
 
       .woocommerce-cart-form__contents {
         max-width: none;
@@ -565,9 +581,9 @@
       }
 
       .aside {
-        flex: 0 0 320px;
+        flex: 0 0 auto;
         width: 100%;
-        max-width: 320px;
+        max-width: 360px;
         border: 1px solid var(--dark);
         padding: 30px;
         box-sizing: border-box;
