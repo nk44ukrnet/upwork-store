@@ -97,7 +97,8 @@
         gap: 3px;
         font-weight: 500;
 
-        .old-price {
+
+        .old-price, del {
           font-size: 15px;
           color: rgba(0, 0, 0, 0.502);
           text-decoration: line-through;
